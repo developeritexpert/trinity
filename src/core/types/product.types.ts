@@ -11,8 +11,9 @@ export interface Option {
     label: string;
     priceModifier: number;
     assets: AssetLayer[];
-    colorCode?: string; // For Fabric
-    styleCode?: string; // <-- ADD THIS: For Jacket Style
+    colorCode?: string;  // For Fabric  → resolves {{color}} token
+    styleCode?: string;  // For Style   → resolves {{style}} token
+    lapelCode?: string;  // For Lapel   → "notch" | "peak" (for UI filtering, not URL)
 }
 
 export interface Attribute {
