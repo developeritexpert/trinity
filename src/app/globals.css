@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* temoprary css for fix postion of models  */
+.pants_folded {
+  margin-top: 35rem;
+}

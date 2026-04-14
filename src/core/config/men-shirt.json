@@ -1,0 +1,59 @@
+{
+    "productId": "men-shirt",
+    "basePrice": 79.00,
+    "defaultSelections": {
+        "fabric": "fab_poplin_white",
+        "cuffs": "cuff_classic"
+    },
+    "attributes": [
+        {
+            "id": "fabric",
+            "label": "Fabric",
+            "options": [
+                {
+                    "id": "fab_poplin_white",
+                    "label": "White Poplin",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/guy_george.png",
+                            "zIndex": 10,
+                            "style": {
+                                "top": "0%",
+                                "left": "15%",
+                                "width": "70%"
+                            }
+                        },
+                        {
+                            "url": "/assets/shirts/sleeves_long+cuffs_classic (1).png",
+                            "zIndex": 20,
+                            "style": {
+                                "top": "0%",
+                                "left": "5%",
+                                "width": "90%"
+                            }
+                        },
+                        {
+                            "url": "/assets/shirts/fit_fit+button_close_standard+inside.png",
+                            "zIndex": 40,
+                            "style": {
+                                "top": "18%",
+                                "left": "20%",
+                                "width": "60%"
+                            }
+                        },
+                        {
+                            "url": "/assets/shirts/encima.png",
+                            "zIndex": 100,
+                            "style": {
+                                "top": "55%",
+                                "left": "25%",
+                                "width": "50%"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
