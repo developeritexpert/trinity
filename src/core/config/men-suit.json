@@ -4,7 +4,8 @@
     "defaultSelections": {
         "fabric": "fab_navy_twill",
         "style": "style_single_breasted",
-        "lapel_style": "lapel_notch"
+        "lapel_style": "lapel_notch",
+        "lapel_width": "width_standard"
     },
     "attributes": [
         {
@@ -260,7 +261,7 @@
                         },
                         {
                             "url": "/assets/suits/{{color}}/style/double_breasted_6/hip_pockets.png",
-                            "zIndex": 180,
+                            "zIndex": 150,
                             "className": "man_jacket"
                         }
                     ]
@@ -314,36 +315,14 @@
                     "label": "Notch Lapel",
                     "lapelCode": "notch",
                     "priceModifier": 0,
-                    "assets": [
-                        {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_notch.png",
-                            "zIndex": 119,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_notch_alt.png",
-                            "zIndex": 170,
-                            "className": "man_jacket"
-                        }
-                    ]
+                    "assets": []
                 },
                 {
                     "id": "lapel_peak",
                     "label": "Peak Lapel",
                     "lapelCode": "peak",
                     "priceModifier": 0,
-                    "assets": [
-                        {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_peak.png",
-                            "zIndex": 119,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_peak_alt.png",
-                            "zIndex": 170,
-                            "className": "man_jacket"
-                        }
-                    ]
+                    "assets": []
                 }
             ]
         },
@@ -352,55 +331,40 @@
             "label": "Lapel Width",
             "options": [
                 {
-                    "id": "lapel_slim",
+                    "id": "width_slim",
                     "label": "Slim",
-                    "lapelCode": "slim",
+                    "widthCode": "slim",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_notch.png",
-                            "zIndex": 119,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_notch_alt.png",
-                            "zIndex": 170,
+                            "url": "/assets/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
+                            "zIndex": 160,
                             "className": "man_jacket"
                         }
                     ]
                 },
                 {
-                    "id": "lapel_standard",
+                    "id": "width_standard",
                     "label": "Standard",
-                    "lapelCode": "standard",
+                    "widthCode": "standard",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_peak.png",
-                            "zIndex": 119,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_peak_alt.png",
-                            "zIndex": 170,
+                            "url": "/assets/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
+                            "zIndex": 160,
                             "className": "man_jacket"
                         }
                     ]
                 },
                 {
-                    "id": "lapel_wide",
+                    "id": "width_wide",
                     "label": "Wide",
-                    "lapelCode": "wide",
+                    "widthCode": "wide",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_peak.png",
-                            "zIndex": 119,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/{{style}}/neck_peak_alt.png",
-                            "zIndex": 170,
+                            "url": "/assets/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
+                            "zIndex": 160,
                             "className": "man_jacket"
                         }
                     ]
