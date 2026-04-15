@@ -5,7 +5,8 @@
         "fabric": "fab_navy_twill",
         "style": "style_single_breasted",
         "lapel_style": "lapel_notch",
-        "lapel_width": "width_standard"
+        "lapel_width": "width_standard",
+        "pocket_style": "with_flap"
     },
     "attributes": [
         {
@@ -17,6 +18,7 @@
                     "label": "Navy Blue Twill",
                     "priceModifier": 0,
                     "colorCode": "navy",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg",
                     "assets": [
                         {
                             "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
@@ -65,6 +67,7 @@
                     "label": "Sicilian Grey",
                     "priceModifier": 0,
                     "colorCode": "grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/141_huge_c300.jpg",
                     "assets": [
                         {
                             "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
@@ -113,6 +116,7 @@
                     "label": "Walkerson",
                     "priceModifier": 10,
                     "colorCode": "walkerson",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3526_huge_c300.jpg",
                     "assets": [
                         {
                             "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
@@ -166,6 +170,7 @@
                     "id": "style_single_breasted",
                     "label": "Single Breasted",
                     "styleCode": "single_breasted",
+                    "thumbnail": "/icons/single_breasted_1.png",
                     "priceModifier": 0,
                     "assets": [
                         {
@@ -177,11 +182,6 @@
                             "url": "/assets/suits/{{color}}/style/single_breasted/breast_pocket.png",
                             "zIndex": 150,
                             "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/single_breasted/hip_pockets.png",
-                            "zIndex": 150,
-                            "className": "man_jacket"
                         }
                     ]
                 },
@@ -189,6 +189,7 @@
                     "id": "style_double_breasted_4_button",
                     "label": "Double Breasted 4 Button",
                     "styleCode": "double_breasted_4",
+                    "thumbnail": "/icons/double_breasted_4.png",
                     "priceModifier": 0,
                     "assets": [
                         {
@@ -240,11 +241,6 @@
                             "url": "/assets/suits/{{color}}/style/double_breasted_4/breast_pocket.png",
                             "zIndex": 150,
                             "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double_breasted_4/hip_pockets.png",
-                            "zIndex": 180,
-                            "className": "man_jacket"
                         }
                     ]
                 },
@@ -252,16 +248,12 @@
                     "id": "style_double_breasted_6_button",
                     "label": "Double Breasted 6 Button",
                     "styleCode": "double_breasted_6",
+                    "thumbnail": "/icons/double_breasted_6.png",
                     "priceModifier": 0,
                     "assets": [
                         {
                             "url": "/assets/suits/{{color}}/style/double_breasted_6/bottom.png",
                             "zIndex": 130,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double_breasted_6/hip_pockets.png",
-                            "zIndex": 150,
                             "className": "man_jacket"
                         }
                     ]
@@ -270,6 +262,7 @@
                     "id": "style_mandarin",
                     "label": "Mandarin",
                     "styleCode": "mandarin",
+                    "thumbnail": "/icons/mandarin.png",
                     "priceModifier": 0,
                     "assets": [
                         {
@@ -314,6 +307,7 @@
                     "id": "lapel_notch",
                     "label": "Notch Lapel",
                     "lapelCode": "notch",
+                    "thumbnail": "/icons/notch.png",
                     "priceModifier": 0,
                     "assets": []
                 },
@@ -321,6 +315,7 @@
                     "id": "lapel_peak",
                     "label": "Peak Lapel",
                     "lapelCode": "peak",
+                    "thumbnail": "/icons/peak.png",
                     "priceModifier": 0,
                     "assets": []
                 }
@@ -334,6 +329,7 @@
                     "id": "width_slim",
                     "label": "Slim",
                     "widthCode": "slim",
+                    "thumbnail": "/icons/slim.png",
                     "priceModifier": 0,
                     "assets": [
                         {
@@ -347,6 +343,7 @@
                     "id": "width_standard",
                     "label": "Standard",
                     "widthCode": "standard",
+                    "thumbnail": "/icons/standard.png",
                     "priceModifier": 0,
                     "assets": [
                         {
@@ -360,11 +357,93 @@
                     "id": "width_wide",
                     "label": "Wide",
                     "widthCode": "wide",
+                    "thumbnail": "/icons/wide.png",
                     "priceModifier": 0,
                     "assets": [
                         {
                             "url": "/assets/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
                             "zIndex": 160,
+                            "className": "man_jacket"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "pocket_style",
+            "label": "Pocket Style",
+            "options": [
+                {
+                    "id": "with_flap",
+                    "label": "With Flap",
+                    "thumbnail": "/icons/flap.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_with_flap.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "double_welted",
+                    "label": "Double Welted",
+                    "thumbnail": "/icons/double_welted.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_double_welt.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "patched",
+                    "label": "Patched",
+                    "thumbnail": "/icons/patched.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_patched.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "with_flap_3",
+                    "label": "With flap x3",
+                    "thumbnail": "/icons/flap.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_with_flap_3.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_with_flap_3_top.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "double_welted_3",
+                    "label": "Double Welted x3",
+                    "thumbnail": "/icons/double_welted.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_double_welt_3.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_double_welt_3_top.png",
+                            "zIndex": 170,
                             "className": "man_jacket"
                         }
                     ]

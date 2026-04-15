@@ -11,10 +11,11 @@ export interface Option {
     label: string;
     priceModifier: number;
     assets: AssetLayer[];
-    colorCode?: string;  // For Fabric      → resolves {{color}} token
-    styleCode?: string;  // For Style       → resolves {{style}} token
-    lapelCode?: string;  // For Lapel Style → resolves {{lapel}} token  (e.g. "notch" | "peak")
-    widthCode?: string;  // For Lapel Width → resolves {{width}} token  (e.g. "slim" | "standard" | "wide")
+    thumbnail?: string;  // <-- ADD THIS for the fabric swatch images
+    colorCode?: string;
+    styleCode?: string;
+    lapelCode?: string;
+    widthCode?: string;
 }
 
 export interface Attribute {
