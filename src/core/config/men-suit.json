@@ -260,6 +260,11 @@
                             "url": "/assets/suits/{{color}}/style/double_breasted_6/bottom.png",
                             "zIndex": 130,
                             "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/double_breasted_6/breast_pocket.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
                         }
                     ]
                 },
@@ -297,6 +302,11 @@
                         },
                         {
                             "url": "/assets/suits/{{color}}/style/mandarin/neck_alt.png",
+                            "zIndex": 180,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/mandarin/breast_pocket.png",
                             "zIndex": 180,
                             "className": "man_jacket"
                         }
