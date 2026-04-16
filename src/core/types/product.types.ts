@@ -11,8 +11,11 @@ export interface Option {
     label: string;
     priceModifier: number;
     assets: AssetLayer[];
-    colorCode?: string; // For Fabric
-    styleCode?: string; // <-- ADD THIS: For Jacket Style
+    thumbnail?: string;  // <-- ADD THIS for the fabric swatch images
+    colorCode?: string;
+    styleCode?: string;
+    lapelCode?: string;
+    widthCode?: string;
 }
 
 export interface Attribute {

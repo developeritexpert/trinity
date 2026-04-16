@@ -3,7 +3,10 @@
     "basePrice": 299.00,
     "defaultSelections": {
         "fabric": "fab_navy_twill",
-        "style": "style_single_breasted"
+        "style": "style_single_breasted",
+        "lapel_style": "lapel_notch",
+        "lapel_width": "width_standard",
+        "pocket_style": "with_flap"
     },
     "attributes": [
         {
@@ -15,44 +18,45 @@
                     "label": "Navy Blue Twill",
                     "priceModifier": 0,
                     "colorCode": "navy",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg",
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/interior+espalda_abajo+length_long (1).png",
+                            "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
                             "zIndex": 45,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/interior+espalda_arriba.png",
+                            "url": "/assets/suits/{{color}}/base/interior_back_upper.png",
                             "zIndex": 104,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/interior+espalda_arriba (1).png",
+                            "url": "/assets/suits/{{color}}/base/interior_back_upper_alt.png",
                             "zIndex": 105,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/negra.png",
+                            "url": "/assets/suits/{{color}}/base/negra.png",
                             "zIndex": 105,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/interior+sleeves.png",
+                            "url": "/assets/suits/{{color}}/base/interior_sleeves.png",
                             "zIndex": 120,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/length_long+cut_slim.png",
+                            "url": "/assets/suits/{{color}}/base/pants_length.png",
                             "zIndex": 31,
                             "className": "pants_folded"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/front_pocket+diagonal.png",
+                            "url": "/assets/suits/{{color}}/base/pants_front_pocket.png",
                             "zIndex": 33,
                             "className": "pants_folded"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/back_pocket+with_button (1).png",
+                            "url": "/assets/suits/{{color}}/base/pants_back_pocket.png",
                             "zIndex": 38,
                             "className": "pants_folded"
                         }
@@ -63,44 +67,45 @@
                     "label": "Sicilian Grey",
                     "priceModifier": 0,
                     "colorCode": "grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/141_huge_c300.jpg",
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/interior+espalda_abajo+length_long (1).png",
+                            "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
                             "zIndex": 45,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/interior+espalda_arriba.png",
+                            "url": "/assets/suits/{{color}}/base/interior_back_upper.png",
                             "zIndex": 104,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/interior+espalda_arriba (1).png",
+                            "url": "/assets/suits/{{color}}/base/interior_back_upper_alt.png",
                             "zIndex": 105,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/negra.png",
+                            "url": "/assets/suits/{{color}}/base/negra.png",
                             "zIndex": 105,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/interior+sleeves.png",
+                            "url": "/assets/suits/{{color}}/base/interior_sleeves.png",
                             "zIndex": 120,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/length_long+cut_slim.png",
+                            "url": "/assets/suits/{{color}}/base/pants_length.png",
                             "zIndex": 31,
                             "className": "pants_folded"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/front_pocket+diagonal.png",
+                            "url": "/assets/suits/{{color}}/base/pants_front_pocket.png",
                             "zIndex": 33,
                             "className": "pants_folded"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/back_pocket+with_button (1).png",
+                            "url": "/assets/suits/{{color}}/base/pants_back_pocket.png",
                             "zIndex": 38,
                             "className": "pants_folded"
                         }
@@ -111,44 +116,45 @@
                     "label": "Walkerson",
                     "priceModifier": 10,
                     "colorCode": "walkerson",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3526_huge_c300.jpg",
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/interior+espalda_abajo+length_long (1).png",
+                            "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
                             "zIndex": 45,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/interior+espalda_arriba.png",
+                            "url": "/assets/suits/{{color}}/base/interior_back_upper.png",
                             "zIndex": 104,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/interior+espalda_arriba (1).png",
+                            "url": "/assets/suits/{{color}}/base/interior_back_upper_alt.png",
                             "zIndex": 105,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/negra.png",
+                            "url": "/assets/suits/{{color}}/base/negra.png",
                             "zIndex": 105,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/interior+sleeves.png",
+                            "url": "/assets/suits/{{color}}/base/interior_sleeves.png",
                             "zIndex": 120,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/length_long+cut_slim.png",
+                            "url": "/assets/suits/{{color}}/base/pants_length.png",
                             "zIndex": 31,
                             "className": "pants_folded"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/front_pocket+diagonal.png",
+                            "url": "/assets/suits/{{color}}/base/pants_front_pocket.png",
                             "zIndex": 33,
                             "className": "pants_folded"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/back_pocket+with_button (1).png",
+                            "url": "/assets/suits/{{color}}/base/pants_back_pocket.png",
                             "zIndex": 38,
                             "className": "pants_folded"
                         }
@@ -164,31 +170,17 @@
                     "id": "style_single_breasted",
                     "label": "Single Breasted",
                     "styleCode": "single_breasted",
+                    "thumbnail": "/icons/single_breasted_1.png",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/neck_single_breasted+buttons_2+lapel_medium+style_lapel_notch.png",
-                            "zIndex": 119,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/bottom_single_breasted+length_long+hemline_open.png",
+                            "url": "/assets/suits/{{color}}/style/single_breasted/bottom.png",
                             "zIndex": 130,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/breast_pocket_classic.png",
+                            "url": "/assets/suits/{{color}}/style/single_breasted/breast_pocket.png",
                             "zIndex": 150,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/hip_pockets_with_flap+fit_slim.png",
-                            "zIndex": 150,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/neck_single_breasted+buttons_2+lapel_medium+style_lapel_notch (1).png",
-                            "zIndex": 170,
                             "className": "man_jacket"
                         }
                     ]
@@ -197,51 +189,57 @@
                     "id": "style_double_breasted_4_button",
                     "label": "Double Breasted 4 Button",
                     "styleCode": "double_breasted_4",
+                    "thumbnail": "/icons/double_breasted_4.png",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/style/double-brested4-button/interior+espalda_abajo+length_long.png",
-                            "zIndex": 119,
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/interior_back.png",
+                            "zIndex": 45,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/style/double-brested4-button/interior+espalda_abajo+length_long.png",
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/interior_back_upper.png",
+                            "zIndex": 104,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/interior_back_upper_alt.png",
+                            "zIndex": 105,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/negra.png",
+                            "zIndex": 105,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/interior_sleeves.png",
+                            "zIndex": 120,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/pants_length.png",
+                            "zIndex": 31,
+                            "className": "pants_folded"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/pants_front_pocket.png",
+                            "zIndex": 33,
+                            "className": "pants_folded"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/pants_back_pocket.png",
+                            "zIndex": 38,
+                            "className": "pants_folded"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/bottom.png",
                             "zIndex": 130,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/style/double-brested4-button/interior+espalda_abajo+length_long.png",
+                            "url": "/assets/suits/{{color}}/style/double_breasted_4/breast_pocket.png",
                             "zIndex": 150,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double-brested4-button/breast_pocket_classic.png",
-                            "zIndex": 150,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double-brested4-button/hip_pockets_with_flap+fit_slim.png",
-                            "zIndex": 180,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double-brested4-button/length_long%2Bcut_slim.png",
-                            "zIndex": 170,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double-brested4-button/front_pocket%2Bdiagonal.png",
-                            "zIndex": 170,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double-brested4-button/bottom_double_breasted+length_long.png",
-                            "zIndex": 170,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double-brested4-button/neck_double_breasted+buttons_4+lapel_medium+style_lapel_notch.png",
-                            "zIndex": 170,
                             "className": "man_jacket"
                         }
                     ]
@@ -250,21 +248,12 @@
                     "id": "style_double_breasted_6_button",
                     "label": "Double Breasted 6 Button",
                     "styleCode": "double_breasted_6",
+                    "thumbnail": "/icons/double_breasted_6.png",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/style/double-brested6-button/hip_pockets_with_flap+fit_slim.png",
-                            "zIndex": 180,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double-brested6-button/bottom_double_breasted+length_long.png",
-                            "zIndex": 170,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/style/double-brested6-button/neck_double_breasted+buttons_6+lapel_medium+style_lapel_notch (1).png",
-                            "zIndex": 170,
+                            "url": "/assets/suits/{{color}}/style/double_breasted_6/bottom.png",
+                            "zIndex": 130,
                             "className": "man_jacket"
                         }
                     ]
@@ -273,31 +262,37 @@
                     "id": "style_mandarin",
                     "label": "Mandarin",
                     "styleCode": "mandarin",
+                    "thumbnail": "/icons/mandarin.png",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/style/mandarin/interior+espalda_arriba_mao (1).png",
-                            "zIndex": 180,
+                            "url": "/assets/suits/{{color}}/style/mandarin/interior_back.png",
+                            "zIndex": 104,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/style/mandarin/neck_mao (1).png",
-                            "zIndex": 180,
+                            "url": "/assets/suits/{{color}}/style/mandarin/interior_back_alt.png",
+                            "zIndex": 105,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/style/mandarin/bottom_mao+length_long.png",
-                            "zIndex": 180,
+                            "url": "/assets/suits/{{color}}/style/mandarin/negra.png",
+                            "zIndex": 105,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/style/mandarin/neck_mao.png",
+                            "url": "/assets/suits/{{color}}/style/mandarin/bottom.png",
+                            "zIndex": 130,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/style/mandarin/neck.png",
                             "zIndex": 170,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/style/mandarin/negra_mao.png",
-                            "zIndex": 170,
+                            "url": "/assets/suits/{{color}}/style/mandarin/neck_alt.png",
+                            "zIndex": 180,
                             "className": "man_jacket"
                         }
                     ]
@@ -311,28 +306,144 @@
                 {
                     "id": "lapel_notch",
                     "label": "Notch Lapel",
+                    "lapelCode": "notch",
+                    "thumbnail": "/icons/notch.png",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "lapel_peak",
+                    "label": "Peak Lapel",
+                    "lapelCode": "peak",
+                    "thumbnail": "/icons/peak.png",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "lapel_width",
+            "label": "Lapel Width",
+            "options": [
+                {
+                    "id": "width_slim",
+                    "label": "Slim",
+                    "widthCode": "slim",
+                    "thumbnail": "/icons/slim.png",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/lapels/neck_{{style}}_lapel_notch.png",
-                            "zIndex": 119,
+                            "url": "/assets/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
+                            "zIndex": 160,
                             "className": "man_jacket"
                         }
                     ]
                 },
                 {
-                    "id": "lapel_peak",
-                    "label": "Peak Lapel",
+                    "id": "width_standard",
+                    "label": "Standard",
+                    "widthCode": "standard",
+                    "thumbnail": "/icons/standard.png",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/suits/{{color}}/lapels/neck_{{style}}_lapel_notch.png",
-                            "zIndex": 119,
+                            "url": "/assets/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
+                            "zIndex": 160,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "width_wide",
+                    "label": "Wide",
+                    "widthCode": "wide",
+                    "thumbnail": "/icons/wide.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
+                            "zIndex": 160,
+                            "className": "man_jacket"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "pocket_style",
+            "label": "Pocket Style",
+            "options": [
+                {
+                    "id": "with_flap",
+                    "label": "With Flap",
+                    "thumbnail": "/icons/flap.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_with_flap.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "double_welted",
+                    "label": "Double Welted",
+                    "thumbnail": "/icons/double_welted.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_double_welt.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "patched",
+                    "label": "Patched",
+                    "thumbnail": "/icons/patched.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_patched.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "with_flap_3",
+                    "label": "With flap x3",
+                    "thumbnail": "/icons/flap.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_with_flap_3.png",
+                            "zIndex": 170,
                             "className": "man_jacket"
                         },
                         {
-                            "url": "/assets/suits/{{color}}/lapels/neck_{{style}}_lapel_notch.png",
-                            "zIndex": 119,
+                            "url": "/assets/suits/{{color}}/pockets/pockets_with_flap_3_top.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "double_welted_3",
+                    "label": "Double Welted x3",
+                    "thumbnail": "/icons/double_welted.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_double_welt_3.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/pockets/pockets_double_welt_3_top.png",
+                            "zIndex": 170,
                             "className": "man_jacket"
                         }
                     ]
