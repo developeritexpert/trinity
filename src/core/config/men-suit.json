@@ -8,7 +8,10 @@
         "lapel_width": "width_standard",
         "pocket_style": "with_flap",
         "internal_lining": "lining_default",
-        "pocket_squares": "without"
+        "pocket_squares": "without",
+        "buttons": "default_button",
+        "lining_style": "lining_default",
+        "lining_fabric": "lf_116_fabric"
     },
     "attributes": [
         {
@@ -550,6 +553,321 @@
                         {
                             "url": "/assets/suits/shared/pocket_squares/siena_lisard.png",
                             "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "buttons",
+            "label": "Buttons",
+            "displayType": "swatch",
+            "options": [
+                {
+                    "id": "default_button",
+                    "label": "Default Button",
+                    "thumbnail": "/icons/default_button.png",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "btn_shiny_gold",
+                    "label": "Shiny Gold",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/50.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/shiny_gold/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_shilver_brass",
+                    "label": "Silver Brass",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/52.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/shilver_brass/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_off_white",
+                    "label": "Off White",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/5.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/off_white/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/buttons/off_white/pants_folded.png",
+                            "zIndex": 39,
+                            "className": "pants_folded"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_antique_brass",
+                    "label": "Antique Brass",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/53.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/antique_brass/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_antrazit",
+                    "label": "Antrazit",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/6.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/antrazit/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/buttons/antrazit/pants_folded.png",
+                            "zIndex": 39,
+                            "className": "pants_folded"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_brown",
+                    "label": "Brown",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/1.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/brown/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/buttons/brown/pants_folded.png",
+                            "zIndex": 39,
+                            "className": "pants_folded"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_dark_grey",
+                    "label": "Dark Grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/2.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/dark_grey/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/buttons/dark_grey/pants_folded.png",
+                            "zIndex": 39,
+                            "className": "pants_folded"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_gold_brass",
+                    "label": "Gold Brass",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/51.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/gold_brass/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_khakhi",
+                    "label": "Khaki",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/4.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/khakhi/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/buttons/khakhi/pants_folded.png",
+                            "zIndex": 39,
+                            "className": "pants_folded"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_navy_blue",
+                    "label": "Navy Blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/3.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/buttons/navy_blue/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/buttons/navy_blue/pants_folded.png",
+                            "zIndex": 39,
+                            "className": "pants_folded"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "lining_style",
+            "label": "Internal Lining",
+            "displayType": "card",
+            "options": [
+                {
+                    "id": "lining_default",
+                    "label": "By Default",
+                    "liningStyleCode": "default",
+                    "thumbnail": "/icons/lining_default.png",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "lining_custom",
+                    "label": "Custom Color",
+                    "liningStyleCode": "",
+                    "thumbnail": "/icons/lining_custom.png",
+                    "priceModifier": 16,
+                    "assets": []
+                },
+                {
+                    "id": "lining_unlined",
+                    "label": "Unlined",
+                    "liningStyleCode": "_unlined",
+                    "thumbnail": "/icons/lining_unlined.png",
+                    "priceModifier": 35,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "lining_fabric",
+            "label": "Lining Color",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "lining_style",
+                "value": [
+                    "lining_custom",
+                    "lining_unlined",
+                    "lining_quilted"
+                ]
+            },
+            "options": [
+                {
+                    "id": "lf_116_fabric",
+                    "label": "Blue Geometric",
+                    "liningColorCode": "116_fabric",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/lining/default/116_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/upper{{lining_style}}.png",
+                            "zIndex": 110,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/lower{{lining_style}}.png",
+                            "zIndex": 111,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "lf_81_fabric",
+                    "label": "Red Paisley",
+                    "liningColorCode": "81_fabric",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/lining/default/81_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/upper{{lining_style}}.png",
+                            "zIndex": 110,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/lower{{lining_style}}.png",
+                            "zIndex": 111,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "lf_96_fabric",
+                    "label": "Cergy",
+                    "liningColorCode": "96_fabric",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/lining/default/96_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/upper{{lining_style}}.png",
+                            "zIndex": 110,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/lower{{lining_style}}.png",
+                            "zIndex": 111,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "lf_173_fabric",
+                    "label": "Hodel",
+                    "liningColorCode": "173_fabric",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/lining/default/173_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/upper{{lining_style}}.png",
+                            "zIndex": 110,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/lower{{lining_style}}.png",
+                            "zIndex": 111,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "lf_236_fabric",
+                    "label": "Kayak Waves",
+                    "liningColorCode": "236_fabric",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/lining/default/236_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/upper{{lining_style}}.png",
+                            "zIndex": 110,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/shared/linings/{{lining_color}}/lower{{lining_style}}.png",
+                            "zIndex": 111,
                             "className": "man_jacket"
                         }
                     ]
