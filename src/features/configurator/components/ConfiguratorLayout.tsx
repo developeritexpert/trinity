@@ -36,17 +36,11 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         if (safeTabIndex > 0) setActiveTab(visibleAttributes[safeTabIndex - 1].id);
     };
 
-    // --- NEW: SMART CLICK HANDLER ---
     const handleOptionClick = (attributeId: string, optionId: string) => {
-        // 1. Set the selection in the state
         setSelection(attributeId, optionId);
-
-        // 2. UX AUTO-ADVANCE: If they pick a custom lining, instantly jump to the lining fabric step!
-        if (attributeId === 'lining_style') {
-            if (optionId === 'lining_custom' || optionId === 'lining_unlined') {
-                setActiveTab('lining_fabric');
-            }
-            // If they pick "lining_default", it does nothing and they remain on the current tab, just as you requested!
+        // SMART UX: Auto-advance for linings
+        if (attributeId === 'lining_style' && (optionId === 'lining_custom' || optionId === 'lining_unlined')) {
+            setActiveTab('lining_fabric');
         }
     };
 
@@ -55,8 +49,31 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         return total + (selectedOpt?.priceModifier || 0);
     }, 0);
 
-    // Safety check: Treat 'fabric' and 'lining_fabric' as swatches automatically
-    const isSwatch = activeAttributeData?.displayType === 'swatch' || activeAttributeData?.id === 'fabric' || activeAttributeData?.id === 'lining_fabric';
+    // --- THE MAGIC 3-MODE LAYOUT ENGINE (FIXED SIZING) ---
+    const attrId = activeAttributeData?.id;
+    let mode = activeAttributeData?.displayType || 'card';
+
+    // Auto-override to protect against JSON mistakes
+    if (['fabric', 'lining_fabric'].includes(attrId)) mode = 'swatch';
+    if (['buttons', 'pocket_squares', 'lapel_style', 'lapel_width', 'pocket_style'].includes(attrId)) mode = 'icon';
+    if (['style', 'lining_style'].includes(attrId)) mode = 'card';
+
+    // 1. Grid Configuration (Added auto-rows-max so rows don't stretch vertically)
+    let gridClass = 'grid-cols-3 gap-4 auto-rows-max';
+    if (mode === 'card') gridClass = 'grid-cols-2 gap-6 auto-rows-max'; // 2 columns for big sketches
+    else if (mode === 'icon') gridClass = 'grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-max'; // 4 columns for small buttons
+
+    // 2. Box Constraints (The fix for giant buttons/cards!)
+    let boxClass = '';
+    if (mode === 'swatch') boxClass = 'aspect-[4/3] p-0 w-full';
+    else if (mode === 'icon') boxClass = 'aspect-square p-2 w-full max-w-[110px] mx-auto'; // Max 110px width/height for buttons!
+    else boxClass = 'h-[170px] p-4 w-full max-w-[220px] mx-auto'; // Fixed 170px height for sketches!
+
+    // 3. Image Sizing inside the Box
+    let imgClass = '';
+    if (mode === 'swatch') imgClass = 'w-full h-full object-cover scale-105 group-hover:scale-100';
+    else if (mode === 'icon') imgClass = 'w-[65%] h-[65%] object-contain mix-blend-multiply opacity-80 group-hover:opacity-100';
+    else imgClass = 'w-[85%] h-[85%] object-contain mix-blend-multiply opacity-80 group-hover:opacity-100';
 
     return (
         <div className="flex flex-col lg:flex-row w-full h-screen bg-white font-sans text-slate-800 overflow-hidden">
@@ -88,7 +105,9 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
                 {/* 2. SCROLLABLE GRID CONTENT */}
                 <div className="flex-1 overflow-y-auto custom-scrollbar px-8 pb-10">
-                    <div className={`grid gap-4 ${isSwatch ? 'grid-cols-3' : 'grid-cols-3'}`}>
+
+                    {/* Applied the dynamic Grid Classes here */}
+                    <div className={`grid ${gridClass}`}>
 
                         {activeAttributeData?.options.map(option => {
                             const isSelected = selections[activeAttributeData.id] === option.id;
@@ -96,14 +115,14 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                             return (
                                 <button
                                     key={option.id}
-                                    // UPDATED: Now points to our smart click handler instead of setSelection directly
                                     onClick={() => handleOptionClick(activeAttributeData.id, option.id)}
+                                    // Applied the dynamic Box Classes here
                                     className={`group relative flex flex-col items-center justify-center overflow-hidden transition-all duration-200 bg-white border rounded-md
-                                        ${isSwatch ? 'aspect-[4/3] p-0' : 'aspect-square p-2'}
+                                        ${boxClass}
                                         ${isSelected ? 'border-slate-800 shadow-md ring-1 ring-slate-800' : 'border-gray-200 hover:border-gray-400'}`}
                                 >
-                                    {/* Info Icon (Hidden if Swatch to keep fabric clean) */}
-                                    {!isSwatch && (
+                                    {/* Info Icon (Hidden if Swatch) */}
+                                    {mode !== 'swatch' && (
                                         <div className="absolute top-2 right-2 z-10 text-gray-300 group-hover:text-gray-500 transition-colors drop-shadow-md">
                                             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -111,33 +130,33 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                                         </div>
                                     )}
 
-                                    {/* White Checkmark when Selected (Sits beautifully on top of dark fabrics) */}
+                                    {/* Bright Blue Checkmark when Selected */}
                                     {isSelected && (
-                                        <div className="absolute top-2 left-2 z-10 bg-white text-slate-900 rounded-full p-0.5 shadow-md">
+                                        <div className="absolute top-2 left-2 z-10 bg-[#0066FF] text-white rounded-full p-0.5 shadow-sm">
                                             <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                             </svg>
                                         </div>
                                     )}
 
-                                    {/* Option Image */}
+                                    {/* Option Image with dynamic image classes */}
                                     {option.thumbnail ? (
                                         <img
                                             src={option.thumbnail}
                                             alt={option.label}
-                                            className={`w-full h-full transition-all duration-300
-                                                ${isSwatch ? 'object-cover scale-105 group-hover:scale-100' : 'object-contain mix-blend-multiply opacity-80 group-hover:opacity-100 p-2'}
-                                            `}
+                                            className={`transition-all duration-300 ${imgClass}`}
                                         />
                                     ) : (
-                                        <span className="text-xs font-medium uppercase tracking-wider text-slate-700 px-2">{option.label}</span>
+                                        <span className="text-[10px] font-medium uppercase tracking-wider text-slate-700 px-2">{option.label}</span>
                                     )}
 
                                     {/* UNIVERSAL DARK HOVER LABEL OVERLAY */}
-                                    <div className={`absolute bottom-0 left-0 w-full bg-[#1e1e1e]/95 backdrop-blur-sm text-white text-[10px] py-2.5 transition-transform duration-300 flex items-center justify-center flex-col z-20
+                                    <div className={`absolute bottom-0 left-0 w-full bg-[#1e1e1e]/95 backdrop-blur-sm text-white py-2 transition-transform duration-300 flex items-center justify-center flex-col z-20
                                         ${isSelected ? 'translate-y-0' : 'translate-y-full group-hover:translate-y-0'}`}>
-                                        <span className="tracking-wider uppercase font-medium">{option.label}</span>
-                                        {option.priceModifier > 0 && <span className="text-[9px] text-gray-400 mt-0.5">(+${option.priceModifier})</span>}
+                                        <span className="text-[9px] leading-tight text-center px-1 tracking-wider uppercase font-medium w-full truncate">
+                                            {option.label}
+                                        </span>
+                                        {option.priceModifier > 0 && <span className="text-[8px] text-gray-400 mt-0.5">(+${option.priceModifier})</span>}
                                     </div>
                                 </button>
                             );
@@ -147,14 +166,10 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
                 {/* 3. FOOTER (Fixed at bottom) */}
                 <div className="px-8 py-6 flex-shrink-0 bg-white flex flex-col items-center z-10 border-t border-gray-100">
-
                     <p className="text-[11px] text-center text-gray-400 mb-6 max-w-sm leading-relaxed">
                         Choose from hundreds of premium options. Can't find exactly what you need? Let us know — we'll take care of it.
                     </p>
-
                     <div className="flex items-center gap-6 w-full justify-center mb-6">
-
-                        {/* PREVIOUS BUTTON (Bracket Style) */}
                         <button
                             onClick={handlePrev}
                             disabled={safeTabIndex === 0}
@@ -167,8 +182,6 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                             <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current transition-all group-hover:w-3 group-hover:h-3"></span>
                             Previous
                         </button>
-
-                        {/* NEXT / ADD TO CART BUTTON (Bracket Style) */}
                         {safeTabIndex < visibleAttributes.length - 1 ? (
                             <button
                                 onClick={handleNext}
@@ -186,8 +199,6 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                             </button>
                         )}
                     </div>
-
-                    {/* BACK TO SHOP BUTTON (Bracket Style) */}
                     <button className="relative group px-6 py-2 mt-2 text-[#0066FF] text-[10px] font-semibold tracking-widest uppercase transition-colors">
                         <span className="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>
                         <span className="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>

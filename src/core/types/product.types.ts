@@ -23,7 +23,7 @@ export interface Option {
 export interface Attribute {
     id: string;
     label: string;
-    displayType?: 'swatch' | 'card';
+    displayType?: 'swatch' | 'card' | 'icon';
     dependsOn?: {                 // <-- ADD THIS BLOCK
         attributeId: string;
         value: string | string[];
