@@ -11,16 +11,23 @@ export interface Option {
     label: string;
     priceModifier: number;
     assets: AssetLayer[];
-    thumbnail?: string;  // <-- ADD THIS for the fabric swatch images
+    thumbnail?: string;
     colorCode?: string;
     styleCode?: string;
     lapelCode?: string;
     widthCode?: string;
+    liningStyleCode?: string; // <-- ADD THIS
+    liningColorCode?: string; // <-- ADD THIS
 }
 
 export interface Attribute {
     id: string;
     label: string;
+    displayType?: 'swatch' | 'card';
+    dependsOn?: {                 // <-- ADD THIS BLOCK
+        attributeId: string;
+        value: string | string[];
+    };
     options: Option[];
 }
 

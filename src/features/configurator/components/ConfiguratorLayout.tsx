@@ -14,60 +14,67 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
     if (!config) return null;
 
-    const currentTabIndex = config.attributes.findIndex(attr => attr.id === activeTab);
-    const activeAttributeData = config.attributes[currentTabIndex];
+    // RULES ENGINE: Filter hidden steps
+    const visibleAttributes = config.attributes.filter(attr => {
+        if (!attr.dependsOn) return true;
+        const dependentValue = selections[attr.dependsOn.attributeId];
+        if (!dependentValue) return false;
+        return Array.isArray(attr.dependsOn.value)
+            ? attr.dependsOn.value.includes(dependentValue)
+            : attr.dependsOn.value === dependentValue;
+    });
+
+    const currentTabIndex = visibleAttributes.findIndex(attr => attr.id === activeTab);
+    const safeTabIndex = currentTabIndex !== -1 ? currentTabIndex : 0;
+    const activeAttributeData = visibleAttributes[safeTabIndex];
 
     const handleNext = () => {
-        if (currentTabIndex < config.attributes.length - 1) {
-            setActiveTab(config.attributes[currentTabIndex + 1].id);
-        }
+        if (safeTabIndex < visibleAttributes.length - 1) setActiveTab(visibleAttributes[safeTabIndex + 1].id);
     };
 
     const handlePrev = () => {
-        if (currentTabIndex > 0) {
-            setActiveTab(config.attributes[currentTabIndex - 1].id);
-        }
+        if (safeTabIndex > 0) setActiveTab(visibleAttributes[safeTabIndex - 1].id);
     };
 
-    const totalPrice = config.basePrice + config.attributes.reduce((total, attr) => {
+    const totalPrice = config.basePrice + visibleAttributes.reduce((total, attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
         return total + (selectedOpt?.priceModifier || 0);
     }, 0);
 
-    // Helper to determine how to display the grid
-    const isFabricStep = activeAttributeData?.id === 'fabric';
+    // Safety check: Treat 'fabric' and 'lining_fabric' as swatches automatically, even if displayType is missing in JSON
+    const isSwatch = activeAttributeData?.displayType === 'swatch' || activeAttributeData?.id === 'fabric' || activeAttributeData?.id === 'lining_fabric';
 
     return (
-        <div className="flex flex-col lg:flex-row w-full h-screen bg-white font-sans text-slate-800">
+        <div className="flex flex-col lg:flex-row w-full h-screen bg-white font-sans text-slate-800 overflow-hidden">
 
             {/* LEFT SIDE: Image Viewer */}
-            <div className="lg:w-[60%] w-full h-[50vh] lg:h-full relative bg-[#f8f9fa] border-r border-gray-200">
+            <div className="lg:w-[60%] w-full h-[50vh] lg:h-full relative bg-[#f4f4f4] border-r border-gray-200">
                 <LayeredViewer />
             </div>
 
             {/* RIGHT SIDE: Tailor UI */}
-            <div className="lg:w-[40%] w-full h-[50vh] lg:h-full flex flex-col px-8 py-10 overflow-y-auto">
+            <div className="lg:w-[40%] w-full h-[50vh] lg:h-full flex flex-col bg-[#fafafa]">
 
-                {/* Header */}
-                <div className="mb-8 flex justify-between items-start">
-                    <div>
-                        <h1 className="text-3xl font-serif text-slate-900 mb-1">Tailor Made Suit for Men</h1>
-                        <p className="text-sm text-gray-400">Customize Your Suit</p>
+                {/* 1. HEADER (Fixed at top) */}
+                <div className="px-8 pt-10 pb-4 flex-shrink-0">
+                    <div className="flex justify-between items-start">
+                        <div>
+                            <h1 className="text-3xl font-serif text-slate-900 mb-1">Tailor Made Suit for Men</h1>
+                            <p className="text-xs text-gray-400 uppercase tracking-widest">Customize Your Suit</p>
+                        </div>
+                        <span className="text-xl font-medium text-[#0066FF]">${totalPrice.toFixed(2)}</span>
                     </div>
-                    <span className="text-xl font-medium text-blue-600">${totalPrice}</span>
+
+                    <div className="text-center mt-8">
+                        <h2 className="text-xl font-serif text-slate-800 tracking-wide">
+                            {activeAttributeData?.label}
+                        </h2>
+                    </div>
                 </div>
 
-                {/* Step Title */}
-                <div className="text-center mb-8">
-                    <h2 className="text-xl font-serif text-slate-800">
-                        {isFabricStep ? 'Premium Fabric' : activeAttributeData?.label}
-                    </h2>
-                    <div className="w-12 h-[2px] bg-gray-300 mx-auto mt-4"></div>
-                </div>
-
-                {/* Dynamic Options Grid */}
-                <div className="flex-1">
-                    <div className={`grid gap-4 ${isFabricStep ? 'grid-cols-4' : 'grid-cols-2'}`}>
+                {/* 2. SCROLLABLE GRID CONTENT */}
+                <div className="flex-1 overflow-y-auto custom-scrollbar px-8 pb-10">
+                    <div className={`grid gap-4 ${isSwatch ? 'grid-cols-3' : 'grid-cols-3'}`}>
 
                         {activeAttributeData?.options.map(option => {
                             const isSelected = selections[activeAttributeData.id] === option.id;
@@ -76,88 +83,101 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                                 <button
                                     key={option.id}
                                     onClick={() => setSelection(activeAttributeData.id, option.id)}
-                                    // We set min-h-[160px] for sketches so they are tall and elegant. 
-                                    // Swatches stay aspect-square.
-                                    className={`relative flex flex-col items-center justify-center overflow-hidden transition-all duration-200 rounded-md border
-                    ${isFabricStep ? 'aspect-square p-0' : 'min-h-[160px] max-h-[200px] p-4'}
-                    ${isSelected
-                                            ? 'ring-2 ring-blue-500 border-blue-500 bg-blue-50/30'
-                                            : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'}`}
+                                    className={`group relative flex flex-col items-center justify-center overflow-hidden transition-all duration-200 bg-white border rounded-md
+                                        ${isSwatch ? 'aspect-[4/3] p-0' : 'aspect-square p-2'}
+                                        ${isSelected ? 'border-slate-800 shadow-md ring-1 ring-slate-800' : 'border-gray-200 hover:border-gray-400'}`}
                                 >
-                                    {option.thumbnail ? (
-                                        <>
-                                            <img
-                                                src={option.thumbnail}
-                                                alt={option.label}
-                                                // object-contain prevents the sketches from stretching!
-                                                className={`w-full ${isFabricStep ? 'h-full object-cover' : 'h-24 object-contain mb-3'}`}
-                                            />
-                                            {/* Show text under the image if it's NOT a fabric */}
-                                            {!isFabricStep && (
-                                                <span className="text-xs font-semibold text-slate-700 text-center uppercase tracking-wide">
-                                                    {option.label}
-                                                </span>
-                                            )}
-                                        </>
-                                    ) : (
-                                        <span className="text-sm font-semibold text-slate-700 text-center uppercase tracking-wide">
-                                            {option.label}
-                                        </span>
-                                    )}
-
-                                    {/* Active Checkmark overlay (Only for Fabric Swatches) */}
-                                    {isFabricStep && isSelected && (
-                                        <div className="absolute inset-0 bg-blue-600/20 flex items-center justify-center">
-                                            <div className="w-5 h-5 bg-blue-600 rounded-full border-2 border-white flex items-center justify-center shadow-sm">
-                                                <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                                </svg>
-                                            </div>
+                                    {/* Info Icon (Hidden if Swatch to keep fabric clean) */}
+                                    {!isSwatch && (
+                                        <div className="absolute top-2 right-2 z-10 text-gray-300 group-hover:text-gray-500 transition-colors drop-shadow-md">
+                                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
                                         </div>
                                     )}
+
+                                    {/* White Checkmark when Selected (Sits beautifully on top of dark fabrics) */}
+                                    {isSelected && (
+                                        <div className="absolute top-2 left-2 z-10 bg-white text-slate-900 rounded-full p-0.5 shadow-md">
+                                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                    )}
+
+                                    {/* Option Image */}
+                                    {option.thumbnail ? (
+                                        <img
+                                            src={option.thumbnail}
+                                            alt={option.label}
+                                            className={`w-full h-full transition-all duration-300
+                                                ${isSwatch ? 'object-cover scale-105 group-hover:scale-100' : 'object-contain mix-blend-multiply opacity-80 group-hover:opacity-100 p-2'}
+                                            `}
+                                        />
+                                    ) : (
+                                        <span className="text-xs font-medium uppercase tracking-wider text-slate-700 px-2">{option.label}</span>
+                                    )}
+
+                                    {/* UNIVERSAL DARK HOVER LABEL OVERLAY */}
+                                    <div className={`absolute bottom-0 left-0 w-full bg-[#1e1e1e]/95 backdrop-blur-sm text-white text-[10px] py-2.5 transition-transform duration-300 flex items-center justify-center flex-col z-20
+                                        ${isSelected ? 'translate-y-0' : 'translate-y-full group-hover:translate-y-0'}`}>
+                                        <span className="tracking-wider uppercase font-medium">{option.label}</span>
+                                        {option.priceModifier > 0 && <span className="text-[9px] text-gray-400 mt-0.5">(+${option.priceModifier})</span>}
+                                    </div>
                                 </button>
                             );
                         })}
                     </div>
                 </div>
 
-                {/* Footer Area: Previous / Next Buttons */}
-                <div className="mt-8 pt-6 border-t border-gray-100 flex flex-col items-center">
+                {/* 3. FOOTER (Fixed at bottom) */}
+                <div className="px-8 py-6 flex-shrink-0 bg-white flex flex-col items-center z-10 border-t border-gray-100">
 
-                    <p className="text-xs text-center text-gray-500 mb-6 max-w-xs leading-relaxed">
-                        Choose from hundreds of premium options. Can't find exactly what you need? Let us know.
+                    <p className="text-[11px] text-center text-gray-400 mb-6 max-w-sm leading-relaxed">
+                        Choose from hundreds of premium options. Can't find exactly what you need? Let us know — we'll take care of it.
                     </p>
 
-                    <div className="flex items-center gap-4 w-full justify-center">
+                    <div className="flex items-center gap-6 w-full justify-center mb-6">
 
-                        {/* Previous (Preview) Button */}
+                        {/* PREVIOUS BUTTON (Bracket Style) */}
                         <button
                             onClick={handlePrev}
-                            disabled={currentTabIndex === 0}
-                            className={`px-8 py-3 text-sm tracking-widest uppercase transition-colors border
-                ${currentTabIndex === 0
-                                    ? 'text-gray-300 border-gray-200 cursor-not-allowed opacity-50'
-                                    : 'text-gray-600 border-gray-300 hover:border-gray-500 hover:text-black'}`}
+                            disabled={safeTabIndex === 0}
+                            className={`relative group px-10 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300
+                                ${safeTabIndex === 0 ? 'text-gray-300 cursor-not-allowed' : 'text-[#0066FF] hover:bg-blue-50/50'}`}
                         >
-                            Prev
+                            <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current transition-all group-hover:w-3 group-hover:h-3"></span>
+                            <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-current transition-all group-hover:w-3 group-hover:h-3"></span>
+                            <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-current transition-all group-hover:w-3 group-hover:h-3"></span>
+                            <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current transition-all group-hover:w-3 group-hover:h-3"></span>
+                            Previous
                         </button>
 
-                        {/* Next / Add to Cart Button */}
-                        {currentTabIndex < config.attributes.length - 1 ? (
+                        {/* NEXT / ADD TO CART BUTTON (Bracket Style) */}
+                        {safeTabIndex < visibleAttributes.length - 1 ? (
                             <button
                                 onClick={handleNext}
-                                className="bg-[#0066FF] text-white px-12 py-3 text-sm tracking-widest uppercase hover:bg-blue-700 transition-colors shadow-md"
+                                className="relative group px-14 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-[#0066FF] text-white hover:bg-blue-700"
                             >
+                                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
+                                <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
+                                <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
+                                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
                                 Next
                             </button>
                         ) : (
-                            <button className="bg-slate-900 text-white px-10 py-3 text-sm tracking-widest uppercase hover:bg-black transition-colors shadow-lg">
+                            <button className="relative group px-10 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-slate-900 text-white hover:bg-black shadow-lg hover:shadow-xl">
                                 Add to Cart
                             </button>
                         )}
                     </div>
 
-                    <button className="mt-8 text-[#0066FF] text-xs uppercase tracking-widest hover:underline transition-colors">
+                    {/* BACK TO SHOP BUTTON (Bracket Style) */}
+                    <button className="relative group px-6 py-2 mt-2 text-[#0066FF] text-[10px] font-semibold tracking-widest uppercase transition-colors">
+                        <span className="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>
+                        <span className="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>
+                        <span className="absolute bottom-0 left-0 w-1.5 h-1.5 border-b border-l border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>
+                        <span className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>
                         Back to Shop
                     </button>
                 </div>
