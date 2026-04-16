@@ -36,12 +36,26 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         if (safeTabIndex > 0) setActiveTab(visibleAttributes[safeTabIndex - 1].id);
     };
 
+    // --- NEW: SMART CLICK HANDLER ---
+    const handleOptionClick = (attributeId: string, optionId: string) => {
+        // 1. Set the selection in the state
+        setSelection(attributeId, optionId);
+
+        // 2. UX AUTO-ADVANCE: If they pick a custom lining, instantly jump to the lining fabric step!
+        if (attributeId === 'lining_style') {
+            if (optionId === 'lining_custom' || optionId === 'lining_unlined') {
+                setActiveTab('lining_fabric');
+            }
+            // If they pick "lining_default", it does nothing and they remain on the current tab, just as you requested!
+        }
+    };
+
     const totalPrice = config.basePrice + visibleAttributes.reduce((total, attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
         return total + (selectedOpt?.priceModifier || 0);
     }, 0);
 
-    // Safety check: Treat 'fabric' and 'lining_fabric' as swatches automatically, even if displayType is missing in JSON
+    // Safety check: Treat 'fabric' and 'lining_fabric' as swatches automatically
     const isSwatch = activeAttributeData?.displayType === 'swatch' || activeAttributeData?.id === 'fabric' || activeAttributeData?.id === 'lining_fabric';
 
     return (
@@ -82,7 +96,8 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                             return (
                                 <button
                                     key={option.id}
-                                    onClick={() => setSelection(activeAttributeData.id, option.id)}
+                                    // UPDATED: Now points to our smart click handler instead of setSelection directly
+                                    onClick={() => handleOptionClick(activeAttributeData.id, option.id)}
                                     className={`group relative flex flex-col items-center justify-center overflow-hidden transition-all duration-200 bg-white border rounded-md
                                         ${isSwatch ? 'aspect-[4/3] p-0' : 'aspect-square p-2'}
                                         ${isSelected ? 'border-slate-800 shadow-md ring-1 ring-slate-800' : 'border-gray-200 hover:border-gray-400'}`}
