@@ -6,7 +6,9 @@
         "style": "style_single_breasted",
         "lapel_style": "lapel_notch",
         "lapel_width": "width_standard",
-        "pocket_style": "with_flap"
+        "pocket_style": "with_flap",
+        "internal_lining": "lining_default",
+        "pocket_squares": "without"
     },
     "attributes": [
         {
@@ -180,7 +182,7 @@
                         },
                         {
                             "url": "/assets/suits/{{color}}/style/single_breasted/breast_pocket.png",
-                            "zIndex": 150,
+                            "zIndex": 170,
                             "className": "man_jacket"
                         }
                     ]
@@ -239,7 +241,7 @@
                         },
                         {
                             "url": "/assets/suits/{{color}}/style/double_breasted_4/breast_pocket.png",
-                            "zIndex": 150,
+                            "zIndex": 170,
                             "className": "man_jacket"
                         }
                     ]
@@ -443,6 +445,110 @@
                         },
                         {
                             "url": "/assets/suits/{{color}}/pockets/pockets_double_welt_3_top.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "pocket_squares",
+            "label": "Pocket Squares",
+            "options": [
+                {
+                    "id": "without",
+                    "label": "Without",
+                    "thumbnail": "/icons/without_pocket.png",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "siena_gideon",
+                    "label": "Siena Gideon",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/768_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_gideon.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "coral_reef",
+                    "label": "Coral Reef",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/811_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/coral_reef.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "daffodil_yellow",
+                    "label": "Daffodil Yellow",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/810_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/daffodil_yellow.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "siena_verona",
+                    "label": "Siena Verona",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/779_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_verona.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "siena_riesi",
+                    "label": "Siena Riesi",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/778_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_riesi.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "siena_parma",
+                    "label": "Siena Parma",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/777_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_parma.png",
+                            "zIndex": 170,
+                            "className": "man_jacket"
+                        }
+                    ]
+                },
+                {
+                    "id": "siena_lisard",
+                    "label": "Siena Lisard",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/776_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_lisard.png",
                             "zIndex": 170,
                             "className": "man_jacket"
                         }
