@@ -1,55 +1,421 @@
 {
     "productId": "men-shirt",
-    "basePrice": 79.00,
+    "basePrice": 99.00,
     "defaultSelections": {
-        "fabric": "fab_poplin_white",
-        "cuffs": "cuff_classic"
+        "fabric": "fab_blue_strip",
+        "collar": "col_cutaway",
+        "cuffs": "cuff_singel_1_button",
+        "fit": "slim_fit",
+        "chest_pocket": "no_pocket"
     },
+    "sharedLayers": [
+        {
+            "url": "/assets/shirts/shared/overlays/sombra.png",
+            "zIndex": 90,
+            "className": "man_shirt"
+        },
+        {
+            "url": "/assets/shirts/shared/overlays/body_overlay_1.png",
+            "zIndex": 101,
+            "className": "man_shirt"
+        },
+        {
+            "url": "/assets/shirts/shared/overlays/body_overlay_2.png",
+            "zIndex": 102,
+            "className": "man_shirt"
+        },
+        {
+            "url": "/assets/shirts/shared/overlays/body_overlay_3.png",
+            "zIndex": 103,
+            "className": "man_shirt"
+        },
+        {
+            "url": "/assets/shirts/shared/overlays/sleeves_overlay_1.png",
+            "zIndex": 111,
+            "className": "man_shirt"
+        },
+        {
+            "url": "/assets/shirts/shared/overlays/sleeves_overlay_2.png",
+            "zIndex": 112,
+            "className": "man_shirt"
+        },
+        {
+            "url": "/assets/shirts/shared/overlays/sleeves_overlay_3.png",
+            "zIndex": 113,
+            "className": "man_shirt"
+        },
+        {
+            "url": "/assets/shirts/shared/overlays/neckline_overlay_1.png",
+            "zIndex": 121,
+            "className": "man_shirt"
+        },
+        {
+            "url": "/assets/shirts/shared/overlays/neckline_overlay_2.png",
+            "zIndex": 122,
+            "className": "man_shirt"
+        },
+        {
+            "url": "/assets/shirts/shared/overlays/neckline_overlay_3.png",
+            "zIndex": 123,
+            "className": "man_shirt"
+        }
+    ],
     "attributes": [
         {
             "id": "fabric",
             "label": "Fabric",
+            "displayType": "swatch",
             "options": [
                 {
-                    "id": "fab_poplin_white",
-                    "label": "White Poplin",
-                    "priceModifier": 0,
+                    "id": "fab_blue_strip",
+                    "label": "Blue Strip",
+                    "colorCode": "blue-strip",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/1871_huge_c300.jpg",
                     "assets": [
                         {
-                            "url": "/assets/shirts/guy_george.png",
-                            "zIndex": 10,
-                            "style": {
-                                "top": "0%",
-                                "left": "15%",
-                                "width": "70%"
-                            }
-                        },
-                        {
-                            "url": "/assets/shirts/sleeves_long+cuffs_classic (1).png",
-                            "zIndex": 20,
-                            "style": {
-                                "top": "0%",
-                                "left": "5%",
-                                "width": "90%"
-                            }
-                        },
-                        {
-                            "url": "/assets/shirts/fit_fit+button_close_standard+inside.png",
-                            "zIndex": 40,
-                            "style": {
-                                "top": "18%",
-                                "left": "20%",
-                                "width": "60%"
-                            }
-                        },
-                        {
-                            "url": "/assets/shirts/encima.png",
+                            "url": "/assets/shirts/{{color}}/base/body.png",
                             "zIndex": 100,
-                            "style": {
-                                "top": "55%",
-                                "left": "25%",
-                                "width": "50%"
-                            }
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/sleeves.png",
+                            "zIndex": 110,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/neckline.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_bengal_stripes",
+                    "label": "Bengal Stripes",
+                    "colorCode": "bengal_stripes",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/1900_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/base/body.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/sleeves.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/neckline.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_linen_cotton",
+                    "label": "Linen-Cotton",
+                    "colorCode": "linen_cotton",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3231_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/base/body.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/sleeves.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/neckline.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_cotton",
+                    "label": "Cotton",
+                    "colorCode": "cotton",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2335_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/base/body.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/sleeves.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/neckline.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_shadow_stripe",
+                    "label": "Shadow Stripe",
+                    "colorCode": "shadow_stripe",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2388_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/base/body.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/sleeves.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/{{color}}/base/neckline.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "collar",
+            "label": "Collar Style",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "col_new_kent",
+                    "label": "New kent",
+                    "collarCode": "new_kent",
+                    "thumbnail": "0059",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/col_new_kent.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "col_cutaway",
+                    "label": "Cutaway",
+                    "collarCode": "cutaway",
+                    "thumbnail": "005A",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/col_cutaway.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "col_kent_collar",
+                    "label": "Kent Collar",
+                    "collarCode": "kent_collar",
+                    "thumbnail": "0061",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/col_kent_collar.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "col_button_down",
+                    "label": "Button Down",
+                    "collarCode": "button_down",
+                    "thumbnail": "0065",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/col_button_down.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "col_rounded_collar",
+                    "label": "Rounded Collar",
+                    "collarCode": "rounded_collar",
+                    "thumbnail": "0064",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/col_rounded_collar.png",
+                            "zIndex": 100,
+                            "className": "man_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cuffs",
+            "label": "Cuff Style",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "cuff_singel_1_button",
+                    "label": "Single cuff 1 button",
+                    "cuffCode": "singel_1_button",
+                    "thumbnail": "0068",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/cuff_singel_1_button.png",
+                            "zIndex": 120,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "cuff_singel_2_button",
+                    "label": "Single cuff 2 buttons",
+                    "cuffCode": "singel_2_button",
+                    "thumbnail": "0069",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/cuff_singel_2_button.png",
+                            "zIndex": 120,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "cuff_two_button_cut",
+                    "label": "Two-button-cut",
+                    "cuffCode": "two_button_cut",
+                    "thumbnail": "006C",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/cuff_two_button_cut.png",
+                            "zIndex": 120,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "cuff_rounded_1_button",
+                    "label": "Rounded 1 button",
+                    "cuffCode": "rounded_1_button",
+                    "thumbnail": "006D",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/cuff_rounded_1_button.png",
+                            "zIndex": 120,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "cuff_double_squared_french",
+                    "label": "Double squared french cuff",
+                    "cuffCode": "double_squared_french",
+                    "thumbnail": "006F",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/cuff_double_squared_french.png",
+                            "zIndex": 120,
+                            "className": "man_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fit",
+            "label": "Fit",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "slim_fit",
+                    "label": "Slim Fit",
+                    "fitCode": "slim_fit",
+                    "thumbnail": "0050",
+                    "assets": []
+                },
+                {
+                    "id": "normal_fit",
+                    "label": "Normal Fit",
+                    "fitCode": "normal_fit",
+                    "thumbnail": "0051",
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "chest_pocket",
+            "label": "Chest Pocket",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_pocket",
+                    "label": "No Pocket",
+                    "fitCode": "no_pocket",
+                    "thumbnail": "0057",
+                    "assets": []
+                },
+                {
+                    "id": "standard_pocket",
+                    "label": "Standard Pocket",
+                    "fitCode": "standard_pocket",
+                    "thumbnail": "0070",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/standard_pocket.png",
+                            "zIndex": 120,
+                            "className": "man_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "placket",
+            "label": "Placket",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "standard_placket",
+                    "label": "Standard Placket",
+                    "fitCode": "standard_placket",
+                    "thumbnail": "0074",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/standard_placket.png",
+                            "zIndex": 110,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "hidden_buttons",
+                    "label": "Hidden Buttons",
+                    "fitCode": "hidden_buttons",
+                    "thumbnail": "0076",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/hidden_buttons.png",
+                            "zIndex": 110,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "french_placket",
+                    "label": "French Placket",
+                    "fitCode": "french_placket",
+                    "thumbnail": "0075",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/{{color}}/style/french_placket.png",
+                            "zIndex": 110,
+                            "className": "man_shirt"
                         }
                     ]
                 }

@@ -1,3 +1,4 @@
+// src/features/configurator/components/LayeredViewer.tsx
 'use client';
 import { useState, useEffect } from 'react';
 import { useConfigStore } from '../store/useConfigStore';
@@ -29,6 +30,10 @@ export const LayeredViewer = () => {
     let activeLiningStyleCode = ''; // Default to empty string for "custom"
     let activeLiningColorCode = '116_fabric';
 
+    // Add these for shirts:
+    let activeCollarCode = 'classic_point';
+    let activeCuffCode = 'classic_cuff';
+
     visibleAttributes.forEach((attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
         if (attr.id === 'fabric' && selectedOpt?.colorCode) activeColorCode = selectedOpt.colorCode;
@@ -37,10 +42,22 @@ export const LayeredViewer = () => {
         if (attr.id === 'lapel_width' && selectedOpt?.widthCode) activeWidthCode = selectedOpt.widthCode;
         if (attr.id === 'lining_style' && selectedOpt?.liningStyleCode !== undefined) activeLiningStyleCode = selectedOpt.liningStyleCode;
         if (attr.id === 'lining_fabric' && selectedOpt?.liningColorCode) activeLiningColorCode = selectedOpt.liningColorCode;
+
+        // Add these for shirts:
+        if (attr.id === 'collar' && selectedOpt?.collarCode) activeCollarCode = selectedOpt.collarCode;
+        if (attr.id === 'cuffs' && selectedOpt?.cuffCode) activeCuffCode = selectedOpt.cuffCode;
     });
 
-    // 3. Gather active assets and REPLACE ALL 6 TOKENS
+    // 3. Gather active assets and REPLACE ALL TOKENS
     const targetAssets: AssetLayer[] = [];
+
+    // Always include sharedLayers first (universal overlays/shadows defined at config level)
+    if (config.sharedLayers) {
+        config.sharedLayers.forEach(asset => {
+            targetAssets.push({ ...asset });
+        });
+    }
+
     visibleAttributes.forEach((attr) => {
         const selectedOptionId = selections[attr.id];
         const option = attr.options.find(opt => opt.id === selectedOptionId);
@@ -53,7 +70,11 @@ export const LayeredViewer = () => {
                     .replace('{{lapel}}', activeLapelCode)
                     .replace('{{width}}', activeWidthCode)
                     .replace('{{lining_style}}', activeLiningStyleCode)
-                    .replace('{{lining_color}}', activeLiningColorCode);
+                    .replace('{{lining_color}}', activeLiningColorCode)
+
+                    // for shirt
+                    .replace('{{collar}}', activeCollarCode)
+                    .replace('{{cuff}}', activeCuffCode);
 
                 targetAssets.push({ ...asset, url: finalUrl });
             });
@@ -100,6 +121,7 @@ export const LayeredViewer = () => {
             </div>
 
             {/* SUIT IMAGES */}
+
             <div className="relative w-full max-w-[550px] aspect-[1/2] transition-all duration-500">
                 {displayedAssets.map((asset, index) => {
                     const customClass = asset.className ? asset.className : "top-0 left-0 w-full h-full object-contain";

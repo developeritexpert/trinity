@@ -9,15 +9,22 @@ export interface AssetLayer {
 export interface Option {
     id: string;
     label: string;
-    priceModifier: number;
+    priceModifier?: number;
     assets: AssetLayer[];
+    /** Path to an image file, OR a 4-char hex unicode code point for CustomIcons font (e.g. "0030") */
     thumbnail?: string;
+    /** Explicit override. Auto-detected from thumbnail if omitted. */
+    thumbnailType?: 'image' | 'icon';
     colorCode?: string;
     styleCode?: string;
     lapelCode?: string;
     widthCode?: string;
-    liningStyleCode?: string; // <-- ADD THIS
-    liningColorCode?: string; // <-- ADD THIS
+    liningStyleCode?: string;
+    liningColorCode?: string;
+
+    // for shirt
+    collarCode?: string;
+    cuffCode?: string;
 }
 
 export interface Attribute {
@@ -36,4 +43,6 @@ export interface ProductConfig {
     basePrice: number;
     attributes: Attribute[];
     defaultSelections: Record<string, string>;
+    /** Assets rendered on every fabric selection — universal overlays/shadows */
+    sharedLayers?: AssetLayer[];
 }
