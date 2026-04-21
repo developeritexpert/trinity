@@ -139,16 +139,34 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                                         </div>
                                     )}
 
-                                    {/* Option Image with dynamic image classes */}
-                                    {option.thumbnail ? (
-                                        <img
-                                            src={option.thumbnail}
-                                            alt={option.label}
-                                            className={`transition-all duration-300 ${imgClass}`}
-                                        />
-                                    ) : (
-                                        <span className="text-[10px] font-medium uppercase tracking-wider text-slate-700 px-2">{option.label}</span>
-                                    )}
+                                    {/* Option Thumbnail: auto-detects image path vs CustomIcons code */}
+                                    {(() => {
+                                        const thumb = option.thumbnail;
+                                        if (!thumb) {
+                                            return <span className="text-[10px] font-medium uppercase tracking-wider text-slate-700 px-2">{option.label}</span>;
+                                        }
+                                        // Icon detection: explicit flag OR 3-4 char hex string with no slash
+                                        const isIcon = option.thumbnailType === 'icon' ||
+                                            (!thumb.includes('/') && /^[0-9a-fA-F]{3,5}$/.test(thumb));
+                                        if (isIcon) {
+                                            return (
+                                                <span
+                                                    style={{ fontFamily: 'CustomIcons', fontSize: '40px', lineHeight: 1 }}
+                                                    className="transition-all duration-300 select-none"
+                                                    aria-hidden="true"
+                                                >
+                                                    {String.fromCodePoint(parseInt(thumb, 16))}
+                                                </span>
+                                            );
+                                        }
+                                        return (
+                                            <img
+                                                src={thumb}
+                                                alt={option.label}
+                                                className={`transition-all duration-300 ${imgClass}`}
+                                            />
+                                        );
+                                    })()}
 
                                     {/* UNIVERSAL DARK HOVER LABEL OVERLAY */}
                                     <div className={`absolute bottom-0 left-0 w-full bg-[#1e1e1e]/95 backdrop-blur-sm text-white py-2 transition-transform duration-300 flex items-center justify-center flex-col z-20
@@ -156,7 +174,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                                         <span className="text-[9px] leading-tight text-center px-1 tracking-wider uppercase font-medium w-full truncate">
                                             {option.label}
                                         </span>
-                                        {option.priceModifier > 0 && <span className="text-[8px] text-gray-400 mt-0.5">(+${option.priceModifier})</span>}
+                                        {(option.priceModifier ?? 0) > 0 && <span className="text-[8px] text-gray-400 mt-0.5">(+${option.priceModifier})</span>}
                                     </div>
                                 </button>
                             );
