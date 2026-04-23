@@ -31,8 +31,10 @@ export const LayeredViewer = () => {
     let activeLiningColorCode = '116_fabric';
 
     // Add these for shirts:
-    let activeCollarCode = 'classic_point';
-    let activeCuffCode = 'classic_cuff';
+    let activeCollarCode = 'cutaway';
+    let activeCuffCode = 'singel_1_button';
+    let activePlacketCode = 'standard';
+    let activePocketCode = 'standard';
 
     visibleAttributes.forEach((attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
@@ -43,9 +45,11 @@ export const LayeredViewer = () => {
         if (attr.id === 'lining_style' && selectedOpt?.liningStyleCode !== undefined) activeLiningStyleCode = selectedOpt.liningStyleCode;
         if (attr.id === 'lining_fabric' && selectedOpt?.liningColorCode) activeLiningColorCode = selectedOpt.liningColorCode;
 
-        // Add these for shirts:
-        if (attr.id === 'collar' && selectedOpt?.collarCode) activeCollarCode = selectedOpt.collarCode;
-        if (attr.id === 'cuffs' && selectedOpt?.cuffCode) activeCuffCode = selectedOpt.cuffCode;
+        // Shirt tokens
+        if (attr.id === 'collar'       && selectedOpt?.collarCode)  activeCollarCode  = selectedOpt.collarCode;
+        if (attr.id === 'cuffs'        && selectedOpt?.cuffCode)    activeCuffCode    = selectedOpt.cuffCode;
+        if (attr.id === 'placket'      && selectedOpt?.placketCode) activePlacketCode = selectedOpt.placketCode;
+        if (attr.id === 'chest_pocket' && selectedOpt?.pocketCode)  activePocketCode  = selectedOpt.pocketCode;
     });
 
     // 3. Gather active assets and REPLACE ALL TOKENS
@@ -74,7 +78,9 @@ export const LayeredViewer = () => {
 
                     // for shirt
                     .replace('{{collar}}', activeCollarCode)
-                    .replace('{{cuff}}', activeCuffCode);
+                    .replace('{{cuff}}', activeCuffCode)
+                    .replace('{{placket}}', activePlacketCode)
+                    .replace('{{pocket}}', activePocketCode);
 
                 targetAssets.push({ ...asset, url: finalUrl });
             });

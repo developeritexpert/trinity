@@ -6,7 +6,8 @@
         "collar": "col_cutaway",
         "cuffs": "cuff_singel_1_button",
         "fit": "slim_fit",
-        "chest_pocket": "no_pocket"
+        "chest_pocket": "no_pocket",
+        "placket": "standard_placket"
     },
     "sharedLayers": [
         {
@@ -190,13 +191,13 @@
             "options": [
                 {
                     "id": "col_new_kent",
-                    "label": "New kent",
+                    "label": "New Kent",
                     "collarCode": "new_kent",
                     "thumbnail": "0059",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/col_new_kent.png",
-                            "zIndex": 100,
+                            "url": "/assets/shirts/{{color}}/style/col_{{collar}}_{{placket}}.png",
+                            "zIndex": 130,
                             "className": "man_shirt"
                         }
                     ]
@@ -208,8 +209,8 @@
                     "thumbnail": "005A",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/col_cutaway.png",
-                            "zIndex": 100,
+                            "url": "/assets/shirts/{{color}}/style/col_{{collar}}_{{placket}}.png",
+                            "zIndex": 130,
                             "className": "man_shirt"
                         }
                     ]
@@ -221,8 +222,8 @@
                     "thumbnail": "0061",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/col_kent_collar.png",
-                            "zIndex": 100,
+                            "url": "/assets/shirts/{{color}}/style/col_{{collar}}_{{placket}}.png",
+                            "zIndex": 130,
                             "className": "man_shirt"
                         }
                     ]
@@ -234,8 +235,8 @@
                     "thumbnail": "0065",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/col_button_down.png",
-                            "zIndex": 100,
+                            "url": "/assets/shirts/{{color}}/style/col_{{collar}}_{{placket}}.png",
+                            "zIndex": 130,
                             "className": "man_shirt"
                         }
                     ]
@@ -247,8 +248,8 @@
                     "thumbnail": "0064",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/col_rounded_collar.png",
-                            "zIndex": 100,
+                            "url": "/assets/shirts/{{color}}/style/col_{{collar}}_{{placket}}.png",
+                            "zIndex": 130,
                             "className": "man_shirt"
                         }
                     ]
@@ -267,7 +268,7 @@
                     "thumbnail": "0068",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/cuff_singel_1_button.png",
+                            "url": "/assets/shirts/{{color}}/style/cuff_{{cuff}}.png",
                             "zIndex": 120,
                             "className": "man_shirt"
                         }
@@ -280,7 +281,7 @@
                     "thumbnail": "0069",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/cuff_singel_2_button.png",
+                            "url": "/assets/shirts/{{color}}/style/cuff_{{cuff}}.png",
                             "zIndex": 120,
                             "className": "man_shirt"
                         }
@@ -293,7 +294,7 @@
                     "thumbnail": "006C",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/cuff_two_button_cut.png",
+                            "url": "/assets/shirts/{{color}}/style/cuff_{{cuff}}.png",
                             "zIndex": 120,
                             "className": "man_shirt"
                         }
@@ -306,7 +307,7 @@
                     "thumbnail": "006D",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/cuff_rounded_1_button.png",
+                            "url": "/assets/shirts/{{color}}/style/cuff_{{cuff}}.png",
                             "zIndex": 120,
                             "className": "man_shirt"
                         }
@@ -319,7 +320,7 @@
                     "thumbnail": "006F",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/cuff_double_squared_french.png",
+                            "url": "/assets/shirts/{{color}}/style/cuff_{{cuff}}.png",
                             "zIndex": 120,
                             "className": "man_shirt"
                         }
@@ -356,19 +357,19 @@
                 {
                     "id": "no_pocket",
                     "label": "No Pocket",
-                    "fitCode": "no_pocket",
+                    "pocketCode": "no_pocket",
                     "thumbnail": "0057",
                     "assets": []
                 },
                 {
                     "id": "standard_pocket",
                     "label": "Standard Pocket",
-                    "fitCode": "standard_pocket",
+                    "pocketCode": "standard",
                     "thumbnail": "0070",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/standard_pocket.png",
-                            "zIndex": 120,
+                            "url": "/assets/shirts/{{color}}/style/pocket_{{pocket}}.png",
+                            "zIndex": 125,
                             "className": "man_shirt"
                         }
                     ]
@@ -383,11 +384,11 @@
                 {
                     "id": "standard_placket",
                     "label": "Standard Placket",
-                    "fitCode": "standard_placket",
+                    "placketCode": "standard",
                     "thumbnail": "0074",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/standard_placket.png",
+                            "url": "/assets/shirts/{{color}}/style/placket_{{placket}}.png",
                             "zIndex": 110,
                             "className": "man_shirt"
                         }
@@ -396,11 +397,11 @@
                 {
                     "id": "hidden_buttons",
                     "label": "Hidden Buttons",
-                    "fitCode": "hidden_buttons",
+                    "placketCode": "hidden",
                     "thumbnail": "0076",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/hidden_buttons.png",
+                            "url": "/assets/shirts/{{color}}/style/placket_{{placket}}.png",
                             "zIndex": 110,
                             "className": "man_shirt"
                         }
@@ -409,11 +410,11 @@
                 {
                     "id": "french_placket",
                     "label": "French Placket",
-                    "fitCode": "french_placket",
+                    "placketCode": "french",
                     "thumbnail": "0075",
                     "assets": [
                         {
-                            "url": "/assets/shirts/{{color}}/style/french_placket.png",
+                            "url": "/assets/shirts/{{color}}/style/placket_{{placket}}.png",
                             "zIndex": 110,
                             "className": "man_shirt"
                         }

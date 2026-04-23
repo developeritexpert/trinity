@@ -25,6 +25,9 @@ export interface Option {
     // for shirt
     collarCode?: string;
     cuffCode?: string;
+    placketCode?: string;
+    fitCode?: string;
+    pocketCode?: string;
 }
 
 export interface Attribute {
