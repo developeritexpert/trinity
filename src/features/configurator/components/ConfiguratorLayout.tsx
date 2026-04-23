@@ -38,9 +38,31 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
     const handleOptionClick = (attributeId: string, optionId: string) => {
         setSelection(attributeId, optionId);
-        // SMART UX: Auto-advance for linings
-        if (attributeId === 'lining_style' && (optionId === 'lining_custom' || optionId === 'lining_unlined')) {
-            setActiveTab('lining_fabric');
+
+        // SMART UX: Generic auto-advance — compute what visibleAttributes will look like
+        // AFTER this selection is applied, then check if the next step depends on it.
+        const futureSelections = { ...selections, [attributeId]: optionId };
+        const futureVisible = config.attributes.filter(attr => {
+            if (!attr.dependsOn) return true;
+            const depVal = futureSelections[attr.dependsOn.attributeId];
+            if (!depVal) return false;
+            return Array.isArray(attr.dependsOn.value)
+                ? attr.dependsOn.value.includes(depVal)
+                : attr.dependsOn.value === depVal;
+        });
+
+        const currentIndex = futureVisible.findIndex(attr => attr.id === attributeId);
+        if (currentIndex !== -1 && currentIndex < futureVisible.length - 1) {
+            const nextAttr = futureVisible[currentIndex + 1];
+            const dep = nextAttr?.dependsOn;
+            if (dep && dep.attributeId === attributeId) {
+                const matches = Array.isArray(dep.value)
+                    ? dep.value.includes(optionId)
+                    : dep.value === optionId;
+                if (matches) {
+                    setActiveTab(nextAttr.id);
+                }
+            }
         }
     };
 

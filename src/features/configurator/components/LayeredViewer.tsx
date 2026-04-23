@@ -33,6 +33,8 @@ export const LayeredViewer = () => {
     // Add these for shirts:
     let activeCollarCode = 'classic_point';
     let activeCuffCode = 'classic_cuff';
+    let activeContrastedCollarCode = ''; // cc_all or cc_inner_fabric
+    let activeCollarFabricCode = '';     // e.g. 699, 2738, etc.
 
     visibleAttributes.forEach((attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
@@ -46,6 +48,8 @@ export const LayeredViewer = () => {
         // Add these for shirts:
         if (attr.id === 'collar' && selectedOpt?.collarCode) activeCollarCode = selectedOpt.collarCode;
         if (attr.id === 'cuffs' && selectedOpt?.cuffCode) activeCuffCode = selectedOpt.cuffCode;
+        if (attr.id === 'contrasted_collar' && selectedOpt?.contrastedCollarCode !== undefined) activeContrastedCollarCode = selectedOpt.contrastedCollarCode;
+        if (attr.id === 'contrasted_collar_fabric' && selectedOpt?.collarFabricCode) activeCollarFabricCode = selectedOpt.collarFabricCode;
     });
 
     // 3. Gather active assets and REPLACE ALL TOKENS
@@ -74,7 +78,9 @@ export const LayeredViewer = () => {
 
                     // for shirt
                     .replace('{{collar}}', activeCollarCode)
-                    .replace('{{cuff}}', activeCuffCode);
+                    .replace('{{cuff}}', activeCuffCode)
+                    .replace('{{contrasted_collar}}', activeContrastedCollarCode)
+                    .replace('{{collar_fabric}}', activeCollarFabricCode);
 
                 targetAssets.push({ ...asset, url: finalUrl });
             });
