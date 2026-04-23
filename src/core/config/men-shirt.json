@@ -405,7 +405,7 @@
                 {
                     "id": "cc_all",
                     "label": "All",
-                    "contrastedCollarCode": "coller_all",
+                    "contrastedCollarCode": "collar_all",
                     "thumbnail": "0042",
                     "priceModifier": 7,
                     "assets": []
