@@ -27,6 +27,8 @@ export interface Option {
     cuffCode?: string;
     contrastedCollarCode?: string;
     collarFabricCode?: string;
+    contrastedCuffCode?: string;
+    cuffFabricCode?: string;
 }
 
 export interface Attribute {

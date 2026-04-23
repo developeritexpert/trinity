@@ -275,9 +275,9 @@
             "displayType": "icon",
             "options": [
                 {
-                    "id": "cuff_singel_1_button",
+                    "id": "cuff_single_1_button",
                     "label": "Single cuff 1 button",
-                    "cuffCode": "singel_1_button",
+                    "cuffCode": "single_1_button",
                     "thumbnail": "0068",
                     "assets": [
                         {
@@ -288,9 +288,9 @@
                     ]
                 },
                 {
-                    "id": "cuff_singel_2_button",
+                    "id": "cuff_single_2_button",
                     "label": "Single cuff 2 buttons",
-                    "cuffCode": "singel_2_button",
+                    "cuffCode": "single_2_button",
                     "thumbnail": "0069",
                     "assets": [
                         {
@@ -553,6 +553,177 @@
                     "assets": [
                         {
                             "url": "/assets/shirts/shared/contrasted_collar/{{collar_fabric}}/{{collar}}_{{contrasted_collar}}.png",
+                            "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "contrasted_cuff",
+            "label": "Contrasted Cuff",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "cc_by_default",
+                    "label": "By Default",
+                    "contrastedCuffCode": "",
+                    "thumbnail": "0068",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "cc_all",
+                    "label": "All",
+                    "contrastedCuffCode": "cuff_all",
+                    "thumbnail": "0045",
+                    "priceModifier": 7,
+                    "assets": []
+                },
+                {
+                    "id": "cc_inner_fabric",
+                    "label": "Inner Fabric",
+                    "contrastedCuffCode": "cuff_inner",
+                    "thumbnail": "0044",
+                    "priceModifier": 8,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "cuff_fabric",
+            "label": "Cuff Fabric",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "contrasted_cuff",
+                "value": [
+                    "cc_all",
+                    "cc_inner_fabric"
+                ]
+            },
+            "options": [
+                {
+                    "id": "ccf_699",
+                    "label": "Mayfield",
+                    "cuffFabricCode": "ccf_699",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/699_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "ccf_2738",
+                    "label": "Bort",
+                    "cuffFabricCode": "ccf_2738",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2738_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "ccf_3742",
+                    "label": "Kaliman",
+                    "cuffFabricCode": "ccf_3742",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3742_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "ccf_3747",
+                    "label": "Curtis",
+                    "cuffFabricCode": "ccf_3747",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3747_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "ccf_3812",
+                    "label": "Shoreditch",
+                    "cuffFabricCode": "ccf_3812",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3812_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "ccf_3813",
+                    "label": "Stratford",
+                    "cuffFabricCode": "ccf_3813",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3813_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "ccf_3783",
+                    "label": "Walthamstow",
+                    "cuffFabricCode": "ccf_3783",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3783_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "ccf_3811",
+                    "label": "Hampsted",
+                    "cuffFabricCode": "ccf_3811",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3811_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "ccf_1769",
+                    "label": "Melville",
+                    "cuffFabricCode": "ccf_1769",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/1769_normal.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
