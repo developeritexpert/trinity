@@ -611,7 +611,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
@@ -625,7 +625,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
@@ -639,7 +639,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
@@ -653,7 +653,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
@@ -667,7 +667,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
@@ -681,7 +681,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
@@ -695,7 +695,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
@@ -709,7 +709,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
@@ -723,7 +723,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/shirts/shared/contrasted_cuff/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
+                            "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
                             "className": "man_shirt"
                         }
