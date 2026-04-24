@@ -4,7 +4,7 @@
     "defaultSelections": {
         "fabric": "fab_blue_strip",
         "collar": "col_cutaway",
-        "cuffs": "cuff_singel_1_button",
+        "cuffs": "cuff_single_1_button",
         "fit": "slim_fit",
         "chest_pocket": "no_pocket",
         "contrasted_collar": "cc_by_default"
@@ -82,11 +82,6 @@
                             "url": "/assets/shirts/{{color}}/base/sleeves.png",
                             "zIndex": 110,
                             "className": "man_shirt"
-                        },
-                        {
-                            "url": "/assets/shirts/{{color}}/base/neckline.png",
-                            "zIndex": 100,
-                            "className": "man_shirt"
                         }
                     ]
                 },
@@ -103,11 +98,6 @@
                         },
                         {
                             "url": "/assets/shirts/{{color}}/base/sleeves.png",
-                            "zIndex": 100,
-                            "className": "man_shirt"
-                        },
-                        {
-                            "url": "/assets/shirts/{{color}}/base/neckline.png",
                             "zIndex": 100,
                             "className": "man_shirt"
                         }
@@ -128,11 +118,6 @@
                             "url": "/assets/shirts/{{color}}/base/sleeves.png",
                             "zIndex": 100,
                             "className": "man_shirt"
-                        },
-                        {
-                            "url": "/assets/shirts/{{color}}/base/neckline.png",
-                            "zIndex": 100,
-                            "className": "man_shirt"
                         }
                     ]
                 },
@@ -151,11 +136,6 @@
                             "url": "/assets/shirts/{{color}}/base/sleeves.png",
                             "zIndex": 100,
                             "className": "man_shirt"
-                        },
-                        {
-                            "url": "/assets/shirts/{{color}}/base/neckline.png",
-                            "zIndex": 100,
-                            "className": "man_shirt"
                         }
                     ]
                 },
@@ -172,11 +152,6 @@
                         },
                         {
                             "url": "/assets/shirts/{{color}}/base/sleeves.png",
-                            "zIndex": 100,
-                            "className": "man_shirt"
-                        },
-                        {
-                            "url": "/assets/shirts/{{color}}/base/neckline.png",
                             "zIndex": 100,
                             "className": "man_shirt"
                         }
@@ -210,7 +185,7 @@
                     "assets": [
                         {
                             "url": "/assets/shirts/{{color}}/style/col_cutaway.png",
-                            "zIndex": 100,
+                            "zIndex": 90,
                             "className": "man_shirt"
                         }
                     ]

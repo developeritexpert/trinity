@@ -31,8 +31,8 @@ export const LayeredViewer = () => {
     let activeLiningColorCode = '116_fabric';
 
     // Add these for shirts:
-    let activeCollarCode = 'classic_point';
-    let activeCuffCode = 'classic_cuff';
+    let activeCollarCode = 'cutaway';
+    let activeCuffCode = 'single_1_button';
     let activeContrastedCollarCode = ''; // cc_all or cc_inner_fabric
     let activeCollarFabricCode = '';     // e.g. 699, 2738, etc.
     let activeContrastedCuffCode = '';   // cuff_all or cuff_inner
