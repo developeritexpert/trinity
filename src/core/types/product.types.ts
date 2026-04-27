@@ -29,6 +29,8 @@ export interface Option {
     collarFabricCode?: string;
     contrastedCuffCode?: string;
     cuffFabricCode?: string;
+    /** Hex color for thread/hole swatch display (e.g. '#384357') */
+    swatchColor?: string;
 }
 
 export interface Attribute {
