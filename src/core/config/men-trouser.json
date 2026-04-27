@@ -21,6 +21,21 @@
             "url": "/assets/trousers/shared/overlays/zapatos_new.png",
             "zIndex": 90,
             "className": "trouser_view_layer trouser_shoes"
+        },
+        {
+            "url": "/assets/trousers/shared/overlays/length_long+cut_slim (1).png",
+            "zIndex": 90,
+            "className": "trouser_view_layer trouser_bottom"
+        },
+        {
+            "url": "/assets/trousers/shared/overlays/fastening_moved+visible_button (1).png",
+            "zIndex": 100,
+            "className": "trouser_view_layer trouser_bottom"
+        },
+        {
+            "url": "/assets/trousers/shared/overlays/fastening_moved+visible_button (2).png",
+            "zIndex": 100,
+            "className": "trouser_view_layer trouser_bottom"
         }
     ],
     "attributes": [
@@ -33,7 +48,7 @@
                     "id": "fab_navy_blue",
                     "label": "Navy Blue",
                     "colorCode": "navy_blue",
-                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/1871_huge_c300.jpg",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg",
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
@@ -41,32 +56,409 @@
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
-                            "url": "/assets/trousers/{{color}}/base/fastening_moved+visible_button (1).png",
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
                             "zIndex": 100,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
-                            "url": "/assets/trousers/{{color}}/base/fastening_moved+visible_button (2).png",
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
                             "zIndex": 100,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
-                            "url": "/assets/trousers/{{color}}/base/fastening_moved+visible_button.png",
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_iron_gray",
+                    "label": "Iron Gray",
+                    "colorCode": "iron_gray",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/141_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
                             "zIndex": 100,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
-                            "url": "/assets/trousers/{{color}}/base/front_pocket+diagonal.png",
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
                             "zIndex": 100,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
-                            "url": "/assets/trousers/{{color}}/base/length_long+cut_slim (1).png",
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
                             "zIndex": 100,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
-                            "url": "/assets/trousers/{{color}}/base/length_long+cut_slim.png",
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_shiny",
+                    "label": "Shiny",
+                    "colorCode": "shiny",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3526_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_melange",
+                    "label": "Melange",
+                    "colorCode": "melange",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2197_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_twill",
+                    "label": "Twill",
+                    "colorCode": "twill",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2192_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_cobalt_blue",
+                    "label": "Cobalt Blue",
+                    "colorCode": "cobalt_blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2311_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "fab_dark_blue",
+                    "label": "Dark Blue",
+                    "colorCode": "dark_blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3879_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "sheen",
+                    "label": "Sheen",
+                    "colorCode": "sheen",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3880_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "busmere",
+                    "label": "Busmere",
+                    "colorCode": "busmere",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3162_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "gabriel",
+                    "label": "Gabriel",
+                    "colorCode": "gabriel",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3338_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "welch",
+                    "label": "Welch",
+                    "colorCode": "welch",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2078_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "delli_colli",
+                    "label": "Delli Colli",
+                    "colorCode": "delli_colli",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2251_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "mcpherson",
+                    "label": "Mcpherson",
+                    "colorCode": "mcpherson",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2845_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "belleville",
+                    "label": "Belleville",
+                    "colorCode": "belleville",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2284_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "stamper",
+                    "label": "Stamper",
+                    "colorCode": "stamper",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2682_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
                             "zIndex": 100,
                             "className": "trouser_view_layer trouser_bottom"
                         }
