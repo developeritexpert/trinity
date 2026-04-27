@@ -119,6 +119,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                         const isSelected = selections[attrId] === option.id;
                         const thumb = option.thumbnail;
                         const isIcon = option.thumbnailType === 'icon' || (!thumb?.includes('/') && /^[0-9a-fA-F]{3,5}$/.test(thumb || ''));
+                        const isColorSwatch = !!option.swatchColor;
 
                         return (
                             <button
@@ -142,7 +143,18 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                                         </svg>
                                     </div>
                                 )}
-                                {!thumb ? (
+                                {isColorSwatch ? (
+                                    <div
+                                        className="absolute inset-0 w-full h-full"
+                                        style={{
+                                            backgroundColor: option.swatchColor,
+                                            backgroundImage: `url(${thumb})`,
+                                            backgroundRepeat: 'no-repeat',
+                                            backgroundSize: 'cover',
+                                            backgroundPosition: 'center',
+                                        }}
+                                    />
+                                ) : !thumb ? (
                                     <span className="text-[10px] font-medium uppercase tracking-wider text-slate-700 px-2">{option.label}</span>
                                 ) : isIcon ? (
                                     <span
