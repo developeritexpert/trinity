@@ -56,6 +56,9 @@ export const LayeredViewer = () => {
         if (attr.id === 'cuff_fabric' && selectedOpt?.cuffFabricCode) activeCuffFabricCode = selectedOpt.cuffFabricCode;
     });
 
+    // Derived token: only button_down and new_kent have holes/threads images
+    const activeHoleCollarCode = activeCollarCode === 'button_down' ? 'button_down' : 'new_kent';
+
     // 3. Gather active assets and REPLACE ALL TOKENS
     const targetAssets: AssetLayer[] = [];
 
@@ -86,7 +89,8 @@ export const LayeredViewer = () => {
                     .replace('{{contrasted_collar}}', activeContrastedCollarCode)
                     .replace('{{collar_fabric}}', activeCollarFabricCode)
                     .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
-                    .replace('{{cuff_fabric}}', activeCuffFabricCode);
+                    .replace('{{cuff_fabric}}', activeCuffFabricCode)
+                    .replace('{{hole_collar}}', activeHoleCollarCode);
 
                 targetAssets.push({ ...asset, url: finalUrl });
             });

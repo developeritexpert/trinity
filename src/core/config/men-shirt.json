@@ -1,13 +1,18 @@
 {
     "productId": "men-shirt",
-    "basePrice": 99.00,
+    "basePrice": 99,
     "defaultSelections": {
         "fabric": "fab_blue_strip",
         "collar": "col_cutaway",
         "cuffs": "cuff_single_1_button",
         "fit": "slim_fit",
         "chest_pocket": "no_pocket",
-        "contrasted_collar": "cc_by_default"
+        "contrasted_collar": "cc_by_default",
+        "contrasted_button_hole_stitch": "cbhs_default",
+        "button_holes_all": "bh_white",
+        "button_holes_cuffs": "bh_white",
+        "button_threads_all": "bt_white",
+        "button_threads_cuffs": "bt_white"
     },
     "sharedLayers": [
         {
@@ -700,6 +705,1158 @@
                         {
                             "url": "/assets/shirts/shared/contrasted_cuffs/{{cuff_fabric}}/{{cuff}}_{{contrasted_cuff}}.png",
                             "zIndex": 130,
+                            "className": "man_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "contrasted_button_hole_stitch",
+            "label": "Contrasting button hole/stitch",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "cbhs_default",
+                    "label": "By default",
+                    "thumbnail": "004A",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "cbhs_all",
+                    "label": "All (+ $5)",
+                    "thumbnail": "0052",
+                    "priceModifier": 5,
+                    "assets": []
+                },
+                {
+                    "id": "cbhs_cuffs",
+                    "label": "Only cuffs (+ $5)",
+                    "thumbnail": "0068",
+                    "priceModifier": 5,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "button_holes_all",
+            "label": "BUTTON HOLES",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "contrasted_button_hole_stitch",
+                "value": "cbhs_all"
+            },
+            "options": [
+                {
+                    "id": "bh_white",
+                    "label": "White",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#ffffff",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_40_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_40_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_40_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_black",
+                    "label": "Black",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#000000",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_50_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_50_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_50_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_navy",
+                    "label": "Navy",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#384357",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_48_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_48_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_48_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_grey",
+                    "label": "Grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#e1d09d",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_53_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_53_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_53_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_beige",
+                    "label": "Beige",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#e0d8c7",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_41_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_41_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_41_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_tan",
+                    "label": "Tan",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#b19779",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_42_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_42_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_42_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_terracotta",
+                    "label": "Terracotta",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#bb6952",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_43_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_43_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_43_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_red",
+                    "label": "Red",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#a84340",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_44_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_44_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_44_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_pink",
+                    "label": "Pink",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#d19f9f",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_54_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_54_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_54_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_purple",
+                    "label": "Purple",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#4d2e44",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_49_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_49_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_49_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_dark_brown",
+                    "label": "Dark Brown",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#4a362a",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_51_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_51_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_51_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_charcoal",
+                    "label": "Charcoal",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#6e605a",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_52_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_52_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_52_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_olive",
+                    "label": "Olive",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#606257",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_45_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_45_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_45_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_sage",
+                    "label": "Sage",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#b5bcae",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_46_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_46_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_46_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_steel_blue",
+                    "label": "Steel Blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#8c99ac",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_47_body_hole.png",
+                            "zIndex": 140,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_47_neck_hole.png",
+                            "zIndex": 141,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_47_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "button_holes_cuffs",
+            "label": "BUTTON HOLES",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "contrasted_button_hole_stitch",
+                "value": "cbhs_cuffs"
+            },
+            "options": [
+                {
+                    "id": "bh_white",
+                    "label": "White",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#ffffff",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_40_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_black",
+                    "label": "Black",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#000000",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_50_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_navy",
+                    "label": "Navy",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#384357",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_48_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_grey",
+                    "label": "Grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#e1d09d",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_53_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_beige",
+                    "label": "Beige",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#e0d8c7",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_41_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_tan",
+                    "label": "Tan",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#b19779",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_42_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_terracotta",
+                    "label": "Terracotta",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#bb6952",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_43_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_red",
+                    "label": "Red",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#a84340",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_44_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_pink",
+                    "label": "Pink",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#d19f9f",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_54_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_purple",
+                    "label": "Purple",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#4d2e44",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_49_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_dark_brown",
+                    "label": "Dark Brown",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#4a362a",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_51_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_charcoal",
+                    "label": "Charcoal",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#6e605a",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_52_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_olive",
+                    "label": "Olive",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#606257",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_45_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_sage",
+                    "label": "Sage",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#b5bcae",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_46_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bh_steel_blue",
+                    "label": "Steel Blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#8c99ac",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_47_sleeves_hole.png",
+                            "zIndex": 142,
+                            "className": "man_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "button_threads_all",
+            "label": "BUTTON THREADS",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "contrasted_button_hole_stitch",
+                "value": "cbhs_all"
+            },
+            "options": [
+                {
+                    "id": "bt_white",
+                    "label": "White",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#ffffff",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_40_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_40_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_40_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_black",
+                    "label": "Black",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#000000",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_50_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_50_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_50_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_navy",
+                    "label": "Navy",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#384357",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_48_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_48_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_48_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_grey",
+                    "label": "Grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#e1d09d",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_53_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_53_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_53_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_beige",
+                    "label": "Beige",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#e0d8c7",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_41_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_41_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_41_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_tan",
+                    "label": "Tan",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#b19779",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_42_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_42_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_42_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_terracotta",
+                    "label": "Terracotta",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#bb6952",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_43_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_43_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_43_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_red",
+                    "label": "Red",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#a84340",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_44_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_44_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_44_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_pink",
+                    "label": "Pink",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#d19f9f",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_54_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_54_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_54_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_purple",
+                    "label": "Purple",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#4d2e44",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_49_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_49_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_49_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_dark_brown",
+                    "label": "Dark Brown",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#4a362a",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_51_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_51_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_51_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_charcoal",
+                    "label": "Charcoal",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#6e605a",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_52_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_52_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_52_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_olive",
+                    "label": "Olive",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#606257",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_45_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_45_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_45_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_sage",
+                    "label": "Sage",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#b5bcae",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_46_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_46_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_46_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_steel_blue",
+                    "label": "Steel Blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#8c99ac",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_47_body_thread.png",
+                            "zIndex": 143,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_47_neck_thread.png",
+                            "zIndex": 144,
+                            "className": "man_shirt"
+                        },
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_47_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "button_threads_cuffs",
+            "label": "BUTTON THREADS",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "contrasted_button_hole_stitch",
+                "value": "cbhs_cuffs"
+            },
+            "options": [
+                {
+                    "id": "bt_white",
+                    "label": "White",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#ffffff",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_40_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_black",
+                    "label": "Black",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#000000",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_50_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_navy",
+                    "label": "Navy",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#384357",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_48_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_grey",
+                    "label": "Grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#e1d09d",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_53_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_beige",
+                    "label": "Beige",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#e0d8c7",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_41_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_tan",
+                    "label": "Tan",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#b19779",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_42_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_terracotta",
+                    "label": "Terracotta",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#bb6952",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_43_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_red",
+                    "label": "Red",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#a84340",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_44_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_pink",
+                    "label": "Pink",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#d19f9f",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_54_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_purple",
+                    "label": "Purple",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#4d2e44",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_49_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_dark_brown",
+                    "label": "Dark Brown",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#4a362a",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_51_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_charcoal",
+                    "label": "Charcoal",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#6e605a",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_52_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_olive",
+                    "label": "Olive",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#606257",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_45_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_sage",
+                    "label": "Sage",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#b5bcae",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_46_sleeves_thread.png",
+                            "zIndex": 145,
+                            "className": "man_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bt_steel_blue",
+                    "label": "Steel Blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/threads/shadow_extras_thread.png",
+                    "swatchColor": "#8c99ac",
+                    "assets": [
+                        {
+                            "url": "/assets/shirts/shared/holes_threads/{{hole_collar}}_47_sleeves_thread.png",
+                            "zIndex": 145,
                             "className": "man_shirt"
                         }
                     ]
