@@ -1,0 +1,78 @@
+{
+    "productId": "men-trouser",
+    "basePrice": 109,
+    "defaultSelections": {
+        "fabric": "fab_navy_blue",
+        "fit": "fit_regular",
+        "style": "style_standard"
+    },
+    "sharedLayers": [
+        {
+            "url": "/assets/trousers/shared/overlays/guy_george.png",
+            "zIndex": 90,
+            "className": "trouser_view_layer trouser_body"
+        },
+        {
+            "url": "/assets/trousers/shared/overlays/shirt_to_pants.png",
+            "zIndex": 90,
+            "className": "trouser_view_layer trouser_shirt"
+        },
+        {
+            "url": "/assets/trousers/shared/overlays/zapatos_new.png",
+            "zIndex": 90,
+            "className": "trouser_view_layer trouser_shoes"
+        }
+    ],
+    "attributes": [
+        {
+            "id": "fabric",
+            "label": "Fabric",
+            "displayType": "swatch",
+            "options": [
+                {
+                    "id": "fab_navy_blue",
+                    "label": "Navy Blue",
+                    "colorCode": "navy_blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/1871_huge_c300.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/belt_loop.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/fastening_moved+visible_button (1).png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/fastening_moved+visible_button (2).png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/fastening_moved+visible_button.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket+diagonal.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long+cut_slim (1).png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long+cut_slim.png",
+                            "zIndex": 100,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
