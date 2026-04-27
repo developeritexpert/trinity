@@ -2,10 +2,12 @@
 import { ProductConfig } from '../types/product.types';
 import menShirtConfig from './men-shirt.json';
 import menSuitConfig from './men-suit.json';
+import menTrouserConfig from './men-trouser.json';
 
 const configRegistry: Record<string, any> = {
     'men-shirt': menShirtConfig,
     'men-suit': menSuitConfig,
+    'men-trouser': menTrouserConfig,
 };
 
 // Added `?` to make them optional, and added an if-statement check

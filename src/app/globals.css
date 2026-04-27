@@ -82,3 +82,26 @@ body {
   height: 90%;
   object-fit: contain;
 }
+
+
+
+/* Men trouser style layout css */
+.trouser_view_layer {
+  object-fit: contain;
+  width: 68%;
+  height: 100%;
+  margin-top: -10rem;
+  top: 0;
+  left: 0;
+}
+
+.trouser_bottom {
+  top: 10rem;
+}
+
+.trouser_shirt {
+  width: 372px !important;
+  height: 103% !important;
+  top: -10rem !important;
+  left: 1px !important;
+}
