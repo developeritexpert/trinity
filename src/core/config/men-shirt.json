@@ -8,6 +8,7 @@
         "fit": "slim_fit",
         "chest_pocket": "no_pocket",
         "contrasted_collar": "cc_by_default",
+        "contrasted_cuff": "cc_by_default",
         "contrasted_button_hole_stitch": "cbhs_default",
         "button_holes_all": "bh_white",
         "button_holes_cuffs": "bh_white",
@@ -548,7 +549,7 @@
                 {
                     "id": "cc_by_default",
                     "label": "By Default",
-                    "contrastedCuffCode": "",
+                    "contrastedCuffCode": "cc_by_default",
                     "thumbnail": "0068",
                     "priceModifier": 0,
                     "assets": []
