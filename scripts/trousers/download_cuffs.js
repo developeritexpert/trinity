@@ -40,13 +40,10 @@ const HEADERS = {
     "Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
 };
 
-// Fastening styles
-const fasteningStyles = {
-    fastening_center: "fastening_center%2Bvisible_button.png",
-    fastening_no_button: "fastening_center%2Bhidden_button.png",
-    fastening_off_centered: "fastening_moved%2Bvisible_button.png",
-    fastening_off_centered_buttonless:
-        "fastening_moved%2Bhidden_button.png",
+// Pant cuff styles
+const cuffStyles = {
+    slim_fit_cuff: "cuffs%2Blength_long%2Bcut_slim.png",
+    normal_fit_cuff: "cuffs%2Blength_long%2Bcut_regular.png",
 };
 
 // ==========================================
@@ -93,14 +90,14 @@ async function downloadImage(url, filepath) {
 }
 
 // URL builder
-function buildFasteningURL(fabricKey, fasteningFile) {
-    return `${BASE}/${fabricKey}/front/${fasteningFile}`;
+function buildCuffURL(fabricKey, cuffFile) {
+    return `${BASE}/${fabricKey}/front/${cuffFile}`;
 }
 
 // ================= MAIN =================
 
 async function run() {
-    console.log("🚀 Downloading trouser fastening styles...\n");
+    console.log("🚀 Downloading trouser pant cuff styles...\n");
 
     for (const [fabricKey, fabricName] of Object.entries(fabrics)) {
         console.log(`\n🧵 Fabric: ${fabricName}`);
@@ -111,40 +108,49 @@ async function run() {
             "style"
         );
 
+        // Ensure style folder exists
+        await fs.ensureDir(styleFolder);
+
         let successCount = 0;
 
-        for (const [fileName, fasteningFile] of Object.entries(
-            fasteningStyles
-        )) {
+        for (const [fileName, cuffFile] of Object.entries(cuffStyles)) {
             const filePath = path.join(
                 styleFolder,
                 `${fileName}.png`
             );
 
-            // Skip existing files
+            // Skip existing
             if (await fs.pathExists(filePath)) {
                 console.log(`⏭️ Already exists: ${filePath}`);
                 continue;
             }
 
-            const url = buildFasteningURL(fabricKey, fasteningFile);
+            const url = buildCuffURL(fabricKey, cuffFile);
 
             const saved = await downloadImage(url, filePath);
+
             if (saved) successCount++;
+            else {
+                console.log(
+                    `⚠️ Failed ${fileName} for fabric: ${fabricName}`
+                );
+            }
         }
 
         if (successCount === 0) {
             console.log(
-                `⚠️ No new fastening styles downloaded for ${fabricName}`
+                `⚠️ No new pant cuff styles downloaded for ${fabricName}`
             );
         } else {
             console.log(
-                `🎉 ${successCount}/3 fastening styles downloaded`
+                `🎉 ${successCount}/2 pant cuff styles downloaded`
             );
         }
     }
 
-    console.log("\n✅ All fastening style downloads completed!");
+    console.log(
+        "\n✅ All trouser pant cuff style downloads completed!"
+    );
 }
 
 run();
