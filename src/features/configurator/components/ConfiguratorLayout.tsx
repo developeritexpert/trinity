@@ -4,9 +4,13 @@ import { useEffect } from 'react';
 import { ProductConfig } from '@/core/types/product.types';
 import { useConfigStore } from '../store/useConfigStore';
 import { LayeredViewer } from './LayeredViewer';
+import { shirtIcons, trouserIcons } from '@/core/utils/fonts';
 
 export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductConfig }) => {
     const { initProduct, config, activeTab, setActiveTab, selections, setSelection } = useConfigStore();
+
+    const isTrouser = initialConfig.productId.includes('trouser');
+    const productFont = isTrouser ? trouserIcons : shirtIcons;
 
     useEffect(() => {
         initProduct(initialConfig);
@@ -158,8 +162,8 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                                     <span className="text-[10px] font-medium uppercase tracking-wider text-slate-700 px-2">{option.label}</span>
                                 ) : isIcon ? (
                                     <span
-                                        style={{ fontFamily: 'CustomIcons', fontSize: '40px', lineHeight: 1 }}
-                                        className="transition-all duration-300 select-none"
+                                        style={{ fontSize: '40px', lineHeight: 1 }}
+                                        className={`transition-all duration-300 select-none ${productFont.className}`}
                                         aria-hidden="true"
                                     >
                                         {String.fromCodePoint(parseInt(thumb, 16))}

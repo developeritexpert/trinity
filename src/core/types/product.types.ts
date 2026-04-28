@@ -10,7 +10,7 @@ export interface Option {
     id: string;
     label: string;
     priceModifier?: number;
-    assets: AssetLayer[];
+    assets?: AssetLayer[];
     /** Path to an image file, OR a 4-char hex unicode code point for CustomIcons font (e.g. "0030") */
     thumbnail?: string;
     /** Explicit override. Auto-detected from thumbnail if omitted. */
@@ -42,6 +42,8 @@ export interface Attribute {
         value: string | string[];
     };
     options: Option[];
+    /** Assets that apply to every option selection in this attribute (supports tokens) */
+    commonAssets?: AssetLayer[];
 }
 
 export interface ProductConfig {
