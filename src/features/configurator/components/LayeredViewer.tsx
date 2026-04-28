@@ -65,7 +65,21 @@ export const LayeredViewer = () => {
     // Always include sharedLayers first (universal overlays/shadows defined at config level)
     if (config.sharedLayers) {
         config.sharedLayers.forEach(asset => {
-            targetAssets.push({ ...asset });
+            const finalUrl = asset.url
+                .replace('{{color}}', activeColorCode)
+                .replace('{{style}}', activeStyleCode)
+                .replace('{{lapel}}', activeLapelCode)
+                .replace('{{width}}', activeWidthCode)
+                .replace('{{lining_style}}', activeLiningStyleCode)
+                .replace('{{lining_color}}', activeLiningColorCode)
+                .replace('{{collar}}', activeCollarCode)
+                .replace('{{cuff}}', activeCuffCode)
+                .replace('{{contrasted_collar}}', activeContrastedCollarCode)
+                .replace('{{collar_fabric}}', activeCollarFabricCode)
+                .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
+                .replace('{{cuff_fabric}}', activeCuffFabricCode)
+                .replace('{{hole_collar}}', activeHoleCollarCode);
+            targetAssets.push({ ...asset, url: finalUrl });
         });
     }
 
@@ -73,26 +87,33 @@ export const LayeredViewer = () => {
         const selectedOptionId = selections[attr.id];
         const option = attr.options.find(opt => opt.id === selectedOptionId);
 
+        // helper to apply tokens
+        const resolveUrl = (url: string) => url
+            .replace('{{color}}', activeColorCode)
+            .replace('{{style}}', activeStyleCode)
+            .replace('{{lapel}}', activeLapelCode)
+            .replace('{{width}}', activeWidthCode)
+            .replace('{{lining_style}}', activeLiningStyleCode)
+            .replace('{{lining_color}}', activeLiningColorCode)
+            .replace('{{collar}}', activeCollarCode)
+            .replace('{{cuff}}', activeCuffCode)
+            .replace('{{contrasted_collar}}', activeContrastedCollarCode)
+            .replace('{{collar_fabric}}', activeCollarFabricCode)
+            .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
+            .replace('{{cuff_fabric}}', activeCuffFabricCode)
+            .replace('{{hole_collar}}', activeHoleCollarCode);
+
+        // 1. Process commonAssets (apply to all options)
+        if (attr.commonAssets) {
+            attr.commonAssets.forEach(asset => {
+                targetAssets.push({ ...asset, url: resolveUrl(asset.url) });
+            });
+        }
+
+        // 2. Process option-specific assets
         if (option && option.assets) {
             option.assets.forEach(asset => {
-                const finalUrl = asset.url
-                    .replace('{{color}}', activeColorCode)
-                    .replace('{{style}}', activeStyleCode)
-                    .replace('{{lapel}}', activeLapelCode)
-                    .replace('{{width}}', activeWidthCode)
-                    .replace('{{lining_style}}', activeLiningStyleCode)
-                    .replace('{{lining_color}}', activeLiningColorCode)
-
-                    // for shirt
-                    .replace('{{collar}}', activeCollarCode)
-                    .replace('{{cuff}}', activeCuffCode)
-                    .replace('{{contrasted_collar}}', activeContrastedCollarCode)
-                    .replace('{{collar_fabric}}', activeCollarFabricCode)
-                    .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
-                    .replace('{{cuff_fabric}}', activeCuffFabricCode)
-                    .replace('{{hole_collar}}', activeHoleCollarCode);
-
-                targetAssets.push({ ...asset, url: finalUrl });
+                targetAssets.push({ ...asset, url: resolveUrl(asset.url) });
             });
         }
     });
