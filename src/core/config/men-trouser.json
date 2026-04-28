@@ -3,38 +3,39 @@
     "basePrice": 109,
     "defaultSelections": {
         "fabric": "fab_navy_blue",
-        "fit": "fit_regular",
-        "style": "style_standard"
+        "fit": "slim_fit",
+        "pant_bottom": "half_break",
+        "pleats": "no_pleats"
     },
     "sharedLayers": [
         {
             "url": "/assets/trousers/shared/overlays/guy_george.png",
-            "zIndex": 90,
+            "zIndex": 10,
             "className": "trouser_view_layer trouser_body"
         },
         {
             "url": "/assets/trousers/shared/overlays/shirt_to_pants.png",
-            "zIndex": 90,
+            "zIndex": 20,
             "className": "trouser_view_layer trouser_shirt"
         },
         {
             "url": "/assets/trousers/shared/overlays/zapatos_new.png",
-            "zIndex": 90,
+            "zIndex": 20,
             "className": "trouser_view_layer trouser_shoes"
         },
         {
-            "url": "/assets/trousers/shared/overlays/length_long+cut_slim (1).png",
-            "zIndex": 90,
+            "url": "/assets/trousers/shared/overlays/cut_slim.png",
+            "zIndex": 31,
             "className": "trouser_view_layer trouser_bottom"
         },
         {
             "url": "/assets/trousers/shared/overlays/fastening_moved+visible_button (1).png",
-            "zIndex": 100,
+            "zIndex": 30,
             "className": "trouser_view_layer trouser_bottom"
         },
         {
             "url": "/assets/trousers/shared/overlays/fastening_moved+visible_button (2).png",
-            "zIndex": 100,
+            "zIndex": 36,
             "className": "trouser_view_layer trouser_bottom"
         }
     ],
@@ -52,22 +53,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -80,22 +81,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -108,22 +109,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -136,22 +137,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -164,22 +165,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -192,22 +193,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -220,22 +221,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -248,22 +249,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -276,22 +277,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -304,22 +305,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -332,22 +333,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -360,22 +361,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -388,22 +389,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -416,22 +417,22 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -444,22 +445,122 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/base/belt_loop.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/visible_button.png",
-                            "zIndex": 100,
+                            "zIndex": 35,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                            "zIndex": 100,
+                            "zIndex": 33,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
-                            "zIndex": 100,
+                            "zIndex": 31,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fit",
+            "label": "Fit",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "slim_fit",
+                    "label": "Slim Fit",
+                    "colorCode": "slim_fit",
+                    "thumbnail": "0031",
+                    "assets": []
+                },
+                {
+                    "id": "normal_fit",
+                    "label": "Normal Fit",
+                    "colorCode": "normal_fit",
+                    "thumbnail": "0032",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/shared/overlays/cut_regular.png",
+                            "zIndex": 30,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/{{color}}/style/length_long_normal.png",
+                            "zIndex": 31,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "pant_bottom",
+            "label": "Pant Bottom",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_break",
+                    "label": "No Break",
+                    "colorCode": "no_break",
+                    "thumbnail": "0054",
+                    "assets": []
+                },
+                {
+                    "id": "half_break",
+                    "label": "Half Break",
+                    "colorCode": "half_break",
+                    "thumbnail": "0055",
+                    "assets": []
+                },
+                {
+                    "id": "full_break",
+                    "label": "Full Break",
+                    "colorCode": "full_break",
+                    "thumbnail": "0056",
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "pleats",
+            "label": "Pleats",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_pleats",
+                    "label": "No Pleats",
+                    "colorCode": "no_pleats",
+                    "thumbnail": "0035",
+                    "assets": []
+                },
+                {
+                    "id": "one_pleat",
+                    "label": "One Pleat",
+                    "colorCode": "one_pleat",
+                    "thumbnail": "0033",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/style/pleats_single.png",
+                            "zIndex": 32,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "two_pleats",
+                    "label": "Two Pleats",
+                    "colorCode": "two_pleats",
+                    "thumbnail": "0034",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/style/pleats_double.png",
+                            "zIndex": 32,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
