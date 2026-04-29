@@ -40,14 +40,8 @@ const HEADERS = {
     "Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
 };
 
-// Fastening styles
-const fasteningStyles = {
-    fastening_center: "fastening_center%2Bvisible_button.png",
-    fastening_no_button: "fastening_center%2Bhidden_button.png",
-    fastening_off_centered: "fastening_moved%2Bvisible_button.png",
-    fastening_off_centered_buttonless:
-        "fastening_moved%2Bhidden_button.png",
-};
+// File name
+const FILE_NAME = "front_pocket_rounded.png";
 
 // ==========================================
 
@@ -93,58 +87,52 @@ async function downloadImage(url, filepath) {
 }
 
 // URL builder
-function buildFasteningURL(fabricKey, fasteningFile) {
-    return `${BASE}/${fabricKey}/front/${fasteningFile}`;
+function buildPocketURL(fabricKey) {
+    return `${BASE}/${fabricKey}/front/front_pocket%2Brounded.png`;
 }
 
 // ================= MAIN =================
 
 async function run() {
-    console.log("🚀 Downloading trouser fastening styles...\n");
+    console.log("🚀 Downloading rounded front pocket style assets...\n");
 
     for (const [fabricKey, fabricName] of Object.entries(fabrics)) {
         console.log(`\n🧵 Fabric: ${fabricName}`);
 
+        // Correct style folder
         const styleFolder = path.join(
             OUTPUT_ROOT,
             fabricName,
             "style"
         );
 
-        let successCount = 0;
+        // Correct file path
+        const filePath = path.join(
+            styleFolder,
+            FILE_NAME
+        );
 
-        for (const [fileName, fasteningFile] of Object.entries(
-            fasteningStyles
-        )) {
-            const filePath = path.join(
-                styleFolder,
-                `${fileName}.png`
-            );
+        // Ensure style folder exists
+        await fs.ensureDir(styleFolder);
 
-            // Skip existing files
-            if (await fs.pathExists(filePath)) {
-                console.log(`⏭️ Already exists: ${filePath}`);
-                continue;
-            }
-
-            const url = buildFasteningURL(fabricKey, fasteningFile);
-
-            const saved = await downloadImage(url, filePath);
-            if (saved) successCount++;
+        // Skip existing correct file
+        if (await fs.pathExists(filePath)) {
+            console.log(`⏭️ Already exists: ${filePath}`);
+            continue;
         }
 
-        if (successCount === 0) {
-            console.log(
-                `⚠️ No new fastening styles downloaded for ${fabricName}`
-            );
-        } else {
-            console.log(
-                `🎉 ${successCount}/3 fastening styles downloaded`
-            );
+        const url = buildPocketURL(fabricKey);
+
+        const saved = await downloadImage(url, filePath);
+
+        if (!saved) {
+            console.log(`⚠️ Failed for fabric: ${fabricName}`);
         }
     }
 
-    console.log("\n✅ All fastening style downloads completed!");
+    console.log(
+        "\n✅ All rounded front pocket style downloads completed!"
+    );
 }
 
 run();

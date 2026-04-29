@@ -37,6 +37,7 @@ export const LayeredViewer = () => {
     let activeCollarFabricCode = '';     // e.g. 699, 2738, etc.
     let activeContrastedCuffCode = '';   // cuff_all or cuff_inner
     let activeCuffFabricCode = '';       // e.g. 699, 2738, etc.
+    let activeFitCode = 'slim_fit';      // Default for trousers
 
     visibleAttributes.forEach((attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
@@ -54,6 +55,7 @@ export const LayeredViewer = () => {
         if (attr.id === 'contrasted_collar_fabric' && selectedOpt?.collarFabricCode) activeCollarFabricCode = selectedOpt.collarFabricCode;
         if (attr.id === 'contrasted_cuff' && selectedOpt?.contrastedCuffCode !== undefined) activeContrastedCuffCode = selectedOpt.contrastedCuffCode;
         if (attr.id === 'cuff_fabric' && selectedOpt?.cuffFabricCode) activeCuffFabricCode = selectedOpt.cuffFabricCode;
+        if (attr.id === 'fit' && selectedOpt?.colorCode) activeFitCode = selectedOpt.colorCode;
     });
 
     // Derived token: only button_down and new_kent have holes/threads images
@@ -78,7 +80,8 @@ export const LayeredViewer = () => {
                 .replace('{{collar_fabric}}', activeCollarFabricCode)
                 .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
                 .replace('{{cuff_fabric}}', activeCuffFabricCode)
-                .replace('{{hole_collar}}', activeHoleCollarCode);
+                .replace('{{hole_collar}}', activeHoleCollarCode)
+                .replace('{{fit}}', activeFitCode);
             targetAssets.push({ ...asset, url: finalUrl });
         });
     }
@@ -101,7 +104,8 @@ export const LayeredViewer = () => {
             .replace('{{collar_fabric}}', activeCollarFabricCode)
             .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
             .replace('{{cuff_fabric}}', activeCuffFabricCode)
-            .replace('{{hole_collar}}', activeHoleCollarCode);
+            .replace('{{hole_collar}}', activeHoleCollarCode)
+            .replace('{{fit}}', activeFitCode);
 
         // 1. Process commonAssets (apply to all options)
         if (attr.commonAssets) {

@@ -6,7 +6,10 @@
         "fit": "slim_fit",
         "pant_bottom": "half_break",
         "pleats": "no_pleats",
-        "pants_fastening": "off_centered"
+        "pants_fastening": "off_centered",
+        "side_pockets": "diagonal",
+        "cuff": "no_pant_cuffs",
+        "suspender_buttons": "no"
     },
     "sharedLayers": [
         {
@@ -23,21 +26,6 @@
             "url": "/assets/trousers/shared/overlays/zapatos_new.png",
             "zIndex": 20,
             "className": "trouser_view_layer trouser_shoes"
-        },
-        {
-            "url": "/assets/trousers/shared/overlays/cut_slim.png",
-            "zIndex": 31,
-            "className": "trouser_view_layer trouser_bottom"
-        },
-        {
-            "url": "/assets/trousers/shared/overlays/fastening_moved+visible_button (1).png",
-            "zIndex": 30,
-            "className": "trouser_view_layer trouser_bottom"
-        },
-        {
-            "url": "/assets/trousers/shared/overlays/fastening_moved+visible_button (2).png",
-            "zIndex": 36,
-            "className": "trouser_view_layer trouser_bottom"
         }
     ],
     "attributes": [
@@ -54,16 +42,6 @@
                 {
                     "url": "/assets/trousers/{{color}}/base/visible_button.png",
                     "zIndex": 35,
-                    "className": "trouser_view_layer trouser_bottom"
-                },
-                {
-                    "url": "/assets/trousers/{{color}}/base/front_pocket.png",
-                    "zIndex": 33,
-                    "className": "trouser_view_layer trouser_bottom"
-                },
-                {
-                    "url": "/assets/trousers/{{color}}/base/length_long.png",
-                    "zIndex": 31,
                     "className": "trouser_view_layer trouser_bottom"
                 }
             ],
@@ -170,7 +148,18 @@
                     "label": "Slim Fit",
                     "colorCode": "slim_fit",
                     "thumbnail": "0031",
-                    "assets": []
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/length_long.png",
+                            "zIndex": 37,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/shared/overlays/cut_slim.png",
+                            "zIndex": 31,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
                 },
                 {
                     "id": "normal_fit",
@@ -180,12 +169,12 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/shared/overlays/cut_regular.png",
-                            "zIndex": 30,
+                            "zIndex": 31,
                             "className": "trouser_view_layer trouser_bottom"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/style/length_long_normal.png",
-                            "zIndex": 31,
+                            "zIndex": 37,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -240,7 +229,7 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/style/pleats_single.png",
-                            "zIndex": 32,
+                            "zIndex": 37,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -253,7 +242,7 @@
                     "assets": [
                         {
                             "url": "/assets/trousers/{{color}}/style/pleats_double.png",
-                            "zIndex": 32,
+                            "zIndex": 37,
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
@@ -293,7 +282,18 @@
                     "label": "Off-centered",
                     "colorCode": "off_centered",
                     "thumbnail": "0039",
-                    "assets": []
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/style/fastening_off_centered.png",
+                            "zIndex": 36,
+                            "className": "trouser_view_layer trouser_bottom"
+                        },
+                        {
+                            "url": "/assets/trousers/shared/overlays/fastening_moved+visible_button (1).png",
+                            "zIndex": 30,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
                 },
                 {
                     "id": "no_button",
@@ -320,6 +320,88 @@
                             "className": "trouser_view_layer trouser_bottom"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "id": "side_pockets",
+            "label": "Side Pockets",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "diagonal",
+                    "label": "Diagonal",
+                    "colorCode": "diagonal",
+                    "thumbnail": "003A",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/base/front_pocket.png",
+                            "zIndex": 34,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "rounded",
+                    "label": "Rounded",
+                    "colorCode": "rounded",
+                    "thumbnail": "003C",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/style/front_pocket_rounded.png",
+                            "zIndex": 34,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cuff",
+            "label": "Cuff",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_pant_cuffs",
+                    "label": "No Pant Cuffs",
+                    "colorCode": "no_pant_cuffs",
+                    "thumbnail": "0050",
+                    "assets": []
+                },
+                {
+                    "id": "pant_cuffs",
+                    "label": "With Pant Cuffs",
+                    "colorCode": "pant_cuffs",
+                    "thumbnail": "0051",
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/{{color}}/style/{{fit}}_cuff.png",
+                            "zIndex": 37,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "suspender_buttons",
+            "label": "Suspender buttons",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "yes",
+                    "label": "Yes",
+                    "colorCode": "yes",
+                    "thumbnail": "006C",
+                    "priceModifier": 7,
+                    "assets": []
+                },
+                {
+                    "id": "no",
+                    "label": "No",
+                    "colorCode": "no",
+                    "thumbnail": "006E",
+                    "assets": []
                 }
             ]
         }
