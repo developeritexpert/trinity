@@ -9,7 +9,8 @@
         "pants_fastening": "off_centered",
         "side_pockets": "diagonal",
         "cuff": "no_pant_cuffs",
-        "suspender_buttons": "no"
+        "suspender_buttons": "no",
+        "belt": "without"
     },
     "sharedLayers": [
         {
@@ -402,6 +403,63 @@
                     "colorCode": "no",
                     "thumbnail": "006E",
                     "assets": []
+                }
+            ]
+        },
+        {
+            "id": "belt",
+            "label": "Belt",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "without",
+                    "label": "Without Belt",
+                    "colorCode": "without",
+                    "thumbnail": "003D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "vecellio_belt",
+                    "label": "Vecellio Belt",
+                    "colorCode": "vecellio_belt",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/belt/814_detail_thumb.png",
+                    "priceModifier": 24,
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/shared/belts/vecellio_belt.png",
+                            "zIndex": 37,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "sansone_belt",
+                    "label": "Sansone Belt",
+                    "colorCode": "sansone_belt",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/belt/816_detail_thumb.png",
+                    "priceModifier": 24,
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/shared/belts/sansone_belt.png",
+                            "zIndex": 37,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
+                },
+                {
+                    "id": "angelo_belt",
+                    "label": "Angelo Belt",
+                    "colorCode": "angelo_belt",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/belt/815_detail_thumb.png",
+                    "priceModifier": 24,
+                    "assets": [
+                        {
+                            "url": "/assets/trousers/shared/belts/angelo_belt.png",
+                            "zIndex": 37,
+                            "className": "trouser_view_layer trouser_bottom"
+                        }
+                    ]
                 }
             ]
         }
