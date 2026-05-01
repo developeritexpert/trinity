@@ -1,0 +1,303 @@
+{
+    "productId": "womens-blazers",
+    "basePrice": 199,
+    "defaultSelections": {
+        "fabric": "fab_navy_blue"
+    },
+    "sharedLayers": [
+        {
+            "url": "/assets/women/blazer/shared/overlays/sara_sampaio.png",
+            "zIndex": 10,
+            "className": "women_body women_blazer_main"
+        },
+        {
+            "url": "/assets/women/blazer/shared/overlays/shirt_front.png",
+            "zIndex": 20,
+            "className": "women_blazer_main women_blazer"
+        },
+        {
+            "url": "/assets/women/blazer/shared/overlays/pants_front.png",
+            "zIndex": 20,
+            "className": "women_pant women_blazer_main"
+        },
+        {
+            "url": "/assets/women/blazer/shared/overlays/sara_sampaio_mano.png",
+            "zIndex": 20,
+            "className": "women_body women_blazer_main"
+        },
+        {
+            "url": "/assets/women/blazer/shared/overlays/sleeves.png",
+            "zIndex": 20,
+            "className": "women_blazer_main women_blazer"
+        },
+        {
+            "url": "/assets/women/blazer/shared/overlays/style_simple+length_long+finishing_straight.png",
+            "zIndex": 20,
+            "className": "women_blazer_main women_blazer"
+        },
+        {
+            "url": "/assets/women/blazer/shared/overlays/sb_2_button_shadow.png",
+            "zIndex": 20,
+            "className": "women_blazer_main women_blazer"
+        }
+    ],
+    "attributes": [
+        {
+            "id": "fabric",
+            "label": "Fabric",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/women/blazer/{{color}}/base/length_long_body.png",
+                    "zIndex": 35,
+                    "className": "women_blazer_main women_blazer"
+                },
+                {
+                    "url": "/assets/women/blazer/{{color}}/base/sleeves.png",
+                    "zIndex": 35,
+                    "className": "women_blazer_main women_blazer"
+                },
+                {
+                    "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
+                    "zIndex": 35,
+                    "className": "women_blazer_main women_blazer"
+                },
+                {
+                    "url": "/assets/women/blazer/{{color}}/base/breast_pocket.png",
+                    "zIndex": 35,
+                    "className": "women_blazer_main women_blazer"
+                }
+            ],
+            "options": [
+                {
+                    "id": "fab_navy_blue",
+                    "label": "Navy Blue",
+                    "colorCode": "navy_blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_gabriel",
+                    "label": "Gabriel",
+                    "colorCode": "gabriel",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3338_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_welch",
+                    "label": "Welch",
+                    "colorCode": "welch",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2078_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_iron_gray",
+                    "label": "Iron Gray",
+                    "colorCode": "iron_gray",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/141_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_shiny",
+                    "label": "Shiny",
+                    "colorCode": "shiny",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3526_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_melange",
+                    "label": "Melange",
+                    "colorCode": "melange",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2197_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_twill",
+                    "label": "Twill",
+                    "colorCode": "twill",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2192_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_cobalt_blue",
+                    "label": "Cobalt Blue",
+                    "colorCode": "cobalt_blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2311_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_dark_blue",
+                    "label": "Dark Blue",
+                    "colorCode": "dark_blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3879_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_sheen",
+                    "label": "Sheen",
+                    "colorCode": "sheen",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3880_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_busmere",
+                    "label": "Busmere",
+                    "colorCode": "busmere",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3162_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_delli_colli",
+                    "label": "Delli Colli",
+                    "colorCode": "delli_colli",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2251_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_mcpherson",
+                    "label": "McPherson",
+                    "colorCode": "mcpherson",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2845_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_belleville",
+                    "label": "Belleville",
+                    "colorCode": "belleville",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2284_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_stamper",
+                    "label": "Stamper",
+                    "colorCode": "stamper",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2682_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_permose",
+                    "label": "Permose",
+                    "colorCode": "permose",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3551_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_lanterbrid",
+                    "label": "Lanterbrid",
+                    "colorCode": "lanterbrid",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3553_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_edan",
+                    "label": "Edan",
+                    "colorCode": "edan",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2985_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_yolo",
+                    "label": "Yolo",
+                    "colorCode": "yolo",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2684_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_blake",
+                    "label": "Blake",
+                    "colorCode": "blake",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/1979_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_saddie",
+                    "label": "Saddie",
+                    "colorCode": "saddie",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/1980_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_hartley",
+                    "label": "Hartley",
+                    "colorCode": "hartley",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2990_huge_c300.jpg"
+                }
+            ]
+        },
+        {
+            "id": "style",
+            "label": "Style & Buttons",
+            "options": [
+                {
+                    "id": "sb_1_button",
+                    "label": "Single Breasted 1 Button",
+                    "styleCode": "sb_1_button",
+                    "thumbnail": "",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/sb_1_button/length_long_body.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/sb_1_button/breast_pocket.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/shared/overlays/sb_1_button_shadow.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "sb_2_button",
+                    "label": "Single Breasted 2 Button",
+                    "styleCode": "sb_2_button",
+                    "thumbnail": "",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/sb_2_button/bottom.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "sb_3_button",
+                    "label": "Single Breasted 3 Button",
+                    "styleCode": "sb_3_button",
+                    "thumbnail": "",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/sb_3_button/length_long_body.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/sb_3_button/breast_pocket.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/shared/overlays/sb_3_button_shadow.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "db_4_button",
+                    "label": "Double Breasted 4 Button",
+                    "styleCode": "db_4_button",
+                    "thumbnail": "",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/db_4_button/bottom.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "without_lapels",
+                    "label": "without lapels 2 button",
+                    "styleCode": "without_lapels",
+                    "thumbnail": "",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/without_lapel/bottom.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -101,3 +101,41 @@ body {
   top: -10rem !important;
   left: 1px !important;
 }
+
+
+
+/* women blazer */
+
+
+.women_shirt {
+  height: 466px;
+  margin-top: 27.5%;
+}
+
+.women_pant {
+  height: 64%;
+  margin-top: 71.5%;
+}
+
+/* .women_pant {
+    height: 39rem;
+    top: 33rem !important;
+} */
+.women_body {
+  height: 1080px;
+  left: 139px !important;
+}
+
+.women_jacket {
+  margin-top: 45.8%;
+}
+
+.women_blazer_main {
+  top: 20%;
+  left: 25%;
+}
+
+.women_blazer {
+  height: 466px;
+  margin-top: 27.5%;
+}
