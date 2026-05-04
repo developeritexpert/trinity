@@ -55,6 +55,9 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         setSelection(attributeId, optionId);
 
         // SMART UX: Generic auto-advance
+        // Skip auto-advance if the attribute opts out with noAutoAdvance: true
+        const currentAttrDef = config.attributes.find(a => a.id === attributeId);
+        if (currentAttrDef?.noAutoAdvance) return;
         const futureSelections = { ...selections, [attributeId]: optionId };
         const futureVisible = config.attributes.filter(attr => {
             if (!attr.dependsOn) return true;

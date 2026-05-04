@@ -189,6 +189,7 @@
             "id": "style",
             "label": "Style & Buttons",
             "displayType": "icon",
+            "noAutoAdvance": true,
             "options": [
                 {
                     "id": "sb_1_button",
@@ -326,6 +327,10 @@
             "id": "hemline",
             "label": "Hemline",
             "displayType": "icon",
+            "dependsOn": {
+                "attributeId": "style",
+                "value": ["sb_1_button", "sb_2_button", "sb_3_button", "without_lapel"]
+            },
             "options": [
                 {
                     "id": "rounded_hemline",

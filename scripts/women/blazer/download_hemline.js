@@ -101,23 +101,6 @@ const variants = {
             "style_simple%2Blength_long%2Bfinishing_open.png",
     },
 
-    db_4_button: {
-        db_4_rounded_long_length:
-            "style_crossed%2Bwide_lapel_standard%2Bfit_slim%2Bstyle_lapel_peak%2Bbuttons_4%2Blength_long.png",
-        db_4_rounded_base_shadow:
-            "style_crossed%2Blength_long.png",
-
-        db_4_straight_long_length:
-            "style_crossed%2Bwide_lapel_standard%2Bfit_slim%2Bstyle_lapel_peak%2Bbuttons_4%2Blength_long.png",
-        db_4_straight_base_shadow:
-            "style_crossed%2Blength_long.png",
-
-        db_4_cutway_long_length:
-            "style_crossed%2Bwide_lapel_standard%2Bfit_slim%2Bstyle_lapel_peak%2Bbuttons_4%2Blength_long.png",
-        db_4_cutway_base_shadow:
-            "style_crossed%2Blength_long.png",
-    },
-
     without_lapel: {
         wl_2_rounded_long_length:
             "style_no_flaps%2Bfit_slim%2Bbuttons_2%2Blength_long%2Bfinishing_rounded.png",
