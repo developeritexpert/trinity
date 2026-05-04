@@ -58,6 +58,16 @@ export const LayeredViewer = () => {
         if (attr.id === 'fit' && selectedOpt?.colorCode) activeFitCode = selectedOpt.colorCode;
     });
 
+    // Derived: map styleCode → short filename prefix used in hemline assets
+    const STYLE_PREFIX_MAP: Record<string, string> = {
+        sb_1_button:   'sb_1',
+        sb_2_button:   'sb_2',
+        sb_3_button:   'sb_3',
+        without_lapel: 'wl_2',
+        db_4_button:   'db_4',
+    };
+    const activeStylePrefix = STYLE_PREFIX_MAP[activeStyleCode] ?? activeStyleCode;
+
     // Derived token: only button_down and new_kent have holes/threads images
     const activeHoleCollarCode = activeCollarCode === 'button_down' ? 'button_down' : 'new_kent';
 
@@ -70,6 +80,7 @@ export const LayeredViewer = () => {
             const finalUrl = asset.url
                 .replace('{{color}}', activeColorCode)
                 .replace('{{style}}', activeStyleCode)
+                .replace('{{style_prefix}}', activeStylePrefix)
                 .replace('{{lapel}}', activeLapelCode)
                 .replace('{{width}}', activeWidthCode)
                 .replace('{{lining_style}}', activeLiningStyleCode)
@@ -94,6 +105,7 @@ export const LayeredViewer = () => {
         const resolveUrl = (url: string) => url
             .replace('{{color}}', activeColorCode)
             .replace('{{style}}', activeStyleCode)
+            .replace('{{style_prefix}}', activeStylePrefix)
             .replace('{{lapel}}', activeLapelCode)
             .replace('{{width}}', activeWidthCode)
             .replace('{{lining_style}}', activeLiningStyleCode)

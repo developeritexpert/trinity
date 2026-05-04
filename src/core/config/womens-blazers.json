@@ -344,41 +344,62 @@
         },
         {
             "id": "hemline",
-            "label": "hemline",
+            "label": "Hemline",
             "displayType": "icon",
             "options": [
                 {
                     "id": "rounded_hemline",
-                    "label": "rounded hemline",
+                    "label": "Rounded Hemline",
                     "styleCode": "rounded_hemline",
                     "thumbnail": "0069",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/style/rounded_hemline/length_long_body.png",
-                            "zIndex": 35,
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_rounded_long_length.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_rounded_base_shadow.png",
+                            "zIndex": 36,
                             "className": "women_blazer_main women_blazer"
                         }
                     ]
                 },
                 {
                     "id": "straight_hemline",
-                    "label": "straight hemline",
+                    "label": "Straight Hemline",
                     "styleCode": "straight_hemline",
                     "thumbnail": "006A",
                     "priceModifier": 0,
-                    "assets": []
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_straight_long_length.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_straight_base_shadow.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
                 },
                 {
                     "id": "cutaway_hemline",
-                    "label": "cutaway hemline",
+                    "label": "Cutaway Hemline",
                     "styleCode": "cutaway_hemline",
                     "thumbnail": "006B",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/style/rounded_hemline/length_long_body.png",
-                            "zIndex": 35,
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_cutway_long_length.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_cutway_base_shadow.png",
+                            "zIndex": 36,
                             "className": "women_blazer_main women_blazer"
                         }
                     ]
