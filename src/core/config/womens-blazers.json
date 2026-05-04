@@ -198,11 +198,6 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/style/sb_1_button/length_long_body.png",
-                            "zIndex": 35,
-                            "className": "women_blazer_main women_blazer"
-                        },
-                        {
                             "url": "/assets/women/blazer/{{color}}/style/sb_1_button/breast_pocket.png",
                             "zIndex": 35,
                             "className": "women_blazer_main women_blazer"
@@ -227,11 +222,6 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/base/length_long_body.png",
-                            "zIndex": 35,
-                            "className": "women_blazer_main women_blazer"
-                        },
-                        {
                             "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
                             "zIndex": 35,
                             "className": "women_blazer_main women_blazer"
@@ -255,11 +245,6 @@
                     "thumbnail": "0037",
                     "priceModifier": 0,
                     "assets": [
-                        {
-                            "url": "/assets/women/blazer/{{color}}/style/sb_3_button/length_long_body.png",
-                            "zIndex": 35,
-                            "className": "women_blazer_main women_blazer"
-                        },
                         {
                             "url": "/assets/women/blazer/{{color}}/style/sb_3_button/breast_pocket.png",
                             "zIndex": 35,
@@ -318,11 +303,6 @@
                     "thumbnail": "0077",
                     "priceModifier": 0,
                     "assets": [
-                        {
-                            "url": "/assets/women/blazer/{{color}}/style/without_lapel/length_long_body.png",
-                            "zIndex": 35,
-                            "className": "women_blazer_main women_blazer"
-                        },
                         {
                             "url": "/assets/women/blazer/{{color}}/style/without_lapel/wl_2_side_pocket.png",
                             "zIndex": 35,

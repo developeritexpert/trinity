@@ -56,6 +56,11 @@ const variants = {
         sb_2_rounded_base_shadow:
             "style_simple%2Blength_long%2Bfinishing_rounded.png",
 
+        sb_2_straight_long_length:
+            "style_simple%2Bwide_lapel_standard%2Bfit_slim%2Bstyle_lapel_peak%2Bbuttons_2%2Blength_long%2Bfinishing_straight.png",
+        sb_2_straight_base_shadow:
+            "style_simple%2Blength_long%2Bfinishing_straight.png",
+
         sb_2_cutway_long_length:
             "style_simple%2Bwide_lapel_standard%2Bfit_slim%2Bstyle_lapel_peak%2Bbuttons_2%2Blength_long%2Bfinishing_open.png",
         sb_2_cutway_base_shadow:
@@ -94,6 +99,23 @@ const variants = {
             "style_simple%2Bwide_lapel_standard%2Bfit_slim%2Bstyle_lapel_peak%2Bbuttons_3%2Blength_long%2Bfinishing_open.png",
         sb_3_cutway_base_shadow:
             "style_simple%2Blength_long%2Bfinishing_open.png",
+    },
+
+    db_4_button: {
+        db_4_rounded_long_length:
+            "style_crossed%2Bwide_lapel_standard%2Bfit_slim%2Bstyle_lapel_peak%2Bbuttons_4%2Blength_long.png",
+        db_4_rounded_base_shadow:
+            "style_crossed%2Blength_long.png",
+
+        db_4_straight_long_length:
+            "style_crossed%2Bwide_lapel_standard%2Bfit_slim%2Bstyle_lapel_peak%2Bbuttons_4%2Blength_long.png",
+        db_4_straight_base_shadow:
+            "style_crossed%2Blength_long.png",
+
+        db_4_cutway_long_length:
+            "style_crossed%2Bwide_lapel_standard%2Bfit_slim%2Bstyle_lapel_peak%2Bbuttons_4%2Blength_long.png",
+        db_4_cutway_base_shadow:
+            "style_crossed%2Blength_long.png",
     },
 
     without_lapel: {
@@ -169,7 +191,7 @@ function buildURL(fabricKey, fileName, isShadow = false) {
 // ================= MAIN =================
 
 async function run() {
-    console.log("🚀 Downloading women jacket finishing variants...\n");
+    console.log("🚀 Downloading women blazer finishing variants...\n");
 
     for (const [fabricKey, fabricName] of Object.entries(fabrics)) {
         console.log(`\n🧵 Fabric: ${fabricName}`);
@@ -225,7 +247,7 @@ async function run() {
     }
 
     console.log(
-        "\n✅ All women jacket finishing variants downloaded!"
+        "\n✅ All women blazer finishing variants downloaded!"
     );
 }
 
