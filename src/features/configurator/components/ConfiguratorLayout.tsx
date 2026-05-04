@@ -4,13 +4,14 @@ import { useEffect } from 'react';
 import { ProductConfig } from '@/core/types/product.types';
 import { useConfigStore } from '../store/useConfigStore';
 import { LayeredViewer } from './LayeredViewer';
-import { shirtIcons, trouserIcons } from '@/core/utils/fonts';
+import { shirtIcons, trouserIcons, womenBlazerIcons } from '@/core/utils/fonts';
 
 export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductConfig }) => {
     const { initProduct, config, activeTab, setActiveTab, selections, setSelection } = useConfigStore();
 
     const isTrouser = initialConfig.productId.includes('trouser');
-    const productFont = isTrouser ? trouserIcons : shirtIcons;
+    const isWomensBlazer = initialConfig.productId.includes('womens-blazer');
+    const productFont = isWomensBlazer ? womenBlazerIcons : isTrouser ? trouserIcons : shirtIcons;
 
     useEffect(() => {
         initProduct(initialConfig);
@@ -54,6 +55,9 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         setSelection(attributeId, optionId);
 
         // SMART UX: Generic auto-advance
+        // Skip auto-advance if the attribute opts out with noAutoAdvance: true
+        const currentAttrDef = config.attributes.find(a => a.id === attributeId);
+        if (currentAttrDef?.noAutoAdvance) return;
         const futureSelections = { ...selections, [attributeId]: optionId };
         const futureVisible = config.attributes.filter(attr => {
             if (!attr.dependsOn) return true;
@@ -90,11 +94,14 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
     // --- REUSABLE GRID RENDERER ---
     const renderAttributeSection = (attr: any, isInline = false) => {
         const attrId = attr.id;
-        let mode = attr.displayType || 'card';
-
-        if (['fabric', 'lining_fabric', 'button_holes', 'button_threads', 'button_holes_all', 'button_holes_cuffs', 'button_threads_all', 'button_threads_cuffs'].includes(attrId)) mode = 'swatch';
-        if (['buttons', 'pocket_squares', 'lapel_style', 'lapel_width', 'pocket_style', 'contrasted_button_hole_stitch'].includes(attrId)) mode = 'icon';
-        if (['style', 'lining_style'].includes(attrId)) mode = 'card';
+        // If the JSON explicitly sets displayType, always honour it.
+        // Only fall back to id-based hardcoded modes when displayType is absent.
+        let mode = attr.displayType || (() => {
+            if (['fabric', 'lining_fabric', 'button_holes', 'button_threads', 'button_holes_all', 'button_holes_cuffs', 'button_threads_all', 'button_threads_cuffs'].includes(attrId)) return 'swatch';
+            if (['buttons', 'pocket_squares', 'lapel_style', 'lapel_width', 'pocket_style', 'contrasted_button_hole_stitch'].includes(attrId)) return 'icon';
+            if (['style', 'lining_style'].includes(attrId)) return 'card';
+            return 'card';
+        })();
 
         let gridClass = 'grid-cols-3 gap-4 auto-rows-max';
         if (['button_holes', 'button_threads', 'button_holes_all', 'button_holes_cuffs', 'button_threads_all', 'button_threads_cuffs'].includes(attrId)) gridClass = 'grid-cols-5 gap-2 auto-rows-max';

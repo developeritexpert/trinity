@@ -11,3 +11,9 @@ export const trouserIcons = localFont({
   variable: '--font-trouser-icons',
   display: 'swap',
 });
+
+export const womenBlazerIcons = localFont({
+  src: '../../../public/fonts/women-blazzer.woff',
+  variable: '--font-women-blazer-icons',
+  display: 'swap',
+});

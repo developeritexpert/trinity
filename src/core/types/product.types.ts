@@ -41,6 +41,8 @@ export interface Attribute {
         attributeId: string;
         value: string | string[];
     };
+    /** When true, selecting an option in this attribute will NOT auto-advance to the next step */
+    noAutoAdvance?: boolean;
     options: Option[];
     /** Assets that apply to every option selection in this attribute (supports tokens) */
     commonAssets?: AssetLayer[];
