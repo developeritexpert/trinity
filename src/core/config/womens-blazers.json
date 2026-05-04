@@ -2,7 +2,9 @@
     "productId": "womens-blazers",
     "basePrice": 199,
     "defaultSelections": {
-        "fabric": "fab_navy_blue"
+        "fabric": "fab_navy_blue",
+        "style": "sb_2_button",
+        "hemline": "straight_hemline"
     },
     "sharedLayers": [
         {
@@ -34,11 +36,6 @@
             "url": "/assets/women/blazer/shared/overlays/style_simple+length_long+finishing_straight.png",
             "zIndex": 20,
             "className": "women_blazer_main women_blazer"
-        },
-        {
-            "url": "/assets/women/blazer/shared/overlays/sb_2_button_shadow.png",
-            "zIndex": 20,
-            "className": "women_blazer_main women_blazer"
         }
     ],
     "attributes": [
@@ -48,22 +45,7 @@
             "displayType": "swatch",
             "commonAssets": [
                 {
-                    "url": "/assets/women/blazer/{{color}}/base/length_long_body.png",
-                    "zIndex": 35,
-                    "className": "women_blazer_main women_blazer"
-                },
-                {
                     "url": "/assets/women/blazer/{{color}}/base/sleeves.png",
-                    "zIndex": 35,
-                    "className": "women_blazer_main women_blazer"
-                },
-                {
-                    "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
-                    "zIndex": 35,
-                    "className": "women_blazer_main women_blazer"
-                },
-                {
-                    "url": "/assets/women/blazer/{{color}}/base/breast_pocket.png",
                     "zIndex": 35,
                     "className": "women_blazer_main women_blazer"
                 }
@@ -206,12 +188,13 @@
         {
             "id": "style",
             "label": "Style & Buttons",
+            "displayType": "icon",
             "options": [
                 {
                     "id": "sb_1_button",
                     "label": "Single Breasted 1 Button",
                     "styleCode": "sb_1_button",
-                    "thumbnail": "",
+                    "thumbnail": "0075",
                     "priceModifier": 0,
                     "assets": [
                         {
@@ -225,7 +208,12 @@
                             "className": "women_blazer_main women_blazer"
                         },
                         {
-                            "url": "/assets/women/blazer/shared/overlays/sb_1_button_shadow.png",
+                            "url": "/assets/women/blazer/{{color}}/style/sb_1_button/sb_1_button_shadow.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
                             "zIndex": 35,
                             "className": "women_blazer_main women_blazer"
                         }
@@ -235,12 +223,27 @@
                     "id": "sb_2_button",
                     "label": "Single Breasted 2 Button",
                     "styleCode": "sb_2_button",
-                    "thumbnail": "",
+                    "thumbnail": "0036",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/style/sb_2_button/bottom.png",
+                            "url": "/assets/women/blazer/{{color}}/base/length_long_body.png",
                             "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/base/breast_pocket.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/shared/overlays/sb_2_button_shadow.png",
+                            "zIndex": 20,
                             "className": "women_blazer_main women_blazer"
                         }
                     ]
@@ -249,7 +252,7 @@
                     "id": "sb_3_button",
                     "label": "Single Breasted 3 Button",
                     "styleCode": "sb_3_button",
-                    "thumbnail": "",
+                    "thumbnail": "0037",
                     "priceModifier": 0,
                     "assets": [
                         {
@@ -263,7 +266,12 @@
                             "className": "women_blazer_main women_blazer"
                         },
                         {
-                            "url": "/assets/women/blazer/shared/overlays/sb_3_button_shadow.png",
+                            "url": "/assets/women/blazer/{{color}}/style/sb_3_button/sb_3_button_shadow.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
                             "zIndex": 35,
                             "className": "women_blazer_main women_blazer"
                         }
@@ -273,25 +281,103 @@
                     "id": "db_4_button",
                     "label": "Double Breasted 4 Button",
                     "styleCode": "db_4_button",
-                    "thumbnail": "",
+                    "thumbnail": "0076",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/style/db_4_button/bottom.png",
+                            "url": "/assets/women/blazer/{{color}}/style/db_4_button/breast_pocket.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/db_4_button/length_long_body.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/db_4_button/db_4_side_pocket.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/db_4_button/db_4_button_shadow.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/db_4_button/db_4_base_shadow.png",
                             "zIndex": 35,
                             "className": "women_blazer_main women_blazer"
                         }
                     ]
                 },
                 {
-                    "id": "without_lapels",
-                    "label": "without lapels 2 button",
-                    "styleCode": "without_lapels",
-                    "thumbnail": "",
+                    "id": "without_lapel",
+                    "label": "Without Lapels 2 Button",
+                    "styleCode": "without_lapel",
+                    "thumbnail": "0077",
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/style/without_lapel/bottom.png",
+                            "url": "/assets/women/blazer/{{color}}/style/without_lapel/length_long_body.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/without_lapel/wl_2_side_pocket.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/without_lapel/wl_2_base_shadow.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/without_lapel/wl_2_button_shadow.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "hemline",
+            "label": "hemline",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "rounded_hemline",
+                    "label": "rounded hemline",
+                    "styleCode": "rounded_hemline",
+                    "thumbnail": "0069",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/rounded_hemline/length_long_body.png",
+                            "zIndex": 35,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "straight_hemline",
+                    "label": "straight hemline",
+                    "styleCode": "straight_hemline",
+                    "thumbnail": "006A",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "cutaway_hemline",
+                    "label": "cutaway hemline",
+                    "styleCode": "cutaway_hemline",
+                    "thumbnail": "006B",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/rounded_hemline/length_long_body.png",
                             "zIndex": 35,
                             "className": "women_blazer_main women_blazer"
                         }
