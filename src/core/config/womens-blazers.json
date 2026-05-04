@@ -4,7 +4,9 @@
     "defaultSelections": {
         "fabric": "fab_navy_blue",
         "style": "sb_2_button",
-        "hemline": "straight_hemline"
+        "hemline": "straight_hemline",
+        "vents": "center_vent",
+        "style_of_lapels": "peak"
     },
     "sharedLayers": [
         {
@@ -210,7 +212,7 @@
                         },
                         {
                             "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
-                            "zIndex": 35,
+                            "zIndex": 37,
                             "className": "women_blazer_main women_blazer"
                         }
                     ]
@@ -224,7 +226,7 @@
                     "assets": [
                         {
                             "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
-                            "zIndex": 35,
+                            "zIndex": 37,
                             "className": "women_blazer_main women_blazer"
                         },
                         {
@@ -258,7 +260,7 @@
                         },
                         {
                             "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
-                            "zIndex": 35,
+                            "zIndex": 37,
                             "className": "women_blazer_main women_blazer"
                         }
                     ]
@@ -306,7 +308,7 @@
                     "assets": [
                         {
                             "url": "/assets/women/blazer/{{color}}/style/without_lapel/wl_2_side_pocket.png",
-                            "zIndex": 35,
+                            "zIndex": 37,
                             "className": "women_blazer_main women_blazer"
                         },
                         {
@@ -329,7 +331,12 @@
             "displayType": "icon",
             "dependsOn": {
                 "attributeId": "style",
-                "value": ["sb_1_button", "sb_2_button", "sb_3_button", "without_lapel"]
+                "value": [
+                    "sb_1_button",
+                    "sb_2_button",
+                    "sb_3_button",
+                    "without_lapel"
+                ]
             },
             "options": [
                 {
@@ -388,6 +395,60 @@
                             "className": "women_blazer_main women_blazer"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "id": "vents",
+            "label": "Vents",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "side_vents",
+                    "label": "Side Vents",
+                    "styleCode": "side_vents",
+                    "thumbnail": "006E",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "center_vent",
+                    "label": "Center Vent",
+                    "styleCode": "center_vent",
+                    "thumbnail": "006D",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "style_of_lapels",
+            "label": "Style Of Lapels",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "notch",
+                    "label": "Notch Lapel",
+                    "styleCode": "notch",
+                    "thumbnail": "0061",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "peak",
+                    "label": "Peak Lapel",
+                    "styleCode": "peak",
+                    "thumbnail": "0063",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "shawl",
+                    "label": "Shawl Lapel",
+                    "styleCode": "shawl",
+                    "thumbnail": "0062",
+                    "priceModifier": 0,
+                    "assets": []
                 }
             ]
         }
