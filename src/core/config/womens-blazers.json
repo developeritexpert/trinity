@@ -6,7 +6,8 @@
         "style": "sb_2_button",
         "hemline": "straight_hemline",
         "vents": "center_vent",
-        "style_of_lapels": "peak"
+        "style_of_lapels": "peak",
+        "pockets": "with_flap"
     },
     "sharedLayers": [
         {
@@ -209,11 +210,6 @@
                             "url": "/assets/women/blazer/{{color}}/style/sb_1_button/sb_1_button_shadow.png",
                             "zIndex": 35,
                             "className": "women_blazer_main women_blazer"
-                        },
-                        {
-                            "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
-                            "zIndex": 37,
-                            "className": "women_blazer_main women_blazer"
                         }
                     ]
                 },
@@ -224,11 +220,6 @@
                     "thumbnail": "0036",
                     "priceModifier": 0,
                     "assets": [
-                        {
-                            "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
-                            "zIndex": 37,
-                            "className": "women_blazer_main women_blazer"
-                        },
                         {
                             "url": "/assets/women/blazer/{{color}}/base/breast_pocket.png",
                             "zIndex": 35,
@@ -256,11 +247,6 @@
                         {
                             "url": "/assets/women/blazer/{{color}}/style/sb_3_button/sb_3_button_shadow.png",
                             "zIndex": 35,
-                            "className": "women_blazer_main women_blazer"
-                        },
-                        {
-                            "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
-                            "zIndex": 37,
                             "className": "women_blazer_main women_blazer"
                         }
                     ]
@@ -422,33 +408,51 @@
             ]
         },
         {
-            "id": "style_of_lapels",
-            "label": "Style Of Lapels",
+            "id": "pockets",
+            "label": "Pockets",
             "displayType": "icon",
             "options": [
                 {
-                    "id": "notch",
-                    "label": "Notch Lapel",
-                    "styleCode": "notch",
-                    "thumbnail": "0061",
+                    "id": "double_welted",
+                    "label": "Double-welted",
+                    "styleCode": "double_welted",
+                    "thumbnail": "0065",
                     "priceModifier": 0,
-                    "assets": []
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/base/double_welted.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
                 },
                 {
-                    "id": "peak",
-                    "label": "Peak Lapel",
-                    "styleCode": "peak",
-                    "thumbnail": "0063",
+                    "id": "with_flap",
+                    "label": "With flap",
+                    "styleCode": "with_flap",
+                    "thumbnail": "0064",
                     "priceModifier": 0,
-                    "assets": []
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
                 },
                 {
-                    "id": "shawl",
-                    "label": "Shawl Lapel",
-                    "styleCode": "shawl",
-                    "thumbnail": "0062",
+                    "id": "slanted_flap",
+                    "label": "Slanted flap",
+                    "styleCode": "slanted_flap",
+                    "thumbnail": "0067",
                     "priceModifier": 0,
-                    "assets": []
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/base/slanted_flap.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
                 }
             ]
         }
