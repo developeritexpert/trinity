@@ -572,7 +572,7 @@
         {
             "id": "buttons",
             "label": "Buttons",
-            "displayType": "swatch",
+            "displayType": "icon",
             "options": [
                 {
                     "id": "default_button",

@@ -455,6 +455,161 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "type_of_button",
+            "label": "Type of Buttons",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "by_default",
+                    "label": "By Default",
+                    "styleCode": "by_default",
+                    "thumbnail": "0056",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "button_1",
+                    "label": "",
+                    "styleCode": "button_1",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/1.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/1/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_2",
+                    "label": "",
+                    "styleCode": "button_2",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/2.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/2/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_3",
+                    "label": "",
+                    "styleCode": "button_3",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/3.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/3/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_4",
+                    "label": "",
+                    "styleCode": "button_4",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/4.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/4/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_5",
+                    "label": "",
+                    "styleCode": "button_5",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/5.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/5/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_6",
+                    "label": "",
+                    "styleCode": "button_6",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/6.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/6/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_50",
+                    "label": "",
+                    "styleCode": "button_50",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/50.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/50/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_51",
+                    "label": "",
+                    "styleCode": "button_51",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/51.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/51/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_52",
+                    "label": "",
+                    "styleCode": "button_52",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/52.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/52/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_53",
+                    "label": "",
+                    "styleCode": "button_53",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/53.jpg",
+                    "priceModifier": 8,
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/shared/buttons/53/{{style_prefix}}_button.png",
+                            "zIndex": 36,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
