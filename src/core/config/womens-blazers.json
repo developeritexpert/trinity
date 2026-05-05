@@ -342,7 +342,7 @@
                 {
                     "id": "rounded_hemline",
                     "label": "Rounded Hemline",
-                    "styleCode": "rounded_hemline",
+                    "styleCode": "rounded",
                     "thumbnail": "0069",
                     "priceModifier": 0,
                     "assets": [
@@ -361,7 +361,7 @@
                 {
                     "id": "straight_hemline",
                     "label": "Straight Hemline",
-                    "styleCode": "straight_hemline",
+                    "styleCode": "straight",
                     "thumbnail": "006A",
                     "priceModifier": 0,
                     "assets": [
@@ -380,7 +380,7 @@
                 {
                     "id": "cutaway_hemline",
                     "label": "Cutaway Hemline",
-                    "styleCode": "cutaway_hemline",
+                    "styleCode": "cutaway",
                     "thumbnail": "006B",
                     "priceModifier": 0,
                     "assets": [
@@ -432,7 +432,23 @@
                     "styleCode": "notch",
                     "thumbnail": "0061",
                     "priceModifier": 0,
-                    "assets": []
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_{{hemline}}_notch_breast_pocket.png",
+                            "zIndex": 40,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_{{hemline}}_notch_length_long.png",
+                            "zIndex": 40,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_{{hemline}}_notch_shadow.png",
+                            "zIndex": 40,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
                 },
                 {
                     "id": "peak",
@@ -440,7 +456,23 @@
                     "styleCode": "peak",
                     "thumbnail": "0063",
                     "priceModifier": 0,
-                    "assets": []
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_{{hemline}}_peak_breast_pocket.png",
+                            "zIndex": 40,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_{{hemline}}_peak_length_long.png",
+                            "zIndex": 40,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_{{hemline}}_peak_shadow.png",
+                            "zIndex": 40,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
                 },
                 {
                     "id": "shawl",
@@ -448,7 +480,23 @@
                     "styleCode": "shawl",
                     "thumbnail": "0062",
                     "priceModifier": 0,
-                    "assets": []
+                    "assets": [
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_{{hemline}}_shawl_breast_pocket.png",
+                            "zIndex": 40,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_{{hemline}}_shawl_length_long.png",
+                            "zIndex": 40,
+                            "className": "women_blazer_main women_blazer"
+                        },
+                        {
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/{{style_prefix}}_{{hemline}}_shawl_shadow.png",
+                            "zIndex": 40,
+                            "className": "women_blazer_main women_blazer"
+                        }
+                    ]
                 }
             ]
         }

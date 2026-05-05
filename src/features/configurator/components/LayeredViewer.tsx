@@ -38,6 +38,7 @@ export const LayeredViewer = () => {
     let activeContrastedCuffCode = '';   // cuff_all or cuff_inner
     let activeCuffFabricCode = '';       // e.g. 699, 2738, etc.
     let activeFitCode = 'slim_fit';      // Default for trousers
+    let activeHemlineCode = 'straight';   // Default hemline styleCode
 
     visibleAttributes.forEach((attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
@@ -56,6 +57,7 @@ export const LayeredViewer = () => {
         if (attr.id === 'contrasted_cuff' && selectedOpt?.contrastedCuffCode !== undefined) activeContrastedCuffCode = selectedOpt.contrastedCuffCode;
         if (attr.id === 'cuff_fabric' && selectedOpt?.cuffFabricCode) activeCuffFabricCode = selectedOpt.cuffFabricCode;
         if (attr.id === 'fit' && selectedOpt?.colorCode) activeFitCode = selectedOpt.colorCode;
+        if (attr.id === 'hemline' && selectedOpt?.styleCode) activeHemlineCode = selectedOpt.styleCode;
     });
 
     // Derived: map styleCode → short filename prefix used in hemline assets
@@ -92,7 +94,8 @@ export const LayeredViewer = () => {
                 .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
                 .replace('{{cuff_fabric}}', activeCuffFabricCode)
                 .replace('{{hole_collar}}', activeHoleCollarCode)
-                .replace('{{fit}}', activeFitCode);
+                .replace('{{fit}}', activeFitCode)
+                .replace('{{hemline}}', activeHemlineCode);
             targetAssets.push({ ...asset, url: finalUrl });
         });
     }
@@ -117,7 +120,8 @@ export const LayeredViewer = () => {
             .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
             .replace('{{cuff_fabric}}', activeCuffFabricCode)
             .replace('{{hole_collar}}', activeHoleCollarCode)
-            .replace('{{fit}}', activeFitCode);
+            .replace('{{fit}}', activeFitCode)
+            .replace('{{hemline}}', activeHemlineCode);
 
         // 1. Process commonAssets (apply to all options)
         if (attr.commonAssets) {
