@@ -164,6 +164,55 @@
                             "className": "pants_folded"
                         }
                     ]
+                },
+                {
+                    "id": "simple_grey",
+                    "label": "Simple Grey",
+                    "priceModifier": 10,
+                    "colorCode": "simple_grey",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/f45b0803edef1bb8803ad01e55314968.jpeg",
+                    "assets": [
+                        {
+                            "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
+                            "zIndex": 45,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/base/interior_back_upper.png",
+                            "zIndex": 104,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/base/interior_back_upper_alt.png",
+                            "zIndex": 105,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/base/negra.png",
+                            "zIndex": 105,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/base/interior_sleeves.png",
+                            "zIndex": 120,
+                            "className": "man_jacket"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/base/pants_length.png",
+                            "zIndex": 31,
+                            "className": "pants_folded"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/base/pants_front_pocket.png",
+                            "zIndex": 33,
+                            "className": "pants_folded"
+                        },
+                        {
+                            "url": "/assets/suits/{{color}}/base/pants_back_pocket.png",
+                            "zIndex": 38,
+                            "className": "pants_folded"
+                        }
+                    ]
                 }
             ]
         },

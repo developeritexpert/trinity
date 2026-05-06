@@ -3,7 +3,9 @@
     "basePrice": 199,
     "defaultSelections": {
         "fabric": "fab_mid_blue",
-        "sleeves": "long"
+        "sleeves": "long",
+        "collar": "classic_collar",
+        "cuffs": "classic_cuff"
     },
     "sharedLayers": [
         {
@@ -29,17 +31,7 @@
             "displayType": "swatch",
             "commonAssets": [
                 {
-                    "url": "/assets/women/shirt/{{color}}/base/sleeves_long.png",
-                    "zIndex": 35,
-                    "className": "women_shirt_main women_shirt"
-                },
-                {
                     "url": "/assets/women/shirt/{{color}}/base/shirt_base.png",
-                    "zIndex": 35,
-                    "className": "women_shirt_main women_shirt"
-                },
-                {
-                    "url": "/assets/women/shirt/{{color}}/base/necklines_classic.png",
                     "zIndex": 35,
                     "className": "women_shirt_main women_shirt"
                 }
@@ -90,7 +82,7 @@
                     "thumbnail": "0057",
                     "assets": [
                         {
-                            "url": "/assets/women/shirt/{{color}}/base/sleeves_long.png",
+                            "url": "/assets/women/shirt/{{color}}/style/sleeves_bracelet.png",
                             "zIndex": 35,
                             "className": "women_shirt_main women_shirt"
                         }
@@ -103,7 +95,135 @@
                     "thumbnail": "0058",
                     "assets": [
                         {
-                            "url": "/assets/women/shirt/{{color}}/base/sleeves_long.png",
+                            "url": "/assets/women/shirt/{{color}}/style/sleeves_short.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cuffs",
+            "label": "Cuffs",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "classic_cuff",
+                    "label": "Classic Cuff",
+                    "thumbnail": "0075",
+                    "assets": []
+                },
+                {
+                    "id": "2_button_cuff",
+                    "label": "2 Buttons",
+                    "thumbnail": "0077",
+                    "assets": []
+                },
+                {
+                    "id": "3_button_cuff",
+                    "label": "3 Buttons",
+                    "thumbnail": "0078",
+                    "assets": []
+                },
+                {
+                    "id": "1_button_rounded_cuff",
+                    "label": "1 Button Rounded",
+                    "thumbnail": "0079",
+                    "assets": []
+                },
+                {
+                    "id": "2_button_rounded_cuff",
+                    "label": "2 Button Rounded",
+                    "thumbnail": "007A",
+                    "assets": []
+                },
+                {
+                    "id": "french_simple_cuff",
+                    "label": "French Simple",
+                    "thumbnail": "0041",
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "collar",
+            "label": "Collar",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "stand_up_collar",
+                    "label": "Stand Up Collar",
+                    "colorCode": "stand_up_collar",
+                    "thumbnail": "0073",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/stand_up_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_down_collar",
+                    "label": "Button Down Collar",
+                    "colorCode": "button_down_collar",
+                    "thumbnail": "0072",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/button_down_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "rounded_collar",
+                    "label": "Rounded Collar",
+                    "colorCode": "rounded_collar",
+                    "thumbnail": "0070",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/rounded_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "classis_narrow_collar",
+                    "label": "Classis Narrow Collar",
+                    "colorCode": "classis_narrow_collar",
+                    "thumbnail": "006D",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/classis_narrow_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "classic_2_button_collar",
+                    "label": "Classic 2 Button Collar",
+                    "colorCode": "classic_2_button_collar",
+                    "thumbnail": "006F",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/classic_2_button_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "classic_collar",
+                    "label": "Classic Collar",
+                    "colorCode": "classic_collar",
+                    "thumbnail": "006C",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/classic_collar.png",
                             "zIndex": 35,
                             "className": "women_shirt_main women_shirt"
                         }
