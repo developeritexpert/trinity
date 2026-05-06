@@ -5,7 +5,10 @@
         "fabric": "fab_mid_blue",
         "sleeves": "long",
         "collar": "classic_collar",
-        "cuffs": "classic_cuff"
+        "cuffs": "classic_cuff",
+        "fastening": "standard",
+        "breast_pocket": "no_pocket",
+        "shoulder_strap": "no_shoulder_strap"
     },
     "sharedLayers": [
         {
@@ -61,6 +64,7 @@
             "id": "sleeves",
             "label": "Sleeves",
             "displayType": "icon",
+            "noAutoAdvance": true,
             "options": [
                 {
                     "id": "long",
@@ -107,6 +111,10 @@
             "id": "cuffs",
             "label": "Cuffs",
             "displayType": "icon",
+            "dependsOn": {
+                "attributeId": "sleeves",
+                "value": "long"
+            },
             "options": [
                 {
                     "id": "classic_cuff",
@@ -155,6 +163,7 @@
                     "id": "stand_up_collar",
                     "label": "Stand Up Collar",
                     "colorCode": "stand_up_collar",
+                    "collarCode": "stand_up_collar",
                     "thumbnail": "0073",
                     "assets": [
                         {
@@ -168,6 +177,7 @@
                     "id": "button_down_collar",
                     "label": "Button Down Collar",
                     "colorCode": "button_down_collar",
+                    "collarCode": "button_down_collar",
                     "thumbnail": "0072",
                     "assets": [
                         {
@@ -181,6 +191,7 @@
                     "id": "rounded_collar",
                     "label": "Rounded Collar",
                     "colorCode": "rounded_collar",
+                    "collarCode": "rounded_collar",
                     "thumbnail": "0070",
                     "assets": [
                         {
@@ -192,8 +203,9 @@
                 },
                 {
                     "id": "classis_narrow_collar",
-                    "label": "Classis Narrow Collar",
+                    "label": "Classic Narrow Collar",
                     "colorCode": "classis_narrow_collar",
+                    "collarCode": "classic_narrow_collar",
                     "thumbnail": "006D",
                     "assets": [
                         {
@@ -207,6 +219,7 @@
                     "id": "classic_2_button_collar",
                     "label": "Classic 2 Button Collar",
                     "colorCode": "classic_2_button_collar",
+                    "collarCode": "classic_2_button_collar",
                     "thumbnail": "006F",
                     "assets": [
                         {
@@ -220,6 +233,7 @@
                     "id": "classic_collar",
                     "label": "Classic Collar",
                     "colorCode": "classic_collar",
+                    "collarCode": "classic_collar",
                     "thumbnail": "006C",
                     "assets": [
                         {
@@ -228,6 +242,129 @@
                             "className": "women_shirt_main women_shirt"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "id": "fastening",
+            "label": "Fastening",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "standard",
+                    "label": "Standard",
+                    "thumbnail": "004E"
+                },
+                {
+                    "id": "hidden_button",
+                    "label": "Hidden Buttons",
+                    "thumbnail": "0051",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/hidden_button/shirt_base.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        },
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/hidden_button/{{collar}}.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "half_fastening",
+                    "label": "Half Fastening",
+                    "thumbnail": "0054",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/half_fastening/shirt_base.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        },
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/half_fastening/{{collar}}.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "breast_pocket",
+            "label": "Breast Pocket",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_pocket",
+                    "label": "No Pocket",
+                    "thumbnail": "0034"
+                },
+                {
+                    "id": "pocket",
+                    "label": "1 Breast Pocket",
+                    "thumbnail": "0023",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/pocket_1.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "2_pockets",
+                    "label": "2 Breast Pockets",
+                    "thumbnail": "0024",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/pocket_2.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "shoulder_strap",
+            "label": "Shoulder Strap",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_shoulder_strap",
+                    "label": "No Shoulder Strap",
+                    "thumbnail": "0031"
+                },
+                {
+                    "id": "shoulder_strap",
+                    "label": "Shoulder Strap",
+                    "thumbnail": "0032",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/shoulder_piece.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "customized_collar",
+            "label": "Customized Collar",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "by_default",
+                    "label": "By Default",
+                    "thumbnail": "0058"
+                },
+                {
+                    "id": "full_coller",
+                    "label": "Full Coller",
+                    "thumbnail": "0058"
                 }
             ]
         }
