@@ -24,6 +24,7 @@ export interface Option {
 
     // for shirt
     collarCode?: string;
+    collarCustomizedCode?: string;
     cuffCode?: string;
     contrastedCollarCode?: string;
     collarFabricCode?: string;

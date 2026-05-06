@@ -17,3 +17,9 @@ export const womenBlazerIcons = localFont({
   variable: '--font-women-blazer-icons',
   display: 'swap',
 });
+
+export const womenShirtIcons = localFont({
+  src: '../../../public/fonts/women-shirt.woff2',
+  variable: '--font-women-shirt-icons',
+  display: 'swap',
+});

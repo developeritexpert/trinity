@@ -1,0 +1,456 @@
+{
+    "productId": "womens-shirt",
+    "basePrice": 199,
+    "defaultSelections": {
+        "fabric": "fab_mid_blue",
+        "sleeves": "long",
+        "collar": "classic_collar",
+        "cuffs": "classic_cuff",
+        "fastening": "standard",
+        "breast_pocket": "no_pocket",
+        "shoulder_strap": "no_shoulder_strap",
+        "customized_collar": "by_default",
+        "customized_collar_fabric": "miles"
+    },
+    "sharedLayers": [
+        {
+            "url": "/assets/women/shirt/shared/overlays/sara_sampaio.png",
+            "zIndex": 20,
+            "className": "women_body women_shirt_main"
+        },
+        {
+            "url": "/assets/women/shirt/shared/overlays/pants_front.png",
+            "zIndex": 20,
+            "className": "women_shirt_jeans women_shirt_main"
+        },
+        {
+            "url": "/assets/women/shirt/shared/overlays/sara_sampaio_mano.png",
+            "zIndex": 20,
+            "className": "women_body women_shirt_main"
+        }
+    ],
+    "attributes": [
+        {
+            "id": "fabric",
+            "label": "Fabric",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/women/shirt/{{color}}/base/shirt_base.png",
+                    "zIndex": 35,
+                    "className": "women_shirt_main women_shirt"
+                }
+            ],
+            "options": [
+                {
+                    "id": "fab_mid_blue",
+                    "label": "Mid Blue",
+                    "colorCode": "mid-blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_saultmarl",
+                    "label": "Saultmarl",
+                    "colorCode": "saultmarl",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3212_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_vega",
+                    "label": "vega",
+                    "colorCode": "vega",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2098_huge_c300.jpg"
+                }
+            ]
+        },
+        {
+            "id": "sleeves",
+            "label": "Sleeves",
+            "displayType": "icon",
+            "noAutoAdvance": true,
+            "options": [
+                {
+                    "id": "long",
+                    "label": "Long",
+                    "colorCode": "long",
+                    "thumbnail": "0056",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/base/sleeves_long.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bracelet",
+                    "label": "Bracelet",
+                    "colorCode": "bracelet",
+                    "thumbnail": "0057",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/sleeves_bracelet.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "short",
+                    "label": "Short",
+                    "colorCode": "short",
+                    "thumbnail": "0058",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/sleeves_short.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cuffs",
+            "label": "Cuffs",
+            "displayType": "icon",
+            "dependsOn": {
+                "attributeId": "sleeves",
+                "value": "long"
+            },
+            "options": [
+                {
+                    "id": "classic_cuff",
+                    "label": "Classic Cuff",
+                    "thumbnail": "0075",
+                    "assets": []
+                },
+                {
+                    "id": "2_button_cuff",
+                    "label": "2 Buttons",
+                    "thumbnail": "0077",
+                    "assets": []
+                },
+                {
+                    "id": "3_button_cuff",
+                    "label": "3 Buttons",
+                    "thumbnail": "0078",
+                    "assets": []
+                },
+                {
+                    "id": "1_button_rounded_cuff",
+                    "label": "1 Button Rounded",
+                    "thumbnail": "0079",
+                    "assets": []
+                },
+                {
+                    "id": "2_button_rounded_cuff",
+                    "label": "2 Button Rounded",
+                    "thumbnail": "007A",
+                    "assets": []
+                },
+                {
+                    "id": "french_simple_cuff",
+                    "label": "French Simple",
+                    "thumbnail": "0041",
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "collar",
+            "label": "Collar",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "stand_up_collar",
+                    "label": "Stand Up Collar",
+                    "colorCode": "stand_up_collar",
+                    "collarCode": "stand_up_collar",
+                    "collarCustomizedCode": "stand_up_coller_customized",
+                    "thumbnail": "0073",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/stand_up_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "button_down_collar",
+                    "label": "Button Down Collar",
+                    "colorCode": "button_down_collar",
+                    "collarCode": "button_down_collar",
+                    "collarCustomizedCode": "button_down_customized",
+                    "thumbnail": "0072",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/button_down_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "rounded_collar",
+                    "label": "Rounded Collar",
+                    "colorCode": "rounded_collar",
+                    "collarCode": "rounded_collar",
+                    "collarCustomizedCode": "rounded_customized",
+                    "thumbnail": "0070",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/rounded_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "classis_narrow_collar",
+                    "label": "Classic Narrow Collar",
+                    "colorCode": "classis_narrow_collar",
+                    "collarCode": "classic_narrow_collar",
+                    "collarCustomizedCode": "classic_narrow_customized",
+                    "thumbnail": "006D",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/classis_narrow_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "classic_2_button_collar",
+                    "label": "Classic 2 Button Collar",
+                    "colorCode": "classic_2_button_collar",
+                    "collarCode": "classic_2_button_collar",
+                    "collarCustomizedCode": "classic_2_button_customized",
+                    "thumbnail": "006F",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/classic_2_button_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "classic_collar",
+                    "label": "Classic Collar",
+                    "colorCode": "classic_collar",
+                    "collarCode": "classic_collar",
+                    "collarCustomizedCode": "classic_customized",
+                    "thumbnail": "006C",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/classic_collar.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "fastening",
+            "label": "Fastening",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "standard",
+                    "label": "Standard",
+                    "thumbnail": "004E"
+                },
+                {
+                    "id": "hidden_button",
+                    "label": "Hidden Buttons",
+                    "thumbnail": "0051",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/hidden_button/shirt_base.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        },
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/hidden_button/{{collar}}.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "half_fastening",
+                    "label": "Half Fastening",
+                    "thumbnail": "0054",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/half_fastening/shirt_base.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        },
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/half_fastening/{{collar}}.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "breast_pocket",
+            "label": "Breast Pocket",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_pocket",
+                    "label": "No Pocket",
+                    "thumbnail": "0034"
+                },
+                {
+                    "id": "pocket",
+                    "label": "1 Breast Pocket",
+                    "thumbnail": "0023",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/pocket_1.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "2_pockets",
+                    "label": "2 Breast Pockets",
+                    "thumbnail": "0024",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/pocket_2.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "shoulder_strap",
+            "label": "Shoulder Strap",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_shoulder_strap",
+                    "label": "No Shoulder Strap",
+                    "thumbnail": "0031"
+                },
+                {
+                    "id": "shoulder_strap",
+                    "label": "Shoulder Strap",
+                    "thumbnail": "0032",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/style/shoulder_piece.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "customized_collar",
+            "label": "Customized Collar",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "by_default",
+                    "label": "By Default",
+                    "thumbnail": "0061"
+                },
+                {
+                    "id": "full_collar",
+                    "label": "Full Collar",
+                    "thumbnail": "0064"
+                }
+            ]
+        },
+        {
+            "id": "customized_collar_fabric",
+            "label": "Collar Fabric",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "customized_collar",
+                "value": "full_collar"
+            },
+            "options": [
+                {
+                    "id": "miles",
+                    "label": "Miles",
+                    "collarCustomizedFabric": "miles",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3404_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/miles/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "marie",
+                    "label": "Marie",
+                    "collarCustomizedFabric": "marie",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2608_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/marie/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "baco",
+                    "label": "Baco",
+                    "collarCustomizedFabric": "baco",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3910_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/baco/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "naya",
+                    "label": "Naya",
+                    "collarCustomizedFabric": "naya",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2601_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/naya/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "perla",
+                    "label": "Perla",
+                    "collarCustomizedFabric": "perla",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3908_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/perla/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

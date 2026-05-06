@@ -4,12 +4,14 @@ import menShirtConfig from './men-shirt.json';
 import menSuitConfig from './men-suit.json';
 import menTrouserConfig from './men-trouser.json';
 import womensBlazerConfig from './womens-blazers.json';
+import womenShirtConfig from './women-shirt.json';
 
 const configRegistry: Record<string, any> = {
     'men-shirt': menShirtConfig,
     'men-suit': menSuitConfig,
     'men-trouser': menTrouserConfig,
     'women-blazer': womensBlazerConfig,
+    'women-shirt': womenShirtConfig,
 };
 
 // Added `?` to make them optional, and added an if-statement check
