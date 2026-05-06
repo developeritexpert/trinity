@@ -1,0 +1,115 @@
+{
+    "productId": "womens-shirt",
+    "basePrice": 199,
+    "defaultSelections": {
+        "fabric": "fab_mid_blue",
+        "sleeves": "long"
+    },
+    "sharedLayers": [
+        {
+            "url": "/assets/women/shirt/shared/overlays/sara_sampaio.png",
+            "zIndex": 20,
+            "className": "women_body women_shirt_main"
+        },
+        {
+            "url": "/assets/women/shirt/shared/overlays/pants_front.png",
+            "zIndex": 20,
+            "className": "women_shirt_jeans women_shirt_main"
+        },
+        {
+            "url": "/assets/women/shirt/shared/overlays/sara_sampaio_mano.png",
+            "zIndex": 20,
+            "className": "women_body women_shirt_main"
+        }
+    ],
+    "attributes": [
+        {
+            "id": "fabric",
+            "label": "Fabric",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/women/shirt/{{color}}/base/sleeves_long.png",
+                    "zIndex": 35,
+                    "className": "women_shirt_main women_shirt"
+                },
+                {
+                    "url": "/assets/women/shirt/{{color}}/base/shirt_base.png",
+                    "zIndex": 35,
+                    "className": "women_shirt_main women_shirt"
+                },
+                {
+                    "url": "/assets/women/shirt/{{color}}/base/necklines_classic.png",
+                    "zIndex": 35,
+                    "className": "women_shirt_main women_shirt"
+                }
+            ],
+            "options": [
+                {
+                    "id": "fab_mid_blue",
+                    "label": "Mid Blue",
+                    "colorCode": "mid-blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_saultmarl",
+                    "label": "Saultmarl",
+                    "colorCode": "saultmarl",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3212_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_vega",
+                    "label": "vega",
+                    "colorCode": "vega",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2098_huge_c300.jpg"
+                }
+            ]
+        },
+        {
+            "id": "sleeves",
+            "label": "Sleeves",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "long",
+                    "label": "Long",
+                    "colorCode": "long",
+                    "thumbnail": "0056",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/base/sleeves_long.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "bracelet",
+                    "label": "Bracelet",
+                    "colorCode": "bracelet",
+                    "thumbnail": "0057",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/base/sleeves_long.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "short",
+                    "label": "Short",
+                    "colorCode": "short",
+                    "thumbnail": "0058",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/{{color}}/base/sleeves_long.png",
+                            "zIndex": 35,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
