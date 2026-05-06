@@ -9,18 +9,19 @@ const fabrics = {
     "2608_fabric": "marie",
     "3910_fabric": "baco",
     "2601_fabric": "naya",
-    "3908_fabric": "perla"
-
+    "3908_fabric": "perla",
 };
 
-// ⚠️ IMPORTANT: uses 3702_fabric in URL (shared asset base)
-const BASE = "https://www.sumissura.com/3d/new_woman/shirt/STD/3702_fabric/front";
+// Base URL (fabricKey will be injected)
+const BASE = "https://www.sumissura.com/3d/new_woman/shirt/STD";
 
+// Output folder
 const OUTPUT_ROOT = path.resolve(
     process.cwd(),
     "public/assets/women/shirt/shared/coller"
 );
 
+// Headers
 const HEADERS = {
     "User-Agent":
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36",
@@ -64,7 +65,7 @@ async function downloadImage(url, filepath) {
 
         if (res.status !== 200) {
             console.log(`❌ ${res.status}: ${url}`);
-            return;
+            return false;
         }
 
         await fs.ensureDir(path.dirname(filepath));
@@ -75,22 +76,28 @@ async function downloadImage(url, filepath) {
         return new Promise((resolve, reject) => {
             writer.on("finish", () => {
                 console.log("✅ Saved:", filepath);
-                resolve();
+                resolve(true);
             });
             writer.on("error", reject);
         });
 
     } catch (err) {
         console.log("❌ Error:", url);
+        return false;
     }
+}
+
+// URL builder
+function buildURL(fabricKey, fileName) {
+    return `${BASE}/${fabricKey}/front/${fileName}`;
 }
 
 // ================= MAIN =================
 
 async function run() {
-    console.log("🚀 Downloading customized collars...\n");
+    console.log("🚀 Downloading customized collars (per fabric)...\n");
 
-    for (const [, fabricName] of Object.entries(fabrics)) {
+    for (const [fabricKey, fabricName] of Object.entries(fabrics)) {
         console.log(`\n🧵 Fabric: ${fabricName}`);
 
         const fabricFolder = path.join(
@@ -109,15 +116,17 @@ async function run() {
                 `${name}.png`
             );
 
+            // Skip existing
             if (await fs.pathExists(filePath)) {
                 console.log("⏭️ Exists:", filePath);
                 continue;
             }
 
-            const url = `${BASE}/${file}`;
+            const url = buildURL(fabricKey, file);
 
-            await downloadImage(url, filePath);
-            success++;
+            const saved = await downloadImage(url, filePath);
+
+            if (saved) success++;
         }
 
         console.log(`🎉 ${success}/6 collars downloaded`);

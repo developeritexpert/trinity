@@ -33,6 +33,7 @@ export const LayeredViewer = () => {
     // Add these for shirts:
     let activeCollarCode = 'cutaway';
     let activeCuffCode = 'single_1_button';
+    let activeCollarCustomizedCode = 'classic_customized'; // default fallback
     let activeContrastedCollarCode = ''; // cc_all or cc_inner_fabric
     let activeCollarFabricCode = '';     // e.g. 699, 2738, etc.
     let activeContrastedCuffCode = '';   // cuff_all or cuff_inner
@@ -50,6 +51,7 @@ export const LayeredViewer = () => {
 
         // Add these for shirts:
         if (attr.id === 'collar' && selectedOpt?.collarCode) activeCollarCode = selectedOpt.collarCode;
+        if (attr.id === 'collar' && selectedOpt?.collarCustomizedCode) activeCollarCustomizedCode = selectedOpt.collarCustomizedCode;
         if (attr.id === 'cuffs' && selectedOpt?.cuffCode) activeCuffCode = selectedOpt.cuffCode;
         if (attr.id === 'contrasted_collar' && selectedOpt?.contrastedCollarCode !== undefined) activeContrastedCollarCode = selectedOpt.contrastedCollarCode;
         if (attr.id === 'contrasted_collar_fabric' && selectedOpt?.collarFabricCode) activeCollarFabricCode = selectedOpt.collarFabricCode;
@@ -86,6 +88,7 @@ export const LayeredViewer = () => {
                 .replace('{{lining_style}}', activeLiningStyleCode)
                 .replace('{{lining_color}}', activeLiningColorCode)
                 .replace('{{collar}}', activeCollarCode)
+                .replace('{{collar_customized}}', activeCollarCustomizedCode)
                 .replace('{{cuff}}', activeCuffCode)
                 .replace('{{contrasted_collar}}', activeContrastedCollarCode)
                 .replace('{{collar_fabric}}', activeCollarFabricCode)
@@ -111,6 +114,7 @@ export const LayeredViewer = () => {
             .replace('{{lining_style}}', activeLiningStyleCode)
             .replace('{{lining_color}}', activeLiningColorCode)
             .replace('{{collar}}', activeCollarCode)
+            .replace('{{collar_customized}}', activeCollarCustomizedCode)
             .replace('{{cuff}}', activeCuffCode)
             .replace('{{contrasted_collar}}', activeContrastedCollarCode)
             .replace('{{collar_fabric}}', activeCollarFabricCode)

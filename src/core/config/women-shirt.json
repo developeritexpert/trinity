@@ -8,7 +8,9 @@
         "cuffs": "classic_cuff",
         "fastening": "standard",
         "breast_pocket": "no_pocket",
-        "shoulder_strap": "no_shoulder_strap"
+        "shoulder_strap": "no_shoulder_strap",
+        "customized_collar": "by_default",
+        "customized_collar_fabric": "miles"
     },
     "sharedLayers": [
         {
@@ -164,6 +166,7 @@
                     "label": "Stand Up Collar",
                     "colorCode": "stand_up_collar",
                     "collarCode": "stand_up_collar",
+                    "collarCustomizedCode": "stand_up_coller_customized",
                     "thumbnail": "0073",
                     "assets": [
                         {
@@ -178,6 +181,7 @@
                     "label": "Button Down Collar",
                     "colorCode": "button_down_collar",
                     "collarCode": "button_down_collar",
+                    "collarCustomizedCode": "button_down_customized",
                     "thumbnail": "0072",
                     "assets": [
                         {
@@ -192,6 +196,7 @@
                     "label": "Rounded Collar",
                     "colorCode": "rounded_collar",
                     "collarCode": "rounded_collar",
+                    "collarCustomizedCode": "rounded_customized",
                     "thumbnail": "0070",
                     "assets": [
                         {
@@ -206,6 +211,7 @@
                     "label": "Classic Narrow Collar",
                     "colorCode": "classis_narrow_collar",
                     "collarCode": "classic_narrow_collar",
+                    "collarCustomizedCode": "classic_narrow_customized",
                     "thumbnail": "006D",
                     "assets": [
                         {
@@ -220,6 +226,7 @@
                     "label": "Classic 2 Button Collar",
                     "colorCode": "classic_2_button_collar",
                     "collarCode": "classic_2_button_collar",
+                    "collarCustomizedCode": "classic_2_button_customized",
                     "thumbnail": "006F",
                     "assets": [
                         {
@@ -234,6 +241,7 @@
                     "label": "Classic Collar",
                     "colorCode": "classic_collar",
                     "collarCode": "classic_collar",
+                    "collarCustomizedCode": "classic_customized",
                     "thumbnail": "006C",
                     "assets": [
                         {
@@ -359,14 +367,90 @@
                 {
                     "id": "by_default",
                     "label": "By Default",
-                    "thumbnail": "0058"
+                    "thumbnail": "0061"
                 },
                 {
-                    "id": "full_coller",
-                    "label": "Full Coller",
-                    "thumbnail": "0058"
+                    "id": "full_collar",
+                    "label": "Full Collar",
+                    "thumbnail": "0064"
+                }
+            ]
+        },
+        {
+            "id": "customized_collar_fabric",
+            "label": "Collar Fabric",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "customized_collar",
+                "value": "full_collar"
+            },
+            "options": [
+                {
+                    "id": "miles",
+                    "label": "Miles",
+                    "collarCustomizedFabric": "miles",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3404_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/miles/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "marie",
+                    "label": "Marie",
+                    "collarCustomizedFabric": "marie",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2608_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/marie/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "baco",
+                    "label": "Baco",
+                    "collarCustomizedFabric": "baco",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3910_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/baco/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "naya",
+                    "label": "Naya",
+                    "collarCustomizedFabric": "naya",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2601_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/naya/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "perla",
+                    "label": "Perla",
+                    "collarCustomizedFabric": "perla",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3908_normal.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/coller/perla/{{collar_customized}}.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
                 }
             ]
         }
     ]
-}
+}
