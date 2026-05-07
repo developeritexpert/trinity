@@ -87,6 +87,13 @@
                     "priceModifier": 10,
                     "colorCode": "simple_blue",
                     "thumbnail": "https://static.shopapps.site/options/swatch/134119/b3b95b0d01d09103c9f0db18cc28fd7c.jpeg"
+                },
+                {
+                    "id": "deep_gray",
+                    "label": "Deep Gray",
+                    "priceModifier": 10,
+                    "colorCode": "deep_gray",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/cce4e91eee5985e7e61604988fb533d0.jpeg"
                 }
             ]
         },
