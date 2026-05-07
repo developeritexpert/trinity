@@ -205,7 +205,7 @@
                         },
                         {
                             "url": "/assets/suits/{{color}}/style/mandarin/interior_back_alt.png",
-                            "zIndex": 105,
+                            "zIndex": 104,
                             "className": "man_jacket"
                         },
                         {
@@ -225,7 +225,7 @@
                         },
                         {
                             "url": "/assets/suits/{{color}}/style/mandarin/neck_alt.png",
-                            "zIndex": 180,
+                            "zIndex": 170,
                             "className": "man_jacket"
                         },
                         {
