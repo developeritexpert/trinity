@@ -17,202 +17,76 @@
         {
             "id": "fabric",
             "label": "Fabric",
+            "commonAssets": [
+                {
+                    "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
+                    "zIndex": 45,
+                    "className": "man_jacket"
+                },
+                {
+                    "url": "/assets/suits/{{color}}/base/interior_back_upper.png",
+                    "zIndex": 104,
+                    "className": "man_jacket"
+                },
+                {
+                    "url": "/assets/suits/{{color}}/base/interior_back_upper_alt.png",
+                    "zIndex": 105,
+                    "className": "man_jacket"
+                },
+                {
+                    "url": "/assets/suits/{{color}}/base/negra.png",
+                    "zIndex": 105,
+                    "className": "man_jacket"
+                },
+                {
+                    "url": "/assets/suits/{{color}}/base/interior_sleeves.png",
+                    "zIndex": 120,
+                    "className": "man_jacket"
+                },
+                {
+                    "url": "/assets/suits/{{color}}/base/pants_length.png",
+                    "zIndex": 31,
+                    "className": "pants_folded"
+                },
+                {
+                    "url": "/assets/suits/{{color}}/base/pants_front_pocket.png",
+                    "zIndex": 33,
+                    "className": "pants_folded"
+                },
+                {
+                    "url": "/assets/suits/{{color}}/base/pants_back_pocket.png",
+                    "zIndex": 38,
+                    "className": "pants_folded"
+                }
+            ],
             "options": [
                 {
                     "id": "fab_navy_twill",
                     "label": "Navy Blue Twill",
                     "priceModifier": 0,
                     "colorCode": "navy",
-                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg",
-                    "assets": [
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
-                            "zIndex": 45,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_upper.png",
-                            "zIndex": 104,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_upper_alt.png",
-                            "zIndex": 105,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/negra.png",
-                            "zIndex": 105,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_sleeves.png",
-                            "zIndex": 120,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_length.png",
-                            "zIndex": 31,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_front_pocket.png",
-                            "zIndex": 33,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_back_pocket.png",
-                            "zIndex": 38,
-                            "className": "pants_folded"
-                        }
-                    ]
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg"
                 },
                 {
                     "id": "fab_sicilian_grey",
                     "label": "Sicilian Grey",
                     "priceModifier": 0,
                     "colorCode": "grey",
-                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/141_huge_c300.jpg",
-                    "assets": [
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
-                            "zIndex": 45,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_upper.png",
-                            "zIndex": 104,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_upper_alt.png",
-                            "zIndex": 105,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/negra.png",
-                            "zIndex": 105,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_sleeves.png",
-                            "zIndex": 120,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_length.png",
-                            "zIndex": 31,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_front_pocket.png",
-                            "zIndex": 33,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_back_pocket.png",
-                            "zIndex": 38,
-                            "className": "pants_folded"
-                        }
-                    ]
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/141_huge_c300.jpg"
                 },
                 {
                     "id": "fab_walkerson_black",
                     "label": "Walkerson",
                     "priceModifier": 10,
                     "colorCode": "walkerson",
-                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3526_huge_c300.jpg",
-                    "assets": [
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
-                            "zIndex": 45,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_upper.png",
-                            "zIndex": 104,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_upper_alt.png",
-                            "zIndex": 105,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/negra.png",
-                            "zIndex": 105,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_sleeves.png",
-                            "zIndex": 120,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_length.png",
-                            "zIndex": 31,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_front_pocket.png",
-                            "zIndex": 33,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_back_pocket.png",
-                            "zIndex": 38,
-                            "className": "pants_folded"
-                        }
-                    ]
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3526_huge_c300.jpg"
                 },
                 {
                     "id": "simple_blue",
-                    "label": "Simple BLue",
+                    "label": "Simple Blue",
                     "priceModifier": 10,
                     "colorCode": "simple_blue",
-                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/b3b95b0d01d09103c9f0db18cc28fd7c.jpeg",
-                    "assets": [
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_lower.png",
-                            "zIndex": 45,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_upper.png",
-                            "zIndex": 104,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_back_upper_alt.png",
-                            "zIndex": 105,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/negra.png",
-                            "zIndex": 105,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/interior_sleeves.png",
-                            "zIndex": 120,
-                            "className": "man_jacket"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_length.png",
-                            "zIndex": 31,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_front_pocket.png",
-                            "zIndex": 33,
-                            "className": "pants_folded"
-                        },
-                        {
-                            "url": "/assets/suits/{{color}}/base/pants_back_pocket.png",
-                            "zIndex": 38,
-                            "className": "pants_folded"
-                        }
-                    ]
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/b3b95b0d01d09103c9f0db18cc28fd7c.jpeg"
                 }
             ]
         },
