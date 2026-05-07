@@ -166,11 +166,11 @@
                     ]
                 },
                 {
-                    "id": "simple_grey",
-                    "label": "Simple Grey",
+                    "id": "simple_blue",
+                    "label": "Simple BLue",
                     "priceModifier": 10,
-                    "colorCode": "simple_grey",
-                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/f45b0803edef1bb8803ad01e55314968.jpeg",
+                    "colorCode": "simple_blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/b3b95b0d01d09103c9f0db18cc28fd7c.jpeg",
                     "assets": [
                         {
                             "url": "/assets/suits/{{color}}/base/interior_back_lower.png",

@@ -14,7 +14,7 @@
     },
     "sharedLayers": [
         {
-            "url": "/assets/women/shirt/shared/overlays/sara_sampaio.png",
+            "url": "/assets/women/shirt/shared/overlays/ora_model.png",
             "zIndex": 20,
             "className": "women_body women_shirt_main"
         },
@@ -24,7 +24,7 @@
             "className": "women_shirt_jeans women_shirt_main"
         },
         {
-            "url": "/assets/women/shirt/shared/overlays/sara_sampaio_mano.png",
+            "url": "/assets/women/shirt/shared/overlays/ora_hand.png",
             "zIndex": 20,
             "className": "women_body women_shirt_main"
         }
