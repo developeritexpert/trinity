@@ -451,6 +451,87 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "collar_buttons_color",
+            "label": "Buttons Color",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "by_default",
+                    "label": "By Default",
+                    "thumbnail": "0039",
+                    "assets": []
+                },
+                {
+                    "id": "white",
+                    "label": "White",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/1.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/buttons/white/{{collarCode}}_color.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        },
+                        {
+                            "url": "/assets/women/shirt/shared/buttons/white/{{fastening}}_base_color.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "red",
+                    "label": "Red",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/3.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/buttons/red/{{collarCode}}_color.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        },
+                        {
+                            "url": "/assets/women/shirt/shared/buttons/red/{{fastening}}_base_color.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "blue",
+                    "label": "Blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/6.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/buttons/blue/{{collarCode}}_color.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        },
+                        {
+                            "url": "/assets/women/shirt/shared/buttons/blue/{{fastening}}_base_color.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                },
+                {
+                    "id": "black",
+                    "label": "Black",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/8.jpg",
+                    "assets": [
+                        {
+                            "url": "/assets/women/shirt/shared/buttons/black/{{collarCode}}_color.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        },
+                        {
+                            "url": "/assets/women/shirt/shared/buttons/black/{{fastening}}_base_color.png",
+                            "zIndex": 40,
+                            "className": "women_shirt_main women_shirt"
+                        }
+                    ]
+                }
+            ]
         }
     ]
-}
+}
