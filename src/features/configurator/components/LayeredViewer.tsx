@@ -39,6 +39,8 @@ export const LayeredViewer = () => {
     let activeContrastedCuffCode = '';   // cuff_all or cuff_inner
     let activeCuffFabricCode = '';       // e.g. 699, 2738, etc.
     let activeFitCode = 'slim_fit';      // Default for trousers
+    let activeCollarCodeToken = 'classic_collar'; // collarCode field from collar option
+    let activeFasteningCode = 'standard';          // selected fastening option id
 
     visibleAttributes.forEach((attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
@@ -51,7 +53,9 @@ export const LayeredViewer = () => {
 
         // Add these for shirts:
         if (attr.id === 'collar' && selectedOpt?.collarCode) activeCollarCode = selectedOpt.collarCode;
+        if (attr.id === 'collar' && selectedOpt?.collarCode) activeCollarCodeToken = selectedOpt.collarCode;
         if (attr.id === 'collar' && selectedOpt?.collarCustomizedCode) activeCollarCustomizedCode = selectedOpt.collarCustomizedCode;
+        if (attr.id === 'fastening') activeFasteningCode = selections['fastening'] ?? 'standard';
         if (attr.id === 'cuffs' && selectedOpt?.cuffCode) activeCuffCode = selectedOpt.cuffCode;
         if (attr.id === 'contrasted_collar' && selectedOpt?.contrastedCollarCode !== undefined) activeContrastedCollarCode = selectedOpt.contrastedCollarCode;
         if (attr.id === 'contrasted_collar_fabric' && selectedOpt?.collarFabricCode) activeCollarFabricCode = selectedOpt.collarFabricCode;
@@ -62,11 +66,11 @@ export const LayeredViewer = () => {
 
     // Derived: map styleCode → short filename prefix used in hemline assets
     const STYLE_PREFIX_MAP: Record<string, string> = {
-        sb_1_button:   'sb_1',
-        sb_2_button:   'sb_2',
-        sb_3_button:   'sb_3',
+        sb_1_button: 'sb_1',
+        sb_2_button: 'sb_2',
+        sb_3_button: 'sb_3',
         without_lapel: 'wl_2',
-        db_4_button:   'db_4',
+        db_4_button: 'db_4',
     };
     const activeStylePrefix = STYLE_PREFIX_MAP[activeStyleCode] ?? activeStyleCode;
 
@@ -88,6 +92,7 @@ export const LayeredViewer = () => {
                 .replace('{{lining_style}}', activeLiningStyleCode)
                 .replace('{{lining_color}}', activeLiningColorCode)
                 .replace('{{collar}}', activeCollarCode)
+                .replace('{{collarCode}}', activeCollarCodeToken)
                 .replace('{{collar_customized}}', activeCollarCustomizedCode)
                 .replace('{{cuff}}', activeCuffCode)
                 .replace('{{contrasted_collar}}', activeContrastedCollarCode)
@@ -95,7 +100,8 @@ export const LayeredViewer = () => {
                 .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
                 .replace('{{cuff_fabric}}', activeCuffFabricCode)
                 .replace('{{hole_collar}}', activeHoleCollarCode)
-                .replace('{{fit}}', activeFitCode);
+                .replace('{{fit}}', activeFitCode)
+                .replace('{{fastening}}', activeFasteningCode);
             targetAssets.push({ ...asset, url: finalUrl });
         });
     }
@@ -114,6 +120,7 @@ export const LayeredViewer = () => {
             .replace('{{lining_style}}', activeLiningStyleCode)
             .replace('{{lining_color}}', activeLiningColorCode)
             .replace('{{collar}}', activeCollarCode)
+            .replace('{{collarCode}}', activeCollarCodeToken)
             .replace('{{collar_customized}}', activeCollarCustomizedCode)
             .replace('{{cuff}}', activeCuffCode)
             .replace('{{contrasted_collar}}', activeContrastedCollarCode)
@@ -121,7 +128,8 @@ export const LayeredViewer = () => {
             .replace('{{contrasted_cuff}}', activeContrastedCuffCode)
             .replace('{{cuff_fabric}}', activeCuffFabricCode)
             .replace('{{hole_collar}}', activeHoleCollarCode)
-            .replace('{{fit}}', activeFitCode);
+            .replace('{{fit}}', activeFitCode)
+            .replace('{{fastening}}', activeFasteningCode);
 
         // 1. Process commonAssets (apply to all options)
         if (attr.commonAssets) {

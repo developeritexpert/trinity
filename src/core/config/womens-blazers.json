@@ -11,7 +11,7 @@
     },
     "sharedLayers": [
         {
-            "url": "/assets/women/blazer/shared/overlays/sara_sampaio.png",
+            "url": "/assets/women/blazer/shared/overlays/ora_model.png",
             "zIndex": 10,
             "className": "women_body women_blazer_main"
         },
@@ -26,7 +26,7 @@
             "className": "women_pant women_blazer_main"
         },
         {
-            "url": "/assets/women/blazer/shared/overlays/sara_sampaio_mano.png",
+            "url": "/assets/women/blazer/shared/overlays/ora_hand.png",
             "zIndex": 20,
             "className": "women_body women_blazer_main"
         },
