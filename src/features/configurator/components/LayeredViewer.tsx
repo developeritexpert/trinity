@@ -66,11 +66,11 @@ export const LayeredViewer = () => {
 
     // Derived: map styleCode → short filename prefix used in hemline assets
     const STYLE_PREFIX_MAP: Record<string, string> = {
-        sb_1_button:   'sb_1',
-        sb_2_button:   'sb_2',
-        sb_3_button:   'sb_3',
+        sb_1_button: 'sb_1',
+        sb_2_button: 'sb_2',
+        sb_3_button: 'sb_3',
         without_lapel: 'wl_2',
-        db_4_button:   'db_4',
+        db_4_button: 'db_4',
     };
     const activeStylePrefix = STYLE_PREFIX_MAP[activeStyleCode] ?? activeStyleCode;
 

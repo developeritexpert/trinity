@@ -456,6 +456,13 @@
             "id": "collar_buttons_color",
             "label": "Buttons Color",
             "displayType": "icon",
+            "dependsOn": {
+                "attributeId": "fastening",
+                "value": [
+                    "standard",
+                    "half_fastening"
+                ]
+            },
             "options": [
                 {
                     "id": "by_default",
@@ -467,6 +474,7 @@
                     "id": "white",
                     "label": "White",
                     "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/1.jpg",
+                    "priceModifier": 5,
                     "assets": [
                         {
                             "url": "/assets/women/shirt/shared/buttons/white/{{collarCode}}_color.png",
@@ -484,6 +492,7 @@
                     "id": "red",
                     "label": "Red",
                     "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/3.jpg",
+                    "priceModifier": 5,
                     "assets": [
                         {
                             "url": "/assets/women/shirt/shared/buttons/red/{{collarCode}}_color.png",
@@ -501,6 +510,7 @@
                     "id": "blue",
                     "label": "Blue",
                     "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/6.jpg",
+                    "priceModifier": 5,
                     "assets": [
                         {
                             "url": "/assets/women/shirt/shared/buttons/blue/{{collarCode}}_color.png",
@@ -518,6 +528,7 @@
                     "id": "black",
                     "label": "Black",
                     "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/8.jpg",
+                    "priceModifier": 5,
                     "assets": [
                         {
                             "url": "/assets/women/shirt/shared/buttons/black/{{collarCode}}_color.png",
