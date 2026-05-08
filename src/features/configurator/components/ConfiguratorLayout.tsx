@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { ProductConfig } from '@/core/types/product.types';
 import { useConfigStore } from '../store/useConfigStore';
 import { LayeredViewer } from './LayeredViewer';
-import { shirtIcons, trouserIcons, womenBlazerIcons, womenShirtIcons } from '@/core/utils/fonts';
+import { menBlazerIcons, shirtIcons, trouserIcons, womenBlazerIcons, womenShirtIcons } from '@/core/utils/fonts';
 
 export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductConfig }) => {
     const { initProduct, config, activeTab, setActiveTab, selections, setSelection } = useConfigStore();
@@ -12,7 +12,8 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
     const isTrouser = initialConfig.productId.includes('trouser');
     const isWomensBlazer = initialConfig.productId.includes('womens-blazer');
     const isWomensShirt = initialConfig.productId.includes('womens-shirt');
-    const productFont = isWomensBlazer ? womenBlazerIcons : isTrouser ? trouserIcons : isWomensShirt ? womenShirtIcons : shirtIcons;
+    const isMenBlazer = initialConfig.productId.includes('men-blazer');
+    const productFont = isWomensBlazer ? womenBlazerIcons : isTrouser ? trouserIcons : isWomensShirt ? womenShirtIcons : isMenBlazer ? menBlazerIcons : shirtIcons;
 
     useEffect(() => {
         initProduct(initialConfig);

@@ -1,0 +1,637 @@
+{
+    "productId": "men-blazer",
+    "basePrice": 199,
+    "defaultSelections": {
+        "fabric": "fab_navy_blue",
+        "style": "style_single_breasted",
+        "lapel_style": "lapel_notch",
+        "lapel_width": "width_standard",
+        "pocket_style": "with_flap"
+    },
+    "sharedLayers": [
+        {
+            "url": "/assets/men/suits/shared/overlays/vasko_humbroich.png",
+            "zIndex": 20,
+            "className": "man_guy"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/shirt_to_jacket.png",
+            "zIndex": 20,
+            "className": "man_suit"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/corbata_estrecha.png",
+            "zIndex": 20,
+            "className": "man_suit"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/corbata_sombra.png",
+            "zIndex": 20,
+            "className": "man_suit"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/sleeves_shadow.png",
+            "zIndex": 20,
+            "className": "man_suit"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/shoe.png",
+            "zIndex": 20,
+            "className": "men_shoe"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/belt_loop.png",
+            "zIndex": 20,
+            "className": "men_pent"
+        }
+    ],
+    "attributes": [
+        {
+            "id": "fabric",
+            "label": "Fabric",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/men/suits/{{color}}/base/sleeves.png",
+                    "zIndex": 35,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/bottom.png",
+                    "zIndex": 35,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/breast_pocket_classic.png",
+                    "zIndex": 46,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/length_long.png",
+                    "zIndex": 20,
+                    "className": "men_pent"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/pent_button.png",
+                    "zIndex": 20,
+                    "className": "men_pent"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/front_pocket.png",
+                    "zIndex": 20,
+                    "className": "men_pent"
+                }
+            ],
+            "options": [
+                {
+                    "id": "fab_navy_blue",
+                    "label": "Navy Blue",
+                    "colorCode": "navy_blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_simple_grey",
+                    "label": "Simple Grey",
+                    "colorCode": "simple_grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/141_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_walnut",
+                    "label": "walnut",
+                    "colorCode": "walnut",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3893_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_linen",
+                    "label": "linen",
+                    "colorCode": "linen",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/69867ec8dc381927f16ab075e8a8522c.jpeg"
+                },
+                {
+                    "id": "fab_threaded_black",
+                    "label": "threaded_black",
+                    "colorCode": "threaded_black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e8fb010bbcf1c6be71e0b13a3585fbb2.jpeg"
+                },
+                {
+                    "id": "fab_royal_blue",
+                    "label": "Royal Blue",
+                    "colorCode": "royal_blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/30661ff46d6e6464484dc6e2ed898c95.jpeg"
+                },
+                {
+                    "id": "fab_soft_black",
+                    "label": "Soft Balck",
+                    "colorCode": "soft_black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e03c18ed8c1587bf325a1895bd12c427.jpeg"
+                },
+                {
+                    "id": "fab_dusty_beige",
+                    "label": "Dusty Beige",
+                    "colorCode": "dusty_beige",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/3424bc94826802435a6bbbcf5e9ee57d.jpeg"
+                },
+                {
+                    "id": "fab_grey_pinstripe",
+                    "label": "Grey Pinstripe",
+                    "colorCode": "grey_pinstripe",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/10061949de725e88c6ca9baeb8ed2833.jpeg"
+                },
+                {
+                    "id": "fab_strong_black",
+                    "label": "Strong Black",
+                    "colorCode": "strong_black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/299254ed5d0490417559e9e12c8ca87c.jpeg"
+                },
+                {
+                    "id": "fab_striped_blue",
+                    "label": "Striped Blue",
+                    "colorCode": "striped_blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/3d616c2faaf3862cf440fc7e194a5ab5.jpeg"
+                },
+                {
+                    "id": "fab_textured_blue",
+                    "label": "Textured Blue",
+                    "colorCode": "textured_blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/d9fc35529f6a0cd4a02d1ed2dc2c40fe.jpeg"
+                }
+            ]
+        },
+        {
+            "id": "style",
+            "label": "Jacket Style",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "style_single_breasted",
+                    "label": "Single Breasted",
+                    "styleCode": "single_breasted",
+                    "thumbnail": "003E",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/style/single_breasted/bottom.png",
+                            "zIndex": 45,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "style_single_breasted_2",
+                    "label": "Single-breasted 2 buttons",
+                    "styleCode": "single_breasted_2",
+                    "thumbnail": "003F",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/style/single_breasted_2/bottom.png",
+                            "zIndex": 45,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "style_double_breasted_4_button",
+                    "label": "Double Breasted 4 Button",
+                    "styleCode": "double_breasted_4",
+                    "thumbnail": "0060",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/style/double_breasted_4/bottom.png",
+                            "zIndex": 45,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "style_double_breasted_6_button",
+                    "label": "Double Breasted 6 Button",
+                    "styleCode": "double_breasted_6",
+                    "thumbnail": "005F",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/style/double_breasted_6/bottom.png",
+                            "zIndex": 45,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "style_mandarin",
+                    "label": "Mandarin",
+                    "styleCode": "mandarin",
+                    "thumbnail": "0067",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/style/mandarin/bottom.png",
+                            "zIndex": 45,
+                            "className": "man_suit"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "lapel_style",
+            "label": "Lapel Style",
+            "options": [
+                {
+                    "id": "lapel_notch",
+                    "label": "Notch Lapel",
+                    "lapelCode": "notch",
+                    "thumbnail": "0063",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "lapel_peak",
+                    "label": "Peak Lapel",
+                    "lapelCode": "peak",
+                    "thumbnail": "0064",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "lapel_width",
+            "label": "Lapel Width",
+            "options": [
+                {
+                    "id": "width_slim",
+                    "label": "Slim",
+                    "widthCode": "slim",
+                    "thumbnail": "004F",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
+                            "zIndex": 45,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "width_standard",
+                    "label": "Standard",
+                    "widthCode": "standard",
+                    "thumbnail": "0063",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
+                            "zIndex": 45,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "width_wide",
+                    "label": "Wide",
+                    "widthCode": "wide",
+                    "thumbnail": "0050",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
+                            "zIndex": 45,
+                            "className": "man_suit"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "pocket_style",
+            "label": "Pocket Style",
+            "options": [
+                {
+                    "id": "with_flap",
+                    "label": "With Flap",
+                    "thumbnail": "0022",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/pockets/pockets_with_flap.png",
+                            "zIndex": 46,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "double_welted",
+                    "label": "Double Welted",
+                    "thumbnail": "0023",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/pockets/pockets_double_welt.png",
+                            "zIndex": 46,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "patched",
+                    "label": "Patched",
+                    "thumbnail": "006E",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/pockets/pockets_patched.png",
+                            "zIndex": 46,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "with_flap_3",
+                    "label": "With flap x3",
+                    "thumbnail": "0022",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/pockets/pockets_with_flap_3.png",
+                            "zIndex": 46,
+                            "className": "man_suit"
+                        },
+                        {
+                            "url": "/assets/men/suits/{{color}}/pockets/pockets_with_flap_3_top.png",
+                            "zIndex": 46,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "double_welted_3",
+                    "label": "Double Welted x3",
+                    "thumbnail": "0023",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/{{color}}/pockets/pockets_double_welt_3.png",
+                            "zIndex": 46,
+                            "className": "man_suit"
+                        },
+                        {
+                            "url": "/assets/men/suits/{{color}}/pockets/pockets_double_welt_3_top.png",
+                            "zIndex": 46,
+                            "className": "man_suit"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "pocket_squares",
+            "label": "Pocket Squares",
+            "options": [
+                {
+                    "id": "without",
+                    "label": "Without",
+                    "thumbnail": "0031",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "siena_gideon",
+                    "label": "Siena Gideon",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/768_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_gideon.png",
+                            "zIndex": 170,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "coral_reef",
+                    "label": "Coral Reef",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/811_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/coral_reef.png",
+                            "zIndex": 170,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "daffodil_yellow",
+                    "label": "Daffodil Yellow",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/810_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/daffodil_yellow.png",
+                            "zIndex": 170,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "siena_verona",
+                    "label": "Siena Verona",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/779_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_verona.png",
+                            "zIndex": 170,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "siena_riesi",
+                    "label": "Siena Riesi",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/778_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_riesi.png",
+                            "zIndex": 170,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "siena_parma",
+                    "label": "Siena Parma",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/777_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_parma.png",
+                            "zIndex": 170,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "siena_lisard",
+                    "label": "Siena Lisard",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/accessory/panuelos/776_detail_thumb.png",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/suits/shared/pocket_squares/siena_lisard.png",
+                            "zIndex": 170,
+                            "className": "man_suit"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "buttons",
+            "label": "Buttons",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "default_button",
+                    "label": "Default Button",
+                    "thumbnail": "/icons/default_button.png",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "btn_shiny_gold",
+                    "label": "Shiny Gold",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/50.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/shiny_gold/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_shilver_brass",
+                    "label": "Silver Brass",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/52.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/shilver_brass/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_off_white",
+                    "label": "Off White",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/5.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/off_white/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_antique_brass",
+                    "label": "Antique Brass",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/53.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/antique_brass/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_antrazit",
+                    "label": "Antrazit",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/6.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/antrazit/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_brown",
+                    "label": "Brown",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/1.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/brown/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_dark_grey",
+                    "label": "Dark Grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/2.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/dark_grey/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_gold_brass",
+                    "label": "Gold Brass",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/51.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/gold_brass/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_khakhi",
+                    "label": "Khaki",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/4.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/khakhi/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "btn_navy_blue",
+                    "label": "Navy Blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/suit/buttons_color/3.jpg",
+                    "priceModifier": 0,
+                    "assets": [
+                        {
+                            "url": "/assets/men/suits/shared/buttons/navy_blue/jacket_{{style}}.png",
+                            "zIndex": 190,
+                            "className": "man_suit"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
