@@ -1,0 +1,73 @@
+{
+    "productId": "womens-shirt",
+    "basePrice": 199,
+    "defaultSelections": {
+        "fabric": "fab_navy_blue"
+    },
+    "sharedLayers": [
+        {
+            "url": "/assets/women/trouser/shared/overlays/ora_model.png",
+            "zIndex": 20,
+            "className": "women_trouser_body women_trouser_main"
+        },
+        {
+            "url": "/assets/women/trouser/shared/overlays/shirt_front_high.png",
+            "zIndex": 20,
+            "className": "women_trouser_main women_trouser_shirt women_trouser_body"
+        }
+    ],
+    "attributes": [
+        {
+            "id": "fabric",
+            "label": "Fabric",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/women/trouser/{{color}}/base/length_long.png",
+                    "zIndex": 35,
+                    "className": "women_trouser women_trouser_body"
+                },
+                {
+                    "url": "/assets/women/trouser/{{color}}/base/front_pocket_straight.png",
+                    "zIndex": 35,
+                    "className": "women_trouser women_trouser_body"
+                },
+                {
+                    "url": "/assets/women/trouser/{{color}}/base/center_button.png",
+                    "zIndex": 35,
+                    "className": "women_trouser women_trouser_body"
+                },
+                {
+                    "url": "/assets/women/trouser/{{color}}/base/belt_loops.png",
+                    "zIndex": 35,
+                    "className": "women_trouser women_trouser_body"
+                },
+                {
+                    "url": "/assets/women/trouser/{{color}}/base/belt_loops_high.png",
+                    "zIndex": 35,
+                    "className": "women_trouser women_trouser_body"
+                }
+            ],
+            "options": [
+                {
+                    "id": "fab_navy_blue",
+                    "label": "Navy Blue",
+                    "colorCode": "navy_blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_grey",
+                    "label": "Grey",
+                    "colorCode": "grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2197_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_gabriel",
+                    "label": "Gabriel",
+                    "colorCode": "gabriel",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3338_huge_c300.jpg"
+                }
+            ]
+        }
+    ]
+}
