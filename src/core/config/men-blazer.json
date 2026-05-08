@@ -1,0 +1,156 @@
+{
+    "productId": "men-blazer",
+    "basePrice": 199,
+    "defaultSelections": {
+        "fabric": "fab_navy_blue",
+        "style": "style_single_breasted"
+    },
+    "sharedLayers": [
+        {
+            "url": "/assets/men/suits/shared/overlays/vasko_humbroich.png",
+            "zIndex": 20,
+            "className": "man_guy"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/shirt_to_jacket.png",
+            "zIndex": 20,
+            "className": "man_suit"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/corbata_estrecha.png",
+            "zIndex": 20,
+            "className": "man_suit"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/corbata_sombra.png",
+            "zIndex": 20,
+            "className": "man_suit"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/sleeves_shadow.png",
+            "zIndex": 20,
+            "className": "man_suit"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/shoe.png",
+            "zIndex": 20,
+            "className": "men_shoe"
+        },
+        {
+            "url": "/assets/men/suits/shared/overlays/belt_loop.png",
+            "zIndex": 20,
+            "className": "men_pent"
+        }
+    ],
+    "attributes": [
+        {
+            "id": "fabric",
+            "label": "Fabric",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/men/suits/{{color}}/base/sleeves.png",
+                    "zIndex": 35,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/bottom.png",
+                    "zIndex": 35,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/lapel_notch_standard.png",
+                    "zIndex": 35,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/pockets_with_flap_3.png",
+                    "zIndex": 35,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/breast_pocket_classic.png",
+                    "zIndex": 35,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/length_long.png",
+                    "zIndex": 20,
+                    "className": "men_pent"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/pent_button.png",
+                    "zIndex": 20,
+                    "className": "men_pent"
+                },
+                {
+                    "url": "/assets/men/suits/{{color}}/base/front_pocket.png",
+                    "zIndex": 20,
+                    "className": "men_pent"
+                }
+            ],
+            "options": [
+                {
+                    "id": "fab_navy_blue",
+                    "label": "Navy Blue",
+                    "colorCode": "navy_blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/2191_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_simple_grey",
+                    "label": "Simple Grey",
+                    "colorCode": "simple_grey",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/141_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_walnut",
+                    "label": "walnut",
+                    "colorCode": "walnut",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3893_huge_c300.jpg"
+                }
+            ]
+        },
+        {
+            "id": "style",
+            "label": "Jacket Style",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "style_single_breasted",
+                    "label": "Single Breasted",
+                    "styleCode": "single_breasted",
+                    "thumbnail": "003E",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "style_single_breasted_2",
+                    "label": "Single-breasted 2 buttons",
+                    "styleCode": "single_breasted_2",
+                    "thumbnail": "003F",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "style_double_breasted_4_button",
+                    "label": "Double Breasted 4 Button",
+                    "styleCode": "double_breasted_4",
+                    "thumbnail": "0060",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "style_double_breasted_6_button",
+                    "label": "Double Breasted 6 Button",
+                    "styleCode": "double_breasted_6",
+                    "thumbnail": "005F",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "style_mandarin",
+                    "label": "Mandarin",
+                    "styleCode": "mandarin",
+                    "thumbnail": "0067",
+                    "priceModifier": 0
+                }
+            ]
+        }
+    ]
+}

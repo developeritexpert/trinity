@@ -6,10 +6,12 @@ import menTrouserConfig from './men-trouser.json';
 import womensBlazerConfig from './womens-blazers.json';
 import womenShirtConfig from './women-shirt.json';
 import womenTrouserConfig from './women-trouser.json';
+import menBlazerConfig from './men-blazer.json';
 
 const configRegistry: Record<string, any> = {
     'men-shirt': menShirtConfig,
     'men-suit': menSuitConfig,
+    'men-blazer': menBlazerConfig,
     'men-trouser': menTrouserConfig,
     'women-blazer': womensBlazerConfig,
     'women-shirt': womenShirtConfig,
