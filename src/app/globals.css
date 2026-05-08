@@ -153,3 +153,33 @@ body {
   top: 20%;
   left: 25%;
 }
+
+
+/* for trouser  */
+
+
+.women_trouser_main {
+  left: 35%;
+  top: 0%;
+
+}
+
+.women_trouser_body {
+  height: 1080px;
+  left: 35% !important;
+  top: -10rem;
+
+}
+
+.women_trouser_shirt {
+  height: 460px;
+  margin-top: 27.5%;
+  left: 193px !important;
+
+}
+
+.women_trouser {
+  height: 717px;
+  margin-top: 70.5%;
+  left: 186px !important;
+}
