@@ -5,8 +5,17 @@ const path = require("path");
 // ================= CONFIG =================
 
 const fabrics = {
-    "3893_fabric": "walnut",
-    "141_fabric": "simple_grey",
+    // "3893_fabric": "walnut",
+    // "141_fabric": "simple_grey",
+    "78_fabric": "linen",
+    "2855_fabric": "threaded_black",
+    "2310_fabric": "striped_blue",
+    "3325_fabric": "royal_blue",
+    "2192_fabric": "strong_black",
+    "2449_fabric": "textured_blue",
+    "2456_fabric": "dusty_beige",
+    "3707_fabric": "soft_black",
+    "2632_fabric": "grey_pinstripe",
 };
 
 // Base URLs

@@ -5,9 +5,17 @@ const path = require("path");
 // ================= CONFIG =================
 
 const fabrics = {
-    "894_fabric": "navy_blue",
-    "3893_fabric": "walnut",
-    "141_fabric": "simple_grey",
+    // "3893_fabric": "walnut",
+    // "141_fabric": "simple_grey",
+    "78_fabric": "linen",
+    "2855_fabric": "threaded_black",
+    "2310_fabric": "striped_blue",
+    "3325_fabric": "royal_blue",
+    "2192_fabric": "strong_black",
+    "2449_fabric": "textured_blue",
+    "2456_fabric": "dusty_beige",
+    "3707_fabric": "soft_black",
+    "2632_fabric": "grey_pinstripe",
 };
 
 const BASE = "https://www.hockerty.com/3d/new_man/jacket/STD";
@@ -27,6 +35,7 @@ const HEADERS = {
 
 // Lapel structure (same as before)
 const lapelTypes = {
+    // ---------- NOTCH ----------
     lapel_notch_standard: {
         mandarin: "front/neck_mao.png",
         single_breasted:
@@ -39,6 +48,31 @@ const lapelTypes = {
             "front/neck_double_breasted%2Bbuttons_6%2Blapel_medium%2Bstyle_lapel_notch.png",
     },
 
+    lapel_notch_slim: {
+        mandarin: "front/neck_mao.png",
+        single_breasted:
+            "front/neck_single_breasted%2Bbuttons_1%2Blapel_narrow%2Bstyle_lapel_notch.png",
+        single_breasted_2:
+            "front/neck_single_breasted%2Bbuttons_2%2Blapel_narrow%2Bstyle_lapel_notch.png",
+        double_breasted_4:
+            "front/neck_double_breasted%2Bbuttons_4%2Blapel_narrow%2Bstyle_lapel_notch.png",
+        double_breasted_6:
+            "front/neck_double_breasted%2Bbuttons_6%2Blapel_narrow%2Bstyle_lapel_notch.png",
+    },
+
+    lapel_notch_wide: {
+        mandarin: "front/neck_mao.png",
+        single_breasted:
+            "front/neck_single_breasted%2Bbuttons_1%2Blapel_wide%2Bstyle_lapel_notch.png",
+        single_breasted_2:
+            "front/neck_single_breasted%2Bbuttons_2%2Blapel_wide%2Bstyle_lapel_notch.png",
+        double_breasted_4:
+            "front/neck_double_breasted%2Bbuttons_4%2Blapel_wide%2Bstyle_lapel_notch.png",
+        double_breasted_6:
+            "front/neck_double_breasted%2Bbuttons_6%2Blapel_wide%2Bstyle_lapel_notch.png",
+    },
+
+    // ---------- PEAK ----------
     lapel_peak_standard: {
         mandarin: "front/neck_mao.png",
         single_breasted:
@@ -49,6 +83,30 @@ const lapelTypes = {
             "front/neck_double_breasted%2Bbuttons_4%2Blapel_medium%2Bstyle_lapel_peak.png",
         double_breasted_6:
             "front/neck_double_breasted%2Bbuttons_6%2Blapel_medium%2Bstyle_lapel_peak.png",
+    },
+
+    lapel_peak_slim: {
+        mandarin: "front/neck_mao.png",
+        single_breasted:
+            "front/neck_single_breasted%2Bbuttons_1%2Blapel_narrow%2Bstyle_lapel_peak.png",
+        single_breasted_2:
+            "front/neck_single_breasted%2Bbuttons_2%2Blapel_narrow%2Bstyle_lapel_peak.png",
+        double_breasted_4:
+            "front/neck_double_breasted%2Bbuttons_4%2Blapel_narrow%2Bstyle_lapel_peak.png",
+        double_breasted_6:
+            "front/neck_double_breasted%2Bbuttons_6%2Blapel_narrow%2Bstyle_lapel_peak.png",
+    },
+
+    lapel_peak_wide: {
+        mandarin: "front/neck_mao.png",
+        single_breasted:
+            "front/neck_single_breasted%2Bbuttons_1%2Blapel_wide%2Bstyle_lapel_peak.png",
+        single_breasted_2:
+            "front/neck_single_breasted%2Bbuttons_2%2Blapel_wide%2Bstyle_lapel_peak.png",
+        double_breasted_4:
+            "front/neck_double_breasted%2Bbuttons_4%2Blapel_wide%2Bstyle_lapel_peak.png",
+        double_breasted_6:
+            "front/neck_double_breasted%2Bbuttons_6%2Blapel_wide%2Bstyle_lapel_peak.png",
     },
 };
 

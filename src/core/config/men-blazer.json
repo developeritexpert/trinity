@@ -100,6 +100,60 @@
                     "label": "walnut",
                     "colorCode": "walnut",
                     "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3893_huge_c300.jpg"
+                },
+                {
+                    "id": "fab_linen",
+                    "label": "linen",
+                    "colorCode": "linen",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/69867ec8dc381927f16ab075e8a8522c.jpeg"
+                },
+                {
+                    "id": "fab_threaded_black",
+                    "label": "threaded_black",
+                    "colorCode": "threaded_black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e8fb010bbcf1c6be71e0b13a3585fbb2.jpeg"
+                },
+                {
+                    "id": "fab_royal_blue",
+                    "label": "Royal Blue",
+                    "colorCode": "royal_blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/30661ff46d6e6464484dc6e2ed898c95.jpeg"
+                },
+                {
+                    "id": "fab_soft_black",
+                    "label": "Soft Balck",
+                    "colorCode": "soft_black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e03c18ed8c1587bf325a1895bd12c427.jpeg"
+                },
+                {
+                    "id": "fab_dusty_beige",
+                    "label": "Dusty Beige",
+                    "colorCode": "dusty_beige",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/3424bc94826802435a6bbbcf5e9ee57d.jpeg"
+                },
+                {
+                    "id": "fab_grey_pinstripe",
+                    "label": "Grey Pinstripe",
+                    "colorCode": "grey_pinstripe",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/10061949de725e88c6ca9baeb8ed2833.jpeg"
+                },
+                {
+                    "id": "fab_strong_black",
+                    "label": "Strong Black",
+                    "colorCode": "strong_black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/299254ed5d0490417559e9e12c8ca87c.jpeg"
+                },
+                {
+                    "id": "fab_striped_blue",
+                    "label": "Striped Blue",
+                    "colorCode": "striped_blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/3d616c2faaf3862cf440fc7e194a5ab5.jpeg"
+                },
+                {
+                    "id": "fab_textured_blue",
+                    "label": "Textured Blue",
+                    "colorCode": "textured_blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/d9fc35529f6a0cd4a02d1ed2dc2c40fe.jpeg"
                 }
             ]
         },
