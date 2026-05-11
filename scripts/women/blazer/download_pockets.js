@@ -46,14 +46,68 @@ const HEADERS = {
     "Accept": "image/webp,image/apng,image/*,*/*;q=0.8",
 };
 
-// ================= POCKET TYPES =================
+// ================= STYLE CONFIG =================
 
-const pocketVariants = {
-    double_welted:
-        "hip_pockets_double_live%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+// Final structure:
+// public/assets/women/blazer/{fabric}/style/{style_variant}/{pocket_type}.png
 
-    slanted_flap:
-        "hip_pockets_diagonal_flap%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+const stylePocketVariants = {
+    // -------- SIMPLE STYLE --------
+    sb_1_button: {
+        hip_pockets:
+            "hip_pockets_with_flap%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+
+        double_welted:
+            "hip_pockets_double_live%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+
+        slanted_flap:
+            "hip_pockets_diagonal_flap%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+    },
+
+    sb_2_button: {
+        hip_pockets:
+            "hip_pockets_with_flap%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+
+        double_welted:
+            "hip_pockets_double_live%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+
+        slanted_flap:
+            "hip_pockets_diagonal_flap%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+    },
+
+    sb_3_button: {
+        hip_pockets:
+            "hip_pockets_with_flap%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+
+        double_welted:
+            "hip_pockets_double_live%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+
+        slanted_flap:
+            "hip_pockets_diagonal_flap%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+    },
+
+    without_lapel: {
+        hip_pockets:
+            "hip_pockets_with_flap%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+
+        double_welted:
+            "hip_pockets_double_live%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+
+        slanted_flap:
+            "hip_pockets_diagonal_flap%2Bfit_slim%2Bstyle_simple%2Blength_long.png",
+    },
+
+    // -------- CROSSED STYLE (DB4 ONLY) --------
+    db_4_button: {
+        hip_pockets:
+            "hip_pockets_with_flap%2Bfit_slim%2Bstyle_crossed%2Blength_long.png",
+
+        double_welted:
+            "hip_pockets_double_live%2Bfit_slim%2Bstyle_crossed%2Blength_long.png",
+
+        slanted_flap:
+            "hip_pockets_diagonal_flap%2Bfit_slim%2Bstyle_crossed%2Blength_long.png",
+    },
 };
 
 // ==========================================
@@ -108,57 +162,63 @@ function buildURL(fabricKey, variantFile) {
 // ================= MAIN =================
 
 async function run() {
-    console.log("🚀 Downloading women blazer base pocket variants...\n");
+    console.log("🚀 Downloading women blazer style pocket variants...\n");
 
     for (const [fabricKey, fabricName] of Object.entries(fabrics)) {
 
         console.log(`\n🧵 Fabric: ${fabricName}`);
 
-        const baseFolder = path.join(
-            OUTPUT_ROOT,
-            fabricName,
-            "base"
-        );
-
-        await fs.ensureDir(baseFolder);
-
-        let successCount = 0;
-
-        for (const [variantName, variantFile] of Object.entries(
-            pocketVariants
+        for (const [styleVariant, pockets] of Object.entries(
+            stylePocketVariants
         )) {
 
-            const filePath = path.join(
-                baseFolder,
-                `${variantName}.png`
+            const styleFolder = path.join(
+                OUTPUT_ROOT,
+                fabricName,
+                "style",
+                styleVariant
             );
 
-            // Skip existing
-            if (await fs.pathExists(filePath)) {
-                console.log(`⏭️ Already exists: ${filePath}`);
-                continue;
+            await fs.ensureDir(styleFolder);
+
+            let successCount = 0;
+
+            for (const [pocketName, variantFile] of Object.entries(
+                pockets
+            )) {
+
+                const filePath = path.join(
+                    styleFolder,
+                    `${pocketName}.png`
+                );
+
+                // Skip existing
+                if (await fs.pathExists(filePath)) {
+                    console.log(`⏭️ Already exists: ${filePath}`);
+                    continue;
+                }
+
+                const url = buildURL(
+                    fabricKey,
+                    variantFile
+                );
+
+                const saved = await downloadImage(
+                    url,
+                    filePath
+                );
+
+                if (saved) successCount++;
             }
 
-            const url = buildURL(
-                fabricKey,
-                variantFile
+            console.log(
+                `🎉 ${styleVariant}: ${successCount}/3 pocket variants downloaded`
             );
-
-            const saved = await downloadImage(
-                url,
-                filePath
-            );
-
-            if (saved) successCount++;
         }
-
-        console.log(
-            `🎉 ${successCount}/2 pocket variants downloaded for ${fabricName}`
-        );
     }
 
     console.log(
-        "\n✅ All women blazer base pocket downloads completed!"
+        "\n✅ All women blazer style pocket downloads completed!"
     );
 }
 

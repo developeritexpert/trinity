@@ -16,17 +16,17 @@
         {
             "url": "/assets/women/shirt/shared/overlays/ora_model.png",
             "zIndex": 20,
-            "className": "women_body women_shirt_main"
+            "className": "women_model"
         },
         {
             "url": "/assets/women/shirt/shared/overlays/pants_front.png",
             "zIndex": 20,
-            "className": "women_shirt_jeans women_shirt_main"
+            "className": "woman_pants"
         },
         {
             "url": "/assets/women/shirt/shared/overlays/ora_hand.png",
             "zIndex": 20,
-            "className": "women_body women_shirt_main"
+            "className": "women_model"
         }
     ],
     "attributes": [
@@ -38,7 +38,7 @@
                 {
                     "url": "/assets/women/shirt/{{color}}/base/shirt_base.png",
                     "zIndex": 35,
-                    "className": "women_shirt_main women_shirt"
+                    "className": "woman_jacket"
                 }
             ],
             "options": [
@@ -77,7 +77,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/base/sleeves_long.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -90,7 +90,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/sleeves_bracelet.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -103,7 +103,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/sleeves_short.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 }
@@ -172,7 +172,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/stand_up_collar.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -187,7 +187,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/button_down_collar.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -202,7 +202,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/rounded_collar.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -217,7 +217,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/classis_narrow_collar.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -232,7 +232,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/classic_2_button_collar.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -247,7 +247,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/classic_collar.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 }
@@ -271,12 +271,12 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/hidden_button/shirt_base.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         },
                         {
                             "url": "/assets/women/shirt/{{color}}/style/hidden_button/{{collar}}.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -288,12 +288,12 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/half_fastening/shirt_base.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         },
                         {
                             "url": "/assets/women/shirt/{{color}}/style/half_fastening/{{collar}}.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 }
@@ -317,7 +317,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/pocket_1.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -329,7 +329,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/pocket_2.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 }
@@ -353,7 +353,7 @@
                         {
                             "url": "/assets/women/shirt/{{color}}/style/shoulder_piece.png",
                             "zIndex": 35,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 }
@@ -394,7 +394,7 @@
                         {
                             "url": "/assets/women/shirt/shared/coller/miles/{{collar_customized}}.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -407,7 +407,7 @@
                         {
                             "url": "/assets/women/shirt/shared/coller/marie/{{collar_customized}}.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -420,7 +420,7 @@
                         {
                             "url": "/assets/women/shirt/shared/coller/baco/{{collar_customized}}.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -433,7 +433,7 @@
                         {
                             "url": "/assets/women/shirt/shared/coller/naya/{{collar_customized}}.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -446,7 +446,7 @@
                         {
                             "url": "/assets/women/shirt/shared/coller/perla/{{collar_customized}}.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 }
@@ -479,12 +479,12 @@
                         {
                             "url": "/assets/women/shirt/shared/buttons/white/{{collarCode}}_color.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         },
                         {
                             "url": "/assets/women/shirt/shared/buttons/white/{{fastening}}_base_color.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -497,12 +497,12 @@
                         {
                             "url": "/assets/women/shirt/shared/buttons/red/{{collarCode}}_color.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         },
                         {
                             "url": "/assets/women/shirt/shared/buttons/red/{{fastening}}_base_color.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -515,12 +515,12 @@
                         {
                             "url": "/assets/women/shirt/shared/buttons/blue/{{collarCode}}_color.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         },
                         {
                             "url": "/assets/women/shirt/shared/buttons/blue/{{fastening}}_base_color.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 },
@@ -533,12 +533,12 @@
                         {
                             "url": "/assets/women/shirt/shared/buttons/black/{{collarCode}}_color.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         },
                         {
                             "url": "/assets/women/shirt/shared/buttons/black/{{fastening}}_base_color.png",
                             "zIndex": 40,
-                            "className": "women_shirt_main women_shirt"
+                            "className": "woman_jacket"
                         }
                     ]
                 }

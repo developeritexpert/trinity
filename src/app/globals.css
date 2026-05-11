@@ -193,11 +193,43 @@ body {
 
 
 
+/* .women_trouser {
+  zoom: 41%;
+  top: -21rem;
+} */
+
+/* .men_blazer {
+  zoom: 47%;
+  top: -11rem;
+} */
+
+
+/*  */
+.man_pant {
+  margin-top: 103%;
+}
+
+.shirt {
+  margin-top: 32%;
+}
+
+.men_model {
+  height: 83rem;
+}
+
+/* .men_trouser {
+  zoom: 50%;
+  top: -12rem;
+} */
+
+.womens_blazers,
+.womens_shirt,
 .women_trouser {
   zoom: 41%;
   top: -21rem;
 }
 
+.men_trouser,
 .men_blazer {
   zoom: 47%;
   top: -11rem;

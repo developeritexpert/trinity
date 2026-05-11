@@ -14,19 +14,19 @@
     },
     "sharedLayers": [
         {
-            "url": "/assets/trousers/shared/overlays/guy_george.png",
+            "url": "/assets/trousers/shared/overlays/vasko_humbroich.png",
             "zIndex": 10,
-            "className": "trouser_view_layer trouser_body"
+            "className": "men_model"
         },
         {
             "url": "/assets/trousers/shared/overlays/shirt_to_pants.png",
             "zIndex": 20,
-            "className": "trouser_view_layer trouser_shirt"
+            "className": "shirt"
         },
         {
             "url": "/assets/trousers/shared/overlays/zapatos_new.png",
             "zIndex": 20,
-            "className": "trouser_view_layer trouser_shoes"
+            "className": "men_model"
         }
     ],
     "attributes": [
@@ -38,12 +38,12 @@
                 {
                     "url": "/assets/trousers/{{color}}/base/belt_loop.png",
                     "zIndex": 35,
-                    "className": "trouser_view_layer trouser_bottom"
+                    "className": "man_pant"
                 },
                 {
                     "url": "/assets/trousers/{{color}}/base/visible_button.png",
                     "zIndex": 35,
-                    "className": "trouser_view_layer trouser_bottom"
+                    "className": "man_pant"
                 }
             ],
             "options": [
@@ -153,12 +153,12 @@
                         {
                             "url": "/assets/trousers/{{color}}/base/length_long.png",
                             "zIndex": 37,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         },
                         {
                             "url": "/assets/trousers/shared/overlays/cut_slim.png",
                             "zIndex": 31,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 },
@@ -171,12 +171,12 @@
                         {
                             "url": "/assets/trousers/shared/overlays/cut_regular.png",
                             "zIndex": 31,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         },
                         {
                             "url": "/assets/trousers/{{color}}/style/length_long_normal.png",
                             "zIndex": 37,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 }
@@ -231,7 +231,7 @@
                         {
                             "url": "/assets/trousers/{{color}}/style/pleats_single.png",
                             "zIndex": 37,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 },
@@ -244,7 +244,7 @@
                         {
                             "url": "/assets/trousers/{{color}}/style/pleats_double.png",
                             "zIndex": 37,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 }
@@ -264,17 +264,17 @@
                         {
                             "url": "/assets/trousers/{{color}}/style/fastening_center.png",
                             "zIndex": 36,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         },
                         {
                             "url": "/assets/trousers/shared/overlays/fastening_center_button.png",
                             "zIndex": 30,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         },
                         {
                             "url": "/assets/trousers/shared/overlays/fastening_center_shade.png",
                             "zIndex": 30,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 },
@@ -287,12 +287,12 @@
                         {
                             "url": "/assets/trousers/{{color}}/style/fastening_off_centered.png",
                             "zIndex": 36,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         },
                         {
                             "url": "/assets/trousers/shared/overlays/fastening_moved+visible_button (1).png",
                             "zIndex": 30,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 },
@@ -305,7 +305,7 @@
                         {
                             "url": "/assets/trousers/{{color}}/style/fastening_no_button.png",
                             "zIndex": 36,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 },
@@ -318,7 +318,7 @@
                         {
                             "url": "/assets/trousers/{{color}}/style/fastening_off_centered_buttonless.png",
                             "zIndex": 36,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 }
@@ -338,7 +338,7 @@
                         {
                             "url": "/assets/trousers/{{color}}/base/front_pocket.png",
                             "zIndex": 34,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 },
@@ -351,7 +351,7 @@
                         {
                             "url": "/assets/trousers/{{color}}/style/front_pocket_rounded.png",
                             "zIndex": 34,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 }
@@ -378,7 +378,7 @@
                         {
                             "url": "/assets/trousers/{{color}}/style/{{fit}}_cuff.png",
                             "zIndex": 37,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 }
@@ -429,7 +429,7 @@
                         {
                             "url": "/assets/trousers/shared/belts/vecellio_belt.png",
                             "zIndex": 37,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 },
@@ -443,7 +443,7 @@
                         {
                             "url": "/assets/trousers/shared/belts/sansone_belt.png",
                             "zIndex": 37,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 },
@@ -457,7 +457,7 @@
                         {
                             "url": "/assets/trousers/shared/belts/angelo_belt.png",
                             "zIndex": 37,
-                            "className": "trouser_view_layer trouser_bottom"
+                            "className": "man_pant"
                         }
                     ]
                 }
