@@ -269,11 +269,6 @@
                             "className": "woman_jacket"
                         },
                         {
-                            "url": "/assets/women/blazer/{{color}}/style/db_4_button/db_4_side_pocket.png",
-                            "zIndex": 35,
-                            "className": "woman_jacket"
-                        },
-                        {
                             "url": "/assets/women/blazer/{{color}}/style/db_4_button/db_4_button_shadow.png",
                             "zIndex": 35,
                             "className": "woman_jacket"
@@ -292,11 +287,6 @@
                     "thumbnail": "0077",
                     "priceModifier": 0,
                     "assets": [
-                        {
-                            "url": "/assets/women/blazer/{{color}}/style/without_lapel/wl_2_side_pocket.png",
-                            "zIndex": 37,
-                            "className": "woman_jacket"
-                        },
                         {
                             "url": "/assets/women/blazer/{{color}}/style/without_lapel/wl_2_base_shadow.png",
                             "zIndex": 35,
@@ -420,7 +410,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/base/double_welted.png",
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/double_welted.png",
                             "zIndex": 36,
                             "className": "woman_jacket"
                         }
@@ -434,7 +424,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/base/hip_pockets.png",
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/hip_pockets.png",
                             "zIndex": 36,
                             "className": "woman_jacket"
                         }
@@ -448,7 +438,7 @@
                     "priceModifier": 0,
                     "assets": [
                         {
-                            "url": "/assets/women/blazer/{{color}}/base/slanted_flap.png",
+                            "url": "/assets/women/blazer/{{color}}/style/{{style}}/slanted_flap.png",
                             "zIndex": 36,
                             "className": "woman_jacket"
                         }
