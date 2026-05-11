@@ -1,4 +1,4 @@
-/* @import url('https://www.sumissura.com/css/1778223186/garment/personalize.css?v=v51'); */
+/* @import url('https:// www.sumissura.com/css/1778223186/garment/personalize.css?v=v51'); */
 @import "tailwindcss";
 
 :root {
@@ -216,4 +216,12 @@ body {
 
 .women_model {
   height: 98rem;
+}
+
+
+
+
+.womens_shirt {
+  zoom: 41%;
+  top: -21rem;
 }
