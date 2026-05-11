@@ -193,15 +193,15 @@ body {
 
 
 
-.women_trouser {
+/* .women_trouser {
   zoom: 41%;
   top: -21rem;
-}
+} */
 
-.men_blazer {
+/* .men_blazer {
   zoom: 47%;
   top: -11rem;
-}
+} */
 
 
 /*  */
@@ -217,12 +217,20 @@ body {
   height: 83rem;
 }
 
-.men_trouser {
+/* .men_trouser {
   zoom: 50%;
   top: -12rem;
+} */
+
+.womens_blazers,
+.womens_shirt,
+.women_trouser {
+  zoom: 41%;
+  top: -21rem;
 }
 
-.womens_blazers {
-  zoom: 50%;
-  top: -12rem;
+.men_trouser,
+.men_blazer {
+  zoom: 47%;
+  top: -11rem;
 }
