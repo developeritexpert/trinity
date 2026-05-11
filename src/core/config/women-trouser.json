@@ -212,7 +212,7 @@
                 {
                     "id": "cuff_on",
                     "label": "With Pant Cuffs",
-                    "thumbnail": "0079",
+                    "thumbnail": "004D",
                     "assets": [
                         {
                             "url": "/assets/women/trouser/{{color}}/style/{{fit}}/{{lengthCode}}_{{fitSuffix}}_cuff.png",
@@ -224,7 +224,7 @@
                 {
                     "id": "cuff_off",
                     "label": "No pants cuff",
-                    "thumbnail": "007A"
+                    "thumbnail": "004C"
                 }
             ]
         }
