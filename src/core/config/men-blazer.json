@@ -154,6 +154,12 @@
                     "label": "Textured Blue",
                     "colorCode": "textured_blue",
                     "thumbnail": "https://static.shopapps.site/options/swatch/134119/d9fc35529f6a0cd4a02d1ed2dc2c40fe.jpeg"
+                },
+                {
+                    "id": "fab_taupe",
+                    "label": "Taupe",
+                    "colorCode": "taupe",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/0733859e50f0034897ad47c7610150f6.jpeg"
                 }
             ]
         },
