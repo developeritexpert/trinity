@@ -1,3 +1,4 @@
+/* @import url('https://www.sumissura.com/css/1778223186/garment/personalize.css?v=v51'); */
 @import "tailwindcss";
 
 :root {
@@ -198,4 +199,21 @@ body {
 
 .man_suit {
   margin-top: 32.5%;
+}
+
+
+
+/* women trouser rebuild from here  */
+
+.woman_pants {
+  margin-top: 114.5%;
+}
+
+.woman_jacket {
+  margin-top: 45.8%;
+}
+
+
+.women_model {
+  height: 98rem;
 }

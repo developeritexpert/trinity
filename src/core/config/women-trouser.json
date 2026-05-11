@@ -8,12 +8,12 @@
         {
             "url": "/assets/women/trouser/shared/overlays/ora_model.png",
             "zIndex": 20,
-            "className": "women_trouser_body women_trouser_main"
+            "className": "women_model"
         },
         {
             "url": "/assets/women/trouser/shared/overlays/shirt_front_high.png",
             "zIndex": 20,
-            "className": "women_trouser_main women_trouser_shirt women_trouser_body"
+            "className": "woman_jacket"
         }
     ],
     "attributes": [
@@ -25,27 +25,27 @@
                 {
                     "url": "/assets/women/trouser/{{color}}/base/length_long.png",
                     "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
+                    "className": "woman_pants"
                 },
                 {
                     "url": "/assets/women/trouser/{{color}}/base/front_pocket_straight.png",
                     "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
+                    "className": "woman_pants"
                 },
                 {
                     "url": "/assets/women/trouser/{{color}}/base/center_button.png",
                     "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
+                    "className": "woman_pants"
                 },
                 {
                     "url": "/assets/women/trouser/{{color}}/base/belt_loops.png",
                     "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
+                    "className": "woman_pants"
                 },
                 {
                     "url": "/assets/women/trouser/{{color}}/base/belt_loops_high.png",
                     "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
+                    "className": "woman_pants"
                 }
             ],
             "options": [

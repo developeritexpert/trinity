@@ -176,7 +176,7 @@ export const LayeredViewer = () => {
     }, [JSON.stringify(targetAssets.map(a => a.url))]);
 
     return (
-        <div className="w-full h-full bg-[#f8f9fa] flex items-center justify-center overflow-hidden p-4 lg:p-8 relative">
+        <div id="available_window" className="image_render  w-full h-full bg-[#f8f9fa] flex items-center justify-center overflow-hidden p-4 lg:p-8 relative">
             {/* LOADING OVERLAY */}
             <div
                 className={`absolute inset-0 z-[999] flex items-center justify-center bg-[#f8f9fa]/50 backdrop-blur-[2px] transition-opacity duration-300 
@@ -187,7 +187,7 @@ export const LayeredViewer = () => {
 
             {/* SUIT IMAGES */}
 
-            <div className="relative w-full max-w-[550px] aspect-[1/2] transition-all duration-500">
+            <div className="layers viewport relative w-full max-w-[550px] aspect-[1/2] transition-all duration-500">
                 {displayedAssets.map((asset, index) => {
                     const customClass = asset.className ? asset.className : "top-0 left-0 w-full h-full object-contain";
                     return (
