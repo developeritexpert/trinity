@@ -1,3 +1,4 @@
+/* @import url('https:// www.sumissura.com/css/1778223186/garment/personalize.css?v=v51'); */
 @import "tailwindcss";
 
 :root {
@@ -155,34 +156,6 @@ body {
 }
 
 
-/* for trouser  */
-
-
-.women_trouser_main {
-  left: 35%;
-  top: 0%;
-
-}
-
-.women_trouser_body {
-  height: 1080px;
-  left: 35% !important;
-  top: -10rem;
-
-}
-
-.women_trouser_shirt {
-  height: 467px;
-  margin-top: 27.5%;
-  left: 190px !important;
-}
-
-.women_trouser {
-  height: 690px;
-  margin-top: 70.5%;
-  left: 193px !important;
-}
-
 
 
 /* guy suits */
@@ -198,4 +171,29 @@ body {
 
 .man_suit {
   margin-top: 32.5%;
+}
+
+
+
+/* women trouser rebuild from here  */
+
+.woman_pants {
+  margin-top: 114.5%;
+}
+
+.woman_jacket {
+  margin-top: 45.8%;
+}
+
+
+.women_model {
+  height: 98rem;
+}
+
+
+
+
+.women_trouser {
+  zoom: 41%;
+  top: -21rem;
 }

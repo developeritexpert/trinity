@@ -1,19 +1,25 @@
 {
-    "productId": "womens-shirt",
+    "productId": "women-trouser",
     "basePrice": 199,
     "defaultSelections": {
-        "fabric": "fab_navy_blue"
+        "fabric": "fab_navy_blue",
+        "length": "length_long",
+        "fit": "fit_slim",
+        "fastening": "center_button",
+        "belt_loops": "belt_loops_on",
+        "back_pocket": "back_pocket_0",
+        "cuff": "cuff_off"
     },
     "sharedLayers": [
         {
             "url": "/assets/women/trouser/shared/overlays/ora_model.png",
             "zIndex": 20,
-            "className": "women_trouser_body women_trouser_main"
+            "className": "women_model"
         },
         {
             "url": "/assets/women/trouser/shared/overlays/shirt_front_high.png",
             "zIndex": 20,
-            "className": "women_trouser_main women_trouser_shirt women_trouser_body"
+            "className": "woman_jacket"
         }
     ],
     "attributes": [
@@ -23,29 +29,9 @@
             "displayType": "swatch",
             "commonAssets": [
                 {
-                    "url": "/assets/women/trouser/{{color}}/base/length_long.png",
-                    "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
-                },
-                {
                     "url": "/assets/women/trouser/{{color}}/base/front_pocket_straight.png",
                     "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
-                },
-                {
-                    "url": "/assets/women/trouser/{{color}}/base/center_button.png",
-                    "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
-                },
-                {
-                    "url": "/assets/women/trouser/{{color}}/base/belt_loops.png",
-                    "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
-                },
-                {
-                    "url": "/assets/women/trouser/{{color}}/base/belt_loops_high.png",
-                    "zIndex": 35,
-                    "className": "women_trouser women_trouser_body"
+                    "className": "woman_pants"
                 }
             ],
             "options": [
@@ -66,6 +52,179 @@
                     "label": "Gabriel",
                     "colorCode": "gabriel",
                     "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/suit/3338_huge_c300.jpg"
+                }
+            ]
+        },
+        {
+            "id": "length",
+            "label": "Length",
+            "displayType": "swatch",
+            "options": [
+                {
+                    "id": "length_long",
+                    "label": "Long",
+                    "lengthCode": "length_long",
+                    "thumbnail": "0070"
+                },
+                {
+                    "id": "length_ankle",
+                    "label": "Ankle",
+                    "lengthCode": "length_ankle",
+                    "thumbnail": "0071"
+                },
+                {
+                    "id": "length_bermuda",
+                    "label": "Bermuda",
+                    "lengthCode": "length_bermuda",
+                    "thumbnail": "0072"
+                }
+            ]
+        },
+        {
+            "id": "fit",
+            "label": "Fit",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/women/trouser/{{color}}/style/{{fit}}/{{lengthCode}}_{{fitSuffix}}.png",
+                    "zIndex": 35,
+                    "className": "woman_pants"
+                }
+            ],
+            "options": [
+                {
+                    "id": "fit_slim",
+                    "label": "Slim",
+                    "styleCode": "slim_fit",
+                    "fitSuffix": "slim",
+                    "thumbnail": "0061"
+                },
+                {
+                    "id": "wide_fit",
+                    "label": "Wide",
+                    "styleCode": "wide_fit",
+                    "fitSuffix": "wide",
+                    "thumbnail": "0062"
+                },
+                {
+                    "id": "regular_fit",
+                    "label": "Regular",
+                    "styleCode": "regular_fit",
+                    "fitSuffix": "regular",
+                    "thumbnail": "0063"
+                }
+            ]
+        },
+        {
+            "id": "fastening",
+            "label": "Fastening",
+            "displayType": "swatch",
+            "options": [
+                {
+                    "id": "center_button",
+                    "label": "Centered button",
+                    "thumbnail": "0065",
+                    "assets": [
+                        {
+                            "url": "/assets/women/trouser/{{color}}/style/center_button.png",
+                            "zIndex": 35,
+                            "className": "woman_pants"
+                        }
+                    ]
+                },
+                {
+                    "id": "off_center",
+                    "label": "Off-centered",
+                    "thumbnail": "0065",
+                    "assets": [
+                        {
+                            "url": "/assets/women/trouser/{{color}}/style/off_center.png",
+                            "zIndex": 35,
+                            "className": "woman_pants"
+                        }
+                    ]
+                },
+                {
+                    "id": "side_zipper",
+                    "label": "Side Zipper",
+                    "thumbnail": "0066",
+                    "assets": [
+                        {
+                            "url": "/assets/women/trouser/{{color}}/style/side_zipper.png",
+                            "zIndex": 35,
+                            "className": "woman_pants"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "belt_loops",
+            "label": "Belt loops",
+            "displayType": "swatch",
+            "options": [
+                {
+                    "id": "belt_loops_on",
+                    "label": "On",
+                    "thumbnail": "0079",
+                    "assets": [
+                        {
+                            "url": "/assets/women/trouser/{{color}}/base/belt_loops_high.png",
+                            "zIndex": 45,
+                            "className": "woman_pants"
+                        }
+                    ]
+                },
+                {
+                    "id": "belt_loops_off",
+                    "label": "Off",
+                    "thumbnail": "007A"
+                }
+            ]
+        },
+        {
+            "id": "back_pocket",
+            "label": "Back pocket",
+            "displayType": "swatch",
+            "options": [
+                {
+                    "id": "back_pocket_0",
+                    "label": "0",
+                    "thumbnail": "0073"
+                },
+                {
+                    "id": "back_pocket_1",
+                    "label": "1",
+                    "thumbnail": "0074"
+                },
+                {
+                    "id": "back_pocket_2",
+                    "label": "2",
+                    "thumbnail": "0075"
+                }
+            ]
+        },
+        {
+            "id": "cuff",
+            "label": "Cuff",
+            "displayType": "swatch",
+            "options": [
+                {
+                    "id": "cuff_on",
+                    "label": "With Pant Cuffs",
+                    "thumbnail": "0079",
+                    "assets": [
+                        {
+                            "url": "/assets/women/trouser/{{color}}/style/{{fit}}/{{lengthCode}}_{{fitSuffix}}_cuff.png",
+                            "zIndex": 45,
+                            "className": "woman_pants"
+                        }
+                    ]
+                },
+                {
+                    "id": "cuff_off",
+                    "label": "No pants cuff",
+                    "thumbnail": "007A"
                 }
             ]
         }

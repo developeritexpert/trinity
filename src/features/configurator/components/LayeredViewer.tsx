@@ -38,9 +38,11 @@ export const LayeredViewer = () => {
     let activeCollarFabricCode = '';     // e.g. 699, 2738, etc.
     let activeContrastedCuffCode = '';   // cuff_all or cuff_inner
     let activeCuffFabricCode = '';       // e.g. 699, 2738, etc.
-    let activeFitCode = 'slim_fit';      // Default for trousers
+    let activeFitCode = 'slim_fit';      // Default for trousers — maps to fit folder name (styleCode)
     let activeCollarCodeToken = 'classic_collar'; // collarCode field from collar option
     let activeFasteningCode = 'standard';          // selected fastening option id
+    let activeLengthCode = 'length_long';           // trouser length token
+    let activeFitSuffix = 'slim';                   // trouser fit filename suffix
 
     visibleAttributes.forEach((attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
@@ -61,7 +63,9 @@ export const LayeredViewer = () => {
         if (attr.id === 'contrasted_collar_fabric' && selectedOpt?.collarFabricCode) activeCollarFabricCode = selectedOpt.collarFabricCode;
         if (attr.id === 'contrasted_cuff' && selectedOpt?.contrastedCuffCode !== undefined) activeContrastedCuffCode = selectedOpt.contrastedCuffCode;
         if (attr.id === 'cuff_fabric' && selectedOpt?.cuffFabricCode) activeCuffFabricCode = selectedOpt.cuffFabricCode;
-        if (attr.id === 'fit' && selectedOpt?.colorCode) activeFitCode = selectedOpt.colorCode;
+        if (attr.id === 'fit' && selectedOpt?.styleCode) activeFitCode = selectedOpt.styleCode;
+        if (attr.id === 'fit' && selectedOpt?.fitSuffix)  activeFitSuffix = selectedOpt.fitSuffix;
+        if (attr.id === 'length' && selectedOpt?.lengthCode) activeLengthCode = selectedOpt.lengthCode;
     });
 
     // Derived: map styleCode → short filename prefix used in hemline assets
@@ -101,6 +105,8 @@ export const LayeredViewer = () => {
                 .replace('{{cuff_fabric}}', activeCuffFabricCode)
                 .replace('{{hole_collar}}', activeHoleCollarCode)
                 .replace('{{fit}}', activeFitCode)
+                .replace('{{fitSuffix}}', activeFitSuffix)
+                .replace('{{lengthCode}}', activeLengthCode)
                 .replace('{{fastening}}', activeFasteningCode);
             targetAssets.push({ ...asset, url: finalUrl });
         });
@@ -129,6 +135,8 @@ export const LayeredViewer = () => {
             .replace('{{cuff_fabric}}', activeCuffFabricCode)
             .replace('{{hole_collar}}', activeHoleCollarCode)
             .replace('{{fit}}', activeFitCode)
+            .replace('{{fitSuffix}}', activeFitSuffix)
+            .replace('{{lengthCode}}', activeLengthCode)
             .replace('{{fastening}}', activeFasteningCode);
 
         // 1. Process commonAssets (apply to all options)
@@ -176,7 +184,7 @@ export const LayeredViewer = () => {
     }, [JSON.stringify(targetAssets.map(a => a.url))]);
 
     return (
-        <div className="w-full h-full bg-[#f8f9fa] flex items-center justify-center overflow-hidden p-4 lg:p-8 relative">
+        <div id="available_window" className={`image_render  w-full h-full bg-[#f8f9fa] flex items-center justify-center overflow-hidden p-4 lg:p-8 relative ${config.productId.replace(/-/g, '_')}_wrap`}>
             {/* LOADING OVERLAY */}
             <div
                 className={`absolute inset-0 z-[999] flex items-center justify-center bg-[#f8f9fa]/50 backdrop-blur-[2px] transition-opacity duration-300 
@@ -187,7 +195,7 @@ export const LayeredViewer = () => {
 
             {/* SUIT IMAGES */}
 
-            <div className="relative w-full max-w-[550px] aspect-[1/2] transition-all duration-500">
+            <div className={`layers viewport relative w-full max-w-[550px] aspect-[1/2] transition-all duration-500 ${config.productId.replace(/-/g, '_')}`}>
                 {displayedAssets.map((asset, index) => {
                     const customClass = asset.className ? asset.className : "top-0 left-0 w-full h-full object-contain";
                     return (
