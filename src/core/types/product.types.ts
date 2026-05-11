@@ -32,6 +32,10 @@ export interface Option {
     cuffFabricCode?: string;
     /** Hex color for thread/hole swatch display (e.g. '#384357') */
     swatchColor?: string;
+
+    // for trousers
+    lengthCode?: string;   // e.g. "length_long", "length_ankle", "length_bermuda"
+    fitSuffix?: string;    // e.g. "slim", "wide", "regular" — used in fit asset filenames
 }
 
 export interface Attribute {

@@ -30,3 +30,9 @@ export const menBlazerIcons = localFont({
   variable: '--font-men-blazer-icons',
   display: 'swap',
 });
+
+export const womenTrouserIcons = localFont({
+  src: '../../../public/fonts/women-trouser.woff2',
+  variable: '--font-women-trouser-icons',
+  display: 'swap',
+});
