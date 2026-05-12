@@ -4,153 +4,163 @@ import Link from 'next/link';
 
 export const Footer = () => {
     return (
-        <footer className="w-full bg-[#F9FAFB] border-t border-gray-100 pt-16 pb-10 px-6 font-sans mt-auto">
+        <footer className="w-full bg-white border-t border-gray-100 pt-16 pb-12 px-6 font-sans mt-auto">
             <div className="max-w-7xl mx-auto">
                 
-                {/* Main Content Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 border-b border-gray-200/60 pb-12">
+                {/* 4-Column Layout Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-gray-100 pb-16">
                     
-                    {/* Brand Logo and Quick Links Column */}
-                    <div className="space-y-6">
-                        <div className="footer-logo">
-                            <Link href="https://www.trinityclothiers.com/" className="inline-block group">
-                                <img 
-                                    src="https://www.trinityclothiers.com/cdn/shop/files/Logo.png?v=1736856009" 
-                                    alt="logo" 
-                                    height="100"
-                                    className="h-[80px] md:h-[100px] w-auto object-contain transition-opacity group-hover:opacity-85"
-                                />
-                            </Link>
-                        </div>
-                        
-                        <nav className="flex flex-col gap-2.5">
-                            <Link href="/" className="text-xs text-gray-500 hover:text-[#0066FF] transition-colors font-medium">
-                                Home
-                            </Link>
-                            <Link href="/men/shirt" className="text-xs text-gray-500 hover:text-[#0066FF] transition-colors font-medium">
-                                Men's Shop
-                            </Link>
-                            <Link href="/women/womens-blazers" className="text-xs text-gray-500 hover:text-[#0066FF] transition-colors font-medium">
-                                Women's Shop
-                            </Link>
-                            <Link href="/measurement-instructions" className="text-xs text-gray-500 hover:text-[#0066FF] transition-colors font-medium">
-                                Women's Measurements
-                            </Link>
-                            <Link href="/measurement-instructions" className="text-xs text-gray-500 hover:text-[#0066FF] transition-colors font-medium">
-                                Men's Measurements
-                            </Link>
-                            <Link href="/about-us" className="text-xs text-gray-500 hover:text-[#0066FF] transition-colors font-medium">
-                                About Us
-                            </Link>
-                            <Link href="/contact-us" className="text-xs text-gray-500 hover:text-[#0066FF] transition-colors font-medium">
-                                Contact Us
-                            </Link>
-                        </nav>
+                    {/* Column 1: Logo */}
+                    <div className="flex items-start">
+                        <Link href="/" className="inline-block group">
+                            <img 
+                                src="https://www.trinityclothiers.com/cdn/shop/files/Logo_220x.png?v=1736856009" 
+                                alt="Trinity Clothiers" 
+                                className="h-14 w-auto object-contain transition-opacity group-hover:opacity-80"
+                            />
+                        </Link>
                     </div>
 
-                    {/* Social Connect Column */}
-                    <div className="space-y-4">
-                        <h3 className="text-sm font-serif font-bold tracking-wider text-slate-900">
-                            Social Connect
-                        </h3>
-                        
-                        <ul className="flex flex-col gap-3">
+                    {/* Column 2: First Nav Menu */}
+                    <div>
+                        <ul className="space-y-4">
                             <li>
-                                <a 
-                                    href="https://www.facebook.com/" 
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    title="TrinityClothiers on Facebook"
-                                    className="text-xs text-gray-500 hover:text-[#0066FF] transition-colors inline-flex items-center gap-2 font-medium"
-                                >
-                                    <svg className="w-4 h-4 text-slate-700 hover:text-[#0066FF] transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-                                    </svg>
-                                    Facebook
-                                </a>
+                                <Link href="/" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                                    Home
+                                </Link>
                             </li>
                             <li>
-                                <a 
-                                    href="https://twitter.com/shopify" 
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    title="TrinityClothiers on Twitter"
-                                    className="text-xs text-gray-500 hover:text-slate-900 transition-colors inline-flex items-center gap-2 font-medium"
-                                >
-                                    <svg className="w-4 h-4 text-slate-700 hover:text-slate-900 transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-                                    </svg>
-                                    Twitter
-                                </a>
+                                <Link href="/women/womens-blazers" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                                    Women's Shop
+                                </Link>
                             </li>
                             <li>
-                                <a 
-                                    href="https://instagram.com/shopify" 
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    title="TrinityClothiers on Instagram"
-                                    className="text-xs text-gray-500 hover:text-[#D946EF] transition-colors inline-flex items-center gap-2 font-medium"
-                                >
-                                    <svg className="w-4 h-4 text-slate-700 hover:text-[#D946EF] transition-colors" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                                    </svg>
-                                    Instagram
-                                </a>
+                                <Link href="/measurement-instructions" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                                    Men's Measurements
+                                </Link>
                             </li>
                             <li>
-                                <a 
-                                    href="https://www.youtube.com/user/shopify" 
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    title="TrinityClothiers on YouTube"
-                                    className="text-xs text-gray-500 hover:text-red-600 transition-colors inline-flex items-center gap-2 font-medium"
-                                >
-                                    <svg className="w-4 h-4 text-slate-700 hover:text-red-600 transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 00-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 002.11 2.11c1.871.507 9.388.507 9.388.507s7.517 0 9.388-.507a3.003 3.003 0 002.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                                    </svg>
-                                    YouTube
-                                </a>
+                                <Link href="/contact-us" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                                    Contact Us
+                                </Link>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Branded Trust Payment Section */}
-                    <div className="flex flex-col items-start lg:items-center justify-start space-y-4">
-                        <div className="text-left lg:text-center w-full">
-                            <h3 className="text-sm font-serif font-bold tracking-wider text-slate-900 mb-4">
-                                Payment Method
-                            </h3>
-                            <div className="inline-block bg-white border border-gray-100 rounded p-2 shadow-xs">
-                                <img 
-                                    src="https://cdn.shopify.com/s/files/1/1785/0229/files/payment.png?v=1737016747" 
-                                    alt="Payment Methods" 
-                                    height="60"
-                                    className="h-[45px] md:h-[60px] w-auto object-contain"
-                                />
-                            </div>
+                    {/* Column 3: Second Nav Menu */}
+                    <div>
+                        <ul className="space-y-4">
+                            <li>
+                                <Link href="/men/shirt" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                                    Men's Shop
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/measurement-instructions" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                                    Women's Measurements
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/about-us" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                                    About Us
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Column 4: Social Connect */}
+                    <div className="space-y-4">
+                        <h3 className="text-base font-serif font-semibold tracking-wide text-slate-900">
+                            Social Connect
+                        </h3>
+                        
+                        <div className="flex items-center gap-2.5">
+                            {/* Facebook */}
+                            <a 
+                                href="https://www.facebook.com/" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="TrinityClothiers on Facebook"
+                                className="w-9 h-9 border border-gray-300 rounded-md flex items-center justify-center text-slate-800 hover:border-[#0066FF] hover:text-[#0066FF] transition-all"
+                            >
+                                <span className="text-sm font-bold">f</span>
+                            </a>
+                            
+                            {/* Twitter / X */}
+                            <a 
+                                href="https://twitter.com/shopify" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="TrinityClothiers on Twitter"
+                                className="w-9 h-9 border border-gray-300 rounded-md flex items-center justify-center text-slate-800 hover:border-black hover:text-black transition-all"
+                            >
+                                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </a>
+                            
+                            {/* Instagram */}
+                            <a 
+                                href="https://instagram.com/shopify" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="TrinityClothiers on Instagram"
+                                className="w-9 h-9 border border-gray-300 rounded-md flex items-center justify-center text-slate-800 hover:border-[#D946EF] hover:text-[#D946EF] transition-all"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            
+                            {/* YouTube */}
+                            <a 
+                                href="https://www.youtube.com/user/shopify" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="TrinityClothiers on YouTube"
+                                className="w-9 h-9 border border-gray-300 rounded-md flex items-center justify-center text-slate-800 hover:border-red-600 hover:text-red-600 transition-all"
+                            >
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.163a3.003 3.003 0 00-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.507a3.003 3.003 0 00-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 002.11 2.11c1.871.507 9.388.507 9.388.507s7.517 0 9.388-.507a3.003 3.003 0 002.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
 
                 </div>
 
+                {/* Branded Trust Payment Section */}
+                <div className="py-12 text-center space-y-6">
+                    <h3 className="text-2xl font-serif tracking-wide text-slate-800">
+                        Payment Method
+                    </h3>
+                    <div className="inline-block bg-white px-4">
+                        <img 
+                            src="https://cdn.shopify.com/s/files/1/1785/0229/files/payment.png?v=1737016747" 
+                            alt="Payment Methods" 
+                            className="h-[55px] md:h-[60px] w-auto object-contain mx-auto"
+                        />
+                    </div>
+                </div>
+
                 {/* Bottom Legal Bar */}
-                <div className="flex flex-col sm:flex-row items-center justify-between pt-8 text-[10px] text-gray-400 tracking-wider font-semibold uppercase space-y-4 sm:space-y-0">
+                <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-gray-100 text-[10px] text-gray-500 tracking-wider font-semibold uppercase space-y-4 sm:space-y-0">
                     <div className="flex items-center gap-1">
                         <span>© 2026, </span>
-                        <Link href="/" className="hover:text-slate-700 transition-colors">
+                        <Link href="/" className="hover:text-slate-800 transition-colors">
                             TrinityClothiers
                         </Link>
                         <span> All rights reserved.</span>
                     </div>
                     
                     <nav className="flex items-center gap-6">
-                        <Link href="/policies/privacy-policy" className="hover:text-slate-700 transition-colors">
+                        <Link href="/policies/privacy-policy" className="hover:text-slate-800 transition-colors">
                             Privacy Policy
                         </Link>
-                        <Link href="/policies/terms-of-service" className="hover:text-slate-700 transition-colors">
-                            Terms & Conditions
+                        <Link href="/policies/terms-of-service" className="hover:text-slate-800 transition-colors">
+                            Terms & Condition
                         </Link>
                     </nav>
                 </div>
