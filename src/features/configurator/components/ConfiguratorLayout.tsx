@@ -5,9 +5,13 @@ import { ProductConfig } from '@/core/types/product.types';
 import { useConfigStore } from '../store/useConfigStore';
 import { LayeredViewer } from './LayeredViewer';
 import { menBlazerIcons, shirtIcons, trouserIcons, womenBlazerIcons, womenShirtIcons, womenTrouserIcons } from '@/core/utils/fonts';
+import { useCartStore } from '@/features/cart/store/useCartStore';
+import { calculatePrice } from '@/core/shopify/calculatePrice';
+import { CartDrawer } from '@/features/cart/components/CartDrawer';
 
 export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductConfig }) => {
     const { initProduct, config, activeTab, setActiveTab, selections, setSelection } = useConfigStore();
+    const { addItem } = useCartStore();
 
     const isTrouser = initialConfig.productId.includes('trouser');
     const isWomensBlazer = initialConfig.productId.includes('womens-blazer');
@@ -93,6 +97,20 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
         return total + (selectedOpt?.priceModifier || 0);
     }, 0);
+
+    const handleAddToCart = () => {
+        const breakdown = calculatePrice(config, selections);
+        const friendlyName = config.productId === 'womens-blazers' 
+            ? "Women's Custom Blazer" 
+            : config.productId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+        addItem({
+            productId: config.productId,
+            productName: friendlyName,
+            selections,
+            priceBreakdown: breakdown
+        });
+    };
 
     // --- REUSABLE GRID RENDERER ---
     const renderAttributeSection = (attr: any, isInline = false) => {
@@ -260,7 +278,10 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                                 Next
                             </button>
                         ) : (
-                            <button className="relative group px-10 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-slate-900 text-white hover:bg-black shadow-lg hover:shadow-xl">
+                            <button 
+                                onClick={handleAddToCart}
+                                className="relative group px-10 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-slate-900 text-white hover:bg-black shadow-lg hover:shadow-xl"
+                            >
                                 Add to Cart
                             </button>
                         )}
@@ -275,6 +296,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                 </div>
 
             </div>
+            <CartDrawer />
         </div>
     );
 };
