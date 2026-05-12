@@ -6,16 +6,16 @@ export const Footer = () => {
     return (
         <footer className="w-full bg-white border-t border-gray-100 pt-16 pb-12 px-6 font-sans mt-auto">
             <div className="max-w-7xl mx-auto">
-                
+
                 {/* 4-Column Layout Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-gray-100 pb-16">
-                    
+
                     {/* Column 1: Logo */}
                     <div className="flex items-start">
                         <Link href="/" className="inline-block group">
-                            <img 
-                                src="https://www.trinityclothiers.com/cdn/shop/files/Logo_220x.png?v=1736856009" 
-                                alt="Trinity Clothiers" 
+                            <img
+                                src="https://www.trinityclothiers.com/cdn/shop/files/Logo_220x.png?v=1736856009"
+                                alt="Trinity Clothiers"
                                 className="h-14 w-auto object-contain transition-opacity group-hover:opacity-80"
                             />
                         </Link>
@@ -61,7 +61,7 @@ export const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about-us" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                                <Link href="https://www.trinityclothiers.com/pages/about-us" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
                                     About Us
                                 </Link>
                             </li>
@@ -73,11 +73,11 @@ export const Footer = () => {
                         <h3 className="text-base font-serif font-semibold tracking-wide text-slate-900">
                             Social Connect
                         </h3>
-                        
+
                         <div className="flex items-center gap-2.5">
                             {/* Facebook */}
-                            <a 
-                                href="https://www.facebook.com/" 
+                            <a
+                                href="https://www.facebook.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title="TrinityClothiers on Facebook"
@@ -85,10 +85,10 @@ export const Footer = () => {
                             >
                                 <span className="text-sm font-bold">f</span>
                             </a>
-                            
+
                             {/* Twitter / X */}
-                            <a 
-                                href="https://twitter.com/shopify" 
+                            <a
+                                href="https://twitter.com/shopify"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title="TrinityClothiers on Twitter"
@@ -98,10 +98,10 @@ export const Footer = () => {
                                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                                 </svg>
                             </a>
-                            
+
                             {/* Instagram */}
-                            <a 
-                                href="https://instagram.com/shopify" 
+                            <a
+                                href="https://instagram.com/shopify"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title="TrinityClothiers on Instagram"
@@ -113,10 +113,10 @@ export const Footer = () => {
                                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                                 </svg>
                             </a>
-                            
+
                             {/* YouTube */}
-                            <a 
-                                href="https://www.youtube.com/user/shopify" 
+                            <a
+                                href="https://www.youtube.com/user/shopify"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title="TrinityClothiers on YouTube"
@@ -137,9 +137,9 @@ export const Footer = () => {
                         Payment Method
                     </h3>
                     <div className="inline-block bg-white px-4">
-                        <img 
-                            src="https://cdn.shopify.com/s/files/1/1785/0229/files/payment.png?v=1737016747" 
-                            alt="Payment Methods" 
+                        <img
+                            src="https://cdn.shopify.com/s/files/1/1785/0229/files/payment.png?v=1737016747"
+                            alt="Payment Methods"
                             className="h-[55px] md:h-[60px] w-auto object-contain mx-auto"
                         />
                     </div>
@@ -154,7 +154,7 @@ export const Footer = () => {
                         </Link>
                         <span> All rights reserved.</span>
                     </div>
-                    
+
                     <nav className="flex items-center gap-6">
                         <Link href="/policies/privacy-policy" className="hover:text-slate-800 transition-colors">
                             Privacy Policy

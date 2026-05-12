@@ -63,16 +63,16 @@ export const Header = () => {
                         </div>
                     </div>
 
-                    <Link href="/measurement-instructions" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                    <Link href="https://www.trinityclothiers.com/pages/measurements" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
                         Measurement Instructions
                     </Link>
-                    <Link href="/ambassador" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                    <Link href="https://www.trinityclothiers.com/pages/ambassador" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
                         Ambassador
                     </Link>
-                    <Link href="/about-us" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                    <Link href="https://www.trinityclothiers.com/pages/about-us" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
                         About Us
                     </Link>
-                    <Link href="/contact-us" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
+                    <Link href="https://www.trinityclothiers.com/pages/contact-us" className="text-[11px] font-semibold uppercase tracking-widest text-slate-900 hover:text-[#0066FF] transition-colors">
                         Contact Us
                     </Link>
                 </nav>
