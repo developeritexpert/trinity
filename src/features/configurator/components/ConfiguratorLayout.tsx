@@ -1,6 +1,7 @@
 // src/features/configurator/components/ConfiguratorLayout.tsx
 'use client';
 import { useEffect } from 'react';
+import Link from 'next/link';
 import { ProductConfig } from '@/core/types/product.types';
 import { useConfigStore } from '../store/useConfigStore';
 import { LayeredViewer } from './LayeredViewer';
