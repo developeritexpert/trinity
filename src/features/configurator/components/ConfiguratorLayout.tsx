@@ -214,87 +214,100 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
     };
 
     return (
-        <div className="flex flex-col lg:flex-row w-full h-screen bg-white font-sans text-slate-800 overflow-hidden">
+        <div className="flex flex-col w-full h-full bg-white font-sans text-slate-800 overflow-hidden">
 
-            {/* LEFT SIDE: Image Viewer */}
-            <div className="lg:w-[60%] w-full h-[50vh] lg:h-full relative bg-[#f4f4f4] border-r border-gray-200">
-                <LayeredViewer />
-            </div>
+            {/* TOP WORKSPACE: Split Model and Controls */}
+            <div className="flex-1 flex flex-col lg:flex-row w-full overflow-hidden">
+                
+                {/* LEFT SIDE: Image Viewer */}
+                <div className="lg:w-[60%] w-full h-[50vh] lg:h-full relative bg-[#f4f4f4] border-r border-gray-200">
+                    <LayeredViewer />
+                </div>
 
-            {/* RIGHT SIDE: Tailor UI */}
-            <div className="lg:w-[40%] w-full h-[50vh] lg:h-full flex flex-col bg-[#fafafa]">
+                {/* RIGHT SIDE: Tailor UI */}
+                <div className="lg:w-[40%] w-full h-[50vh] lg:h-full flex flex-col bg-[#fafafa]">
 
-                {/* 1. HEADER (Fixed at top) */}
-                <div className="px-8 pt-10 pb-4 flex-shrink-0">
-                    <div className="flex justify-between items-start">
-                        <div>
-                            <h1 className="text-3xl font-serif text-slate-900 mb-1">Tailor Made Shirt for Men</h1>
-                            <p className="text-xs text-gray-400 uppercase tracking-widest">Customize Your Shirt</p>
+                    {/* 1. HEADER (Fixed at top) */}
+                    <div className="px-8 pt-10 pb-4 flex-shrink-0">
+                        <div className="flex justify-between items-start">
+                            <div>
+                                <h1 className="text-3xl font-serif text-slate-900 mb-1">Tailor Made Shirt for Men</h1>
+                                <p className="text-xs text-gray-400 uppercase tracking-widest">Customize Your Shirt</p>
+                            </div>
+                            <span className="text-xl font-medium text-[#0066FF]">${totalPrice.toFixed(2)}</span>
                         </div>
-                        <span className="text-xl font-medium text-[#0066FF]">${totalPrice.toFixed(2)}</span>
+
+                        <div className="text-center mt-8">
+                            <h2 className="text-xl font-serif text-slate-800 tracking-wide">
+                                {activeAttributeData?.label}
+                            </h2>
+                        </div>
                     </div>
 
-                    <div className="text-center mt-8">
-                        <h2 className="text-xl font-serif text-slate-800 tracking-wide">
-                            {activeAttributeData?.label}
-                        </h2>
+                    {/* 2. SCROLLABLE GRID CONTENT */}
+                    <div className="flex-1 overflow-y-auto custom-scrollbar px-8 pb-10">
+                        {activeAttributeData && renderAttributeSection(activeAttributeData)}
+                        {inlineAttributes.map(attr => renderAttributeSection(attr, true))}
                     </div>
-                </div>
 
-                {/* 2. SCROLLABLE GRID CONTENT */}
-                <div className="flex-1 overflow-y-auto custom-scrollbar px-8 pb-10">
-                    {activeAttributeData && renderAttributeSection(activeAttributeData)}
-                    {inlineAttributes.map(attr => renderAttributeSection(attr, true))}
-                </div>
-
-                {/* 3. FOOTER (Fixed at bottom) */}
-                <div className="px-8 py-6 flex-shrink-0 bg-white flex flex-col items-center z-10 border-t border-gray-100">
-                    <p className="text-[11px] text-center text-gray-400 mb-6 max-w-sm leading-relaxed">
-                        Choose from hundreds of premium options. Can't find exactly what you need? Let us know — we'll take care of it.
-                    </p>
-                    <div className="flex items-center gap-6 w-full justify-center mb-6">
-                        <button
-                            onClick={handlePrev}
-                            disabled={safeTabIndex === 0}
-                            className={`relative group px-10 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300
-                                ${safeTabIndex === 0 ? 'text-gray-300 cursor-not-allowed' : 'text-[#0066FF] hover:bg-blue-50/50'}`}
-                        >
-                            <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current transition-all group-hover:w-3 group-hover:h-3"></span>
-                            <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-current transition-all group-hover:w-3 group-hover:h-3"></span>
-                            <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-current transition-all group-hover:w-3 group-hover:h-3"></span>
-                            <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current transition-all group-hover:w-3 group-hover:h-3"></span>
-                            Previous
-                        </button>
-                        {safeTabIndex < visibleAttributes.length - 1 ? (
+                    {/* 3. FOOTER (Fixed at bottom of controls) */}
+                    <div className="px-8 py-6 flex-shrink-0 bg-white flex flex-col items-center z-10 border-t border-gray-100">
+                        <p className="text-[11px] text-center text-gray-400 mb-6 max-w-sm leading-relaxed">
+                            Choose from hundreds of premium options. Can't find exactly what you need? Let us know — we'll take care of it.
+                        </p>
+                        <div className="flex items-center gap-6 w-full justify-center">
                             <button
-                                onClick={handleNext}
-                                className="relative group px-14 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-[#0066FF] text-white hover:bg-blue-700"
+                                onClick={handlePrev}
+                                disabled={safeTabIndex === 0}
+                                className={`relative group px-10 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300
+                                    ${safeTabIndex === 0 ? 'text-gray-300 cursor-not-allowed' : 'text-[#0066FF] hover:bg-blue-50/50'}`}
                             >
-                                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
-                                <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
-                                <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
-                                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
-                                Next
+                                <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-current transition-all group-hover:w-3 group-hover:h-3"></span>
+                                <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-current transition-all group-hover:w-3 group-hover:h-3"></span>
+                                <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-current transition-all group-hover:w-3 group-hover:h-3"></span>
+                                <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-current transition-all group-hover:w-3 group-hover:h-3"></span>
+                                Previous
                             </button>
-                        ) : (
-                            <button 
-                                onClick={handleAddToCart}
-                                className="relative group px-10 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-slate-900 text-white hover:bg-black shadow-lg hover:shadow-xl"
-                            >
-                                Add to Cart
-                            </button>
-                        )}
+                            {safeTabIndex < visibleAttributes.length - 1 ? (
+                                <button
+                                    onClick={handleNext}
+                                    className="relative group px-14 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-[#0066FF] text-white hover:bg-blue-700"
+                                >
+                                    <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
+                                    <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
+                                    <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
+                                    <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/50 transition-all group-hover:w-3 group-hover:h-3"></span>
+                                    Next
+                                </button>
+                            ) : (
+                                <button 
+                                    onClick={handleAddToCart}
+                                    className="relative group px-10 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-slate-900 text-white hover:bg-black shadow-lg hover:shadow-xl"
+                                >
+                                    Add to Cart
+                                </button>
+                            )}
+                        </div>
                     </div>
-                    <button className="relative group px-6 py-2 mt-2 text-[#0066FF] text-[10px] font-semibold tracking-widest uppercase transition-colors">
-                        <span className="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>
-                        <span className="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>
-                        <span className="absolute bottom-0 left-0 w-1.5 h-1.5 border-b border-l border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>
-                        <span className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-[#0066FF]/50 transition-all group-hover:w-2 group-hover:h-2"></span>
-                        Back to Shop
-                    </button>
+
                 </div>
 
             </div>
+
+            {/* BOTTOM FULL-WIDTH BAR: Centered Back to Shop */}
+            <div className="w-full h-18 bg-white border-t border-gray-100 flex-shrink-0 flex items-center justify-center py-4 z-20">
+                <Link 
+                    href="/"
+                    className="relative group px-12 py-3.5 bg-[#0070d8] text-white rounded text-xs font-semibold tracking-widest uppercase hover:bg-blue-700 transition-all shadow-sm hover:shadow-md text-center inline-block"
+                >
+                    <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/45 transition-all group-hover:w-3 group-hover:h-3"></span>
+                    <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/45 transition-all group-hover:w-3 group-hover:h-3"></span>
+                    <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/45 transition-all group-hover:w-3 group-hover:h-3"></span>
+                    <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/45 transition-all group-hover:w-3 group-hover:h-3"></span>
+                    Back to Shop
+                </Link>
+            </div>
+
         </div>
     );
 };
