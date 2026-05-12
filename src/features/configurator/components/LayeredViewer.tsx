@@ -189,12 +189,25 @@ export const LayeredViewer = () => {
         };
     }, [JSON.stringify(targetAssets.map(a => a.url))]);
 
+    // Read Computed CSS legacy Zoom dynamically from active element styles at runtime
+    const getComputedZoom = () => {
+        if (typeof window === 'undefined') return 1;
+        const el = document.querySelector('.layers.viewport');
+        if (!el) return 1;
+        const zoomVal = window.getComputedStyle(el).zoom;
+        return zoomVal ? parseFloat(zoomVal) || 1 : 1;
+    };
+
     // Boundary Clamp Engine (Keeps model perfectly contained on screen proportional to current zoom scale)
     const clampPosition = (x: number, y: number, currentScale: number) => {
-        if (currentScale <= 1) return { x: 0, y: 0 };
-        // Max permissible distance they can drag horizontally/vertically
-        const limitX = (currentScale - 1) * 140; 
-        const limitY = (currentScale - 1) * 240; 
+        const zoomFactor = getComputedZoom();
+        // Adjust bounds dynamically depending on scale and legacy CSS zoom factors
+        const baseLimitX = 140 / zoomFactor;
+        const baseLimitY = 245 / zoomFactor;
+
+        const limitX = currentScale <= 1 ? baseLimitX : (currentScale - 1) * (180 / zoomFactor) + baseLimitX; 
+        const limitY = currentScale <= 1 ? baseLimitY : (currentScale - 1) * (280 / zoomFactor) + baseLimitY; 
+
         return {
             x: Math.max(-limitX, Math.min(limitX, x)),
             y: Math.max(-limitY, Math.min(limitY, y))
@@ -227,20 +240,22 @@ export const LayeredViewer = () => {
         setPosition({ x: 0, y: 0 });
     };
 
-    // Click and Drag event listeners
+    // Click and Drag event listeners (Compensating for active CSS Zoom)
     const handleMouseDown = (e: React.MouseEvent) => {
-        if (scale === 1) return;
         setIsDragging(true);
+        const zoomFactor = getComputedZoom();
         dragStartRef.current = {
-            x: e.clientX - position.x,
-            y: e.clientY - position.y
+            // Divide position by zoomFactor to map mouse delta 1-to-1 in zoomed screens
+            x: e.clientX - position.x * zoomFactor,
+            y: e.clientY - position.y * zoomFactor
         };
     };
 
     const handleMouseMove = (e: React.MouseEvent) => {
         if (!isDragging) return;
-        const rawX = e.clientX - dragStartRef.current.x;
-        const rawY = e.clientY - dragStartRef.current.y;
+        const zoomFactor = getComputedZoom();
+        const rawX = (e.clientX - dragStartRef.current.x) / zoomFactor;
+        const rawY = (e.clientY - dragStartRef.current.y) / zoomFactor;
         setPosition(clampPosition(rawX, rawY, scale));
     };
 
@@ -248,14 +263,14 @@ export const LayeredViewer = () => {
         setIsDragging(false);
     };
 
-    // Mobile Touch Drag handlers
+    // Mobile Touch Drag handlers (Compensating for active CSS Zoom)
     const handleTouchStart = (e: React.TouchEvent) => {
-        if (scale === 1) return;
         if (e.touches.length === 1) {
             setIsDragging(true);
+            const zoomFactor = getComputedZoom();
             dragStartRef.current = {
-                x: e.touches[0].clientX - position.x,
-                y: e.touches[0].clientY - position.y
+                x: e.touches[0].clientX - position.x * zoomFactor,
+                y: e.touches[0].clientY - position.y * zoomFactor
             };
         }
     };
@@ -263,8 +278,9 @@ export const LayeredViewer = () => {
     const handleTouchMove = (e: React.TouchEvent) => {
         if (!isDragging) return;
         if (e.touches.length === 1) {
-            const rawX = e.touches[0].clientX - dragStartRef.current.x;
-            const rawY = e.touches[0].clientY - dragStartRef.current.y;
+            const zoomFactor = getComputedZoom();
+            const rawX = (e.touches[0].clientX - dragStartRef.current.x) / zoomFactor;
+            const rawY = (e.touches[0].clientY - dragStartRef.current.y) / zoomFactor;
             setPosition(clampPosition(rawX, rawY, scale));
         }
     };
@@ -277,7 +293,7 @@ export const LayeredViewer = () => {
     const handleWheel = (e: React.WheelEvent) => {
         e.preventDefault();
         const direction = e.deltaY < 0 ? 1 : -1;
-        const step = 0.2;
+        const step = 0.15;
         setScale(prev => {
             const next = Math.max(1, Math.min(prev + direction * step, 3));
             if (next === 1) {
@@ -326,11 +342,9 @@ export const LayeredViewer = () => {
             </div>
 
             {/* HELPER GESTURE INSTRUCTION */}
-            {scale > 1 && (
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 bg-slate-900/80 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-[10px] tracking-wider uppercase font-semibold pointer-events-none transition-all duration-300">
-                    Click and drag model to move
-                </div>
-            )}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 bg-slate-900/80 backdrop-blur-sm text-white px-5 py-1.5 rounded-full text-[10px] tracking-wider uppercase font-semibold pointer-events-none transition-all duration-300">
+                Drag model to move • Scroll to zoom
+            </div>
 
             {/* LOADING OVERLAY */}
             <div
@@ -346,7 +360,7 @@ export const LayeredViewer = () => {
                 style={{
                     transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
                     transformOrigin: 'center center',
-                    cursor: scale > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default',
+                    cursor: isDragging ? 'grabbing' : 'grab',
                     transition: isDragging ? 'none' : 'transform 0.3s cubic-bezier(0.25, 1, 0.5, 1)'
                 }}
                 onMouseDown={handleMouseDown}
