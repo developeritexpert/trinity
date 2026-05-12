@@ -28,7 +28,7 @@ export default async function ProductPage({ params }: PageProps) {
 
     // 4. Render the UI
     return (
-        <main className="w-full h-screen bg-white text-slate-900 overflow-hidden">
+        <main className="w-full h-[calc(100vh-112px)] bg-white text-slate-900 overflow-hidden">
             <ConfiguratorLayout initialConfig={config} />
         </main>
     );

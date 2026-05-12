@@ -7,7 +7,6 @@ import { LayeredViewer } from './LayeredViewer';
 import { menBlazerIcons, shirtIcons, trouserIcons, womenBlazerIcons, womenShirtIcons, womenTrouserIcons } from '@/core/utils/fonts';
 import { useCartStore } from '@/features/cart/store/useCartStore';
 import { calculatePrice } from '@/core/shopify/calculatePrice';
-import { CartDrawer } from '@/features/cart/components/CartDrawer';
 
 export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductConfig }) => {
     const { initProduct, config, activeTab, setActiveTab, selections, setSelection } = useConfigStore();
@@ -296,7 +295,6 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                 </div>
 
             </div>
-            <CartDrawer />
         </div>
     );
 };
