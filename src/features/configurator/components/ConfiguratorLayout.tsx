@@ -22,7 +22,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
     const getProductLabelDetails = (productId: string) => {
         const idLower = productId.toLowerCase();
-        
+
         let gender = "Men";
         if (idLower.includes('women') || idLower.includes('womens') || idLower.includes('female')) {
             gender = "Women";
@@ -256,7 +256,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                     <div className="px-4 pt-4 pb-4 flex-shrink-0">
                         <div className="flex justify-between items-start">
                             <div>
-                                <h1 className="text-3xl font-serif text-slate-900 mb-1">Tailor Made {productType} for {gender}</h1>
+                                <h1 className="text-2xl font-serif text-slate-900 mb-1">Tailor Made {productType} for {gender}</h1>
                                 <p className="text-xs text-gray-400 uppercase tracking-widest">Customize Your {productType}</p>
                             </div>
                             <span className="text-xl font-medium text-[#0066FF]">${totalPrice.toFixed(2)}</span>

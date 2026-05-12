@@ -44,21 +44,24 @@ export const Header = () => {
 
                         {/* Dropdown Menu Container */}
                         <div className="absolute top-full left-0 mt-0 w-52 bg-white border border-gray-100 shadow-xl rounded-md py-2 opacity-0 invisible group-hover/shop:opacity-100 group-hover/shop:visible transition-all duration-200 z-50">
-                            <Link href="/men/shirt" className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#0066FF] transition-colors">
-                                Men's Custom Shirts
-                            </Link>
-                            <Link href="/men/suit" className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#0066FF] transition-colors">
-                                Men's Custom Suits
-                            </Link>
                             <Link href="/men/blazer" className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#0066FF] transition-colors">
                                 Men's Custom Blazers
                             </Link>
                             <Link href="/men/trouser" className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#0066FF] transition-colors">
                                 Men's Custom Trousers
                             </Link>
+                            <Link href="/men/shirt" className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#0066FF] transition-colors">
+                                Men's Custom Shirts
+                            </Link>
                             <div className="border-t border-gray-100 my-1" />
-                            <Link href="/women/womens-blazers" className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#0066FF] transition-colors">
+                            <Link href="/women/blazer" className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#0066FF] transition-colors">
                                 Women's Custom Blazers
+                            </Link>
+                            <Link href="/women/trouser" className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#0066FF] transition-colors">
+                                Women's Custom Trousers
+                            </Link>
+                            <Link href="/women/shirt" className="block px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider text-slate-700 hover:bg-slate-50 hover:text-[#0066FF] transition-colors">
+                                Women's Custom Shirt
                             </Link>
                         </div>
                     </div>
