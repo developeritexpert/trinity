@@ -20,6 +20,30 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
     const isWomenTrouser = initialConfig.productId.includes('women-trouser');
     const productFont = isWomensBlazer ? womenBlazerIcons : isWomenTrouser ? womenTrouserIcons : isTrouser ? trouserIcons : isWomensShirt ? womenShirtIcons : isMenBlazer ? menBlazerIcons : shirtIcons;
 
+    const getProductLabelDetails = (productId: string) => {
+        const idLower = productId.toLowerCase();
+        
+        let gender = "Men";
+        if (idLower.includes('women') || idLower.includes('womens') || idLower.includes('female')) {
+            gender = "Women";
+        }
+
+        let productType = "Suit";
+        if (idLower.includes('shirt')) {
+            productType = "Shirt";
+        } else if (idLower.includes('blazer')) {
+            productType = "Blazer";
+        } else if (idLower.includes('trouser') || idLower.includes('pant')) {
+            productType = "Trouser";
+        } else if (idLower.includes('suit')) {
+            productType = "Suit";
+        }
+
+        return { gender, productType };
+    };
+
+    const { gender, productType } = getProductLabelDetails(initialConfig.productId);
+
     useEffect(() => {
         initProduct(initialConfig);
     }, [initialConfig, initProduct]);
@@ -100,8 +124,8 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
     const handleAddToCart = () => {
         const breakdown = calculatePrice(config, selections);
-        const friendlyName = config.productId === 'womens-blazers' 
-            ? "Women's Custom Blazer" 
+        const friendlyName = config.productId === 'womens-blazers'
+            ? "Women's Custom Blazer"
             : config.productId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
         addItem({
@@ -219,7 +243,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
             {/* TOP WORKSPACE: Split Model and Controls */}
             <div className="flex-1 flex flex-col lg:flex-row w-full overflow-hidden">
-                
+
                 {/* LEFT SIDE: Image Viewer */}
                 <div className="lg:w-[60%] w-full h-[50vh] lg:h-full relative bg-[#f4f4f4] border-r border-gray-200">
                     <LayeredViewer />
@@ -229,11 +253,11 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                 <div className="lg:w-[40%] w-full h-[50vh] lg:h-full flex flex-col bg-[#fafafa]">
 
                     {/* 1. HEADER (Fixed at top) */}
-                    <div className="px-8 pt-10 pb-4 flex-shrink-0">
+                    <div className="px-4 pt-4 pb-4 flex-shrink-0">
                         <div className="flex justify-between items-start">
                             <div>
-                                <h1 className="text-3xl font-serif text-slate-900 mb-1">Tailor Made Shirt for Men</h1>
-                                <p className="text-xs text-gray-400 uppercase tracking-widest">Customize Your Shirt</p>
+                                <h1 className="text-3xl font-serif text-slate-900 mb-1">Tailor Made {productType} for {gender}</h1>
+                                <p className="text-xs text-gray-400 uppercase tracking-widest">Customize Your {productType}</p>
                             </div>
                             <span className="text-xl font-medium text-[#0066FF]">${totalPrice.toFixed(2)}</span>
                         </div>
@@ -281,7 +305,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                                     Next
                                 </button>
                             ) : (
-                                <button 
+                                <button
                                     onClick={handleAddToCart}
                                     className="relative group px-10 py-3 text-xs font-semibold tracking-widest uppercase transition-all duration-300 bg-slate-900 text-white hover:bg-black shadow-lg hover:shadow-xl"
                                 >
@@ -297,7 +321,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
             {/* BOTTOM FULL-WIDTH BAR: Centered Back to Shop */}
             <div className="w-full h-18 bg-white border-t border-gray-100 flex-shrink-0 flex items-center justify-center py-4 z-20">
-                <Link 
+                <Link
                     href="/"
                     className="relative group px-12 py-3.5 bg-[#0070d8] text-white rounded text-xs font-semibold tracking-widest uppercase hover:bg-blue-700 transition-all shadow-sm hover:shadow-md text-center inline-block"
                 >
