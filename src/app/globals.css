@@ -225,12 +225,12 @@ body {
 .womens_blazers,
 .womens_shirt,
 .women_trouser {
-  zoom: 41%;
+  zoom: 30%;
   top: -21rem;
 }
 
 .men_trouser,
 .men_blazer {
-  zoom: 47%;
+  zoom: 35%;
   top: -11rem;
 }
