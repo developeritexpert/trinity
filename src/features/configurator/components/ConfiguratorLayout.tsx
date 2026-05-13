@@ -366,7 +366,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
             </div>
 
             {/* BOTTOM FULL-WIDTH BAR: Centered Back to Shop */}
-            <div className="w-full h-18 bg-white border-t border-gray-100 flex-shrink-0 flex items-center justify-center py-4 z-20">
+            <div className="back-to-shop-bar w-full h-18 bg-white border-t border-gray-100 flex-shrink-0 flex items-center justify-center py-4 z-20">
                 <Link
                     href="/"
                     className="relative group px-12 py-3.5 bg-[#0070d8] text-white rounded text-xs font-semibold tracking-widest uppercase hover:bg-blue-700 transition-all shadow-sm hover:shadow-md text-center inline-block"

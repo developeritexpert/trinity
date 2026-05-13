@@ -28,6 +28,21 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (window.self !== window.top || window.location.search.includes('embed=true')) {
+                  document.documentElement.classList.add('embedded');
+                }
+              } catch (e) {
+                console.error(e);
+              }
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-white text-slate-900">
         <Header />
         {children}
