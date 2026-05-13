@@ -6,7 +6,29 @@
         "style": "style_single_breasted",
         "lapel_style": "lapel_notch",
         "lapel_width": "width_standard",
-        "pocket_style": "with_flap"
+        "pocket_style": "with_flap",
+        "vent_style": "no_vent",
+        "cuff_button": "no_button",
+        "shoulder_padding": "regular_padding",
+        "inside_pen_ticket": "lhs",
+        "satin_lapel": "no",
+        "personalise_monogramming": "no_monogram",
+        "working_button_cuffs": "no",
+        "inside_piping": "no",
+        "boutonniere_loop": "no",
+        "pocket_piping": "no_piping",
+        "contrasting_buttonholes": "no_contrast",
+        "outside_ticket_pocket": "no",
+        "waistcoat_design": "no",
+        "back_pockets": "no_pocket",
+        "front_pockets_style": "no_pocket",
+        "belt_loops": "no_loops",
+        "pleat_style": "plain_front",
+        "hem_cuffs": "flat",
+        "extra_trousers": "no",
+        "satin_stripe": "no",
+        "adjustable_side_tabs": "no",
+        "buttons_for_brace": "no"
     },
     "sharedLayers": [
         {
@@ -388,6 +410,878 @@
                             "className": "man_suit"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "id": "vent_style",
+            "label": "Vent Style",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_vent",
+                    "label": "No Vent",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/5ed1cabe85bff6e4bf070c3a21c57858.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "side_vents",
+                    "label": "Side Vents",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/f0a88fdfa62522ce561fc82d20909995.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "center_vent",
+                    "label": "Center Vent",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/1b1f72ff9d842b20ee9d32e7c38d8d14.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "cuff_button",
+            "label": "Cuff Button",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_button",
+                    "label": "No Button",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/1708d5524bc9bb40f106b6bcfdb94cc3.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "3_buttons",
+                    "label": "3 Buttons",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/769c1980aca0cd0e2a29dd119991d66a.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "4_buttons",
+                    "label": "4 Buttons",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/53fe35630a9625df34aeb067fb6d2a72.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "3_kissing_buttons",
+                    "label": "3 Kissing Buttons",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/d558aa7170827b7474290b2de250aeca.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "4_kissing_buttons",
+                    "label": "4 Kissing Buttons",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/542741cc74870d1e15fb8ec542671c2d.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "1_button",
+                    "label": "1 Button",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/f697ecfbd3d194c3d5096597cc3e81cd.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "shoulder_padding",
+            "label": "Shoulder Padding",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "regular_padding",
+                    "label": "Regular Padding",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/fcfae2a7d75fed230ac47a3d605012a9.png",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "light_padding",
+                    "label": "Light Padding",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/eda1c503b5a23b74578b2c0da347d8cd.png",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "inside_pen_ticket",
+            "label": "Inside Pen and Ticket Pockets",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "lhs",
+                    "label": "LHS",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/f5e8a272cba3159a58d57408479cbe15.png",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "rhs",
+                    "label": "RHS",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/5d1360446a23cf607d9ab68234108103.png",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "satin_lapel",
+            "label": "Satin Lapel",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "black",
+                    "label": "Black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e4a1adc7c7987df5fc50e2e76832d20c.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "grey",
+                    "label": "Grey",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e4a1adc7c7987df5fc50e2e76832d20c.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "white",
+                    "label": "White",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e4a1adc7c7987df5fc50e2e76832d20c.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "personalise_monogramming",
+            "label": "Personalise Monogramming Inside The Jacket",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_monogram",
+                    "label": "No Personalise Monogramming Inside The Jacket",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "block_letters",
+                    "label": "Block Letters",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/361f51da88b71798d9bbcb30366ac389.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "script_letters",
+                    "label": "Script Letters",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/361f51da88b71798d9bbcb30366ac389.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "monogram_text",
+            "label": "Enter Your Name",
+            "displayType": "text",
+            "placeholder": "Input max 15 letters",
+            "dependsOn": {
+                "attributeId": "personalise_monogramming",
+                "value": [
+                    "block_letters",
+                    "script_letters"
+                ]
+            },
+            "options": []
+        },
+        {
+            "id": "working_button_cuffs",
+            "label": "Working/Functional Button Cuffs",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "3_buttons",
+                    "label": "3 Buttons",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/3270258a0620f761777f7e0f7a80b3ff.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "4_buttons",
+                    "label": "4 Buttons",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/3270258a0620f761777f7e0f7a80b3ff.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "inside_piping",
+            "label": "Inside Piping",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "red",
+                    "label": "Red",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/57ee6fb6a9ffaa2a3c3c2fbc80a8c591.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "maroon",
+                    "label": "Maroon",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/57ee6fb6a9ffaa2a3c3c2fbc80a8c591.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "white",
+                    "label": "White",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/57ee6fb6a9ffaa2a3c3c2fbc80a8c591.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "yellow",
+                    "label": "Yellow",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/57ee6fb6a9ffaa2a3c3c2fbc80a8c591.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "purple",
+                    "label": "Purple",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/57ee6fb6a9ffaa2a3c3c2fbc80a8c591.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "pink",
+                    "label": "Pink",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/57ee6fb6a9ffaa2a3c3c2fbc80a8c591.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "orange",
+                    "label": "Orange",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/57ee6fb6a9ffaa2a3c3c2fbc80a8c591.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "green",
+                    "label": "Green",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/57ee6fb6a9ffaa2a3c3c2fbc80a8c591.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "boutonniere_loop",
+            "label": "Functional Boutonniere And Flower Loop",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "yes",
+                    "label": "Yes",
+                    "thumbnail": "003F",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "pocket_piping",
+            "label": "Pocket Piping",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_piping",
+                    "label": "No Piping Pocket",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "red",
+                    "label": "Red",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a6754afa4643d649166da5041156d982.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "maroon",
+                    "label": "Maroon",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a6754afa4643d649166da5041156d982.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "white",
+                    "label": "White",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a6754afa4643d649166da5041156d982.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "yellow",
+                    "label": "Yellow",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a6754afa4643d649166da5041156d982.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "purple",
+                    "label": "Purple",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a6754afa4643d649166da5041156d982.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "pink",
+                    "label": "Pink",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a6754afa4643d649166da5041156d982.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "orange",
+                    "label": "Orange",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a6754afa4643d649166da5041156d982.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "green",
+                    "label": "Green",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a6754afa4643d649166da5041156d982.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "contrasting_buttonholes",
+            "label": "Contrasting Buttonholes",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_contrast",
+                    "label": "No Contrasting button hole",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "all_buttonholes",
+                    "label": "All Buttonholes (Including Waistcoat, if any)",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e6f117883dc41a3e432bbf46c2e666fe.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "sleeve_all",
+                    "label": "Sleeve Buttonholes (All)",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e6f117883dc41a3e432bbf46c2e666fe.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "sleeve_first",
+                    "label": "Sleeve Buttonholes (First only)",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e6f117883dc41a3e432bbf46c2e666fe.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "sleeve_first_two",
+                    "label": "Sleeve Buttonholes (First two only)",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e6f117883dc41a3e432bbf46c2e666fe.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "lapel_buttonhole",
+                    "label": "Lapel Buttonhole",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e6f117883dc41a3e432bbf46c2e666fe.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "contrasting_colors",
+            "label": "Contrasting Colors",
+            "displayType": "icon",
+            "dependsOn": {
+                "attributeId": "contrasting_buttonholes",
+                "value": [
+                    "all_buttonholes",
+                    "sleeve_all",
+                    "sleeve_first",
+                    "sleeve_first_two",
+                    "lapel_buttonhole"
+                ]
+            },
+            "options": [
+                {
+                    "id": "red",
+                    "label": "Red",
+                    "thumbnail": "004D",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "white",
+                    "label": "White",
+                    "thumbnail": "004D",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "black",
+                    "label": "Black",
+                    "thumbnail": "004D",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "blue",
+                    "label": "Blue",
+                    "thumbnail": "004D",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "pink",
+                    "label": "Pink",
+                    "thumbnail": "004D",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "yellow",
+                    "label": "Yellow",
+                    "thumbnail": "004D",
+                    "priceModifier": 0
+                }
+            ]
+        },
+        {
+            "id": "outside_ticket_pocket",
+            "label": "Outside Ticket Pocket",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "yes_rhs",
+                    "label": "Yes - RHS",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/4628692bb30745151aee0c8dd1cb2cc4.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "yes_lhs",
+                    "label": "Yes - LHS",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/4628692bb30745151aee0c8dd1cb2cc4.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "waistcoat_design",
+            "label": "Design Your Waistcoat",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "002B",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "5_btn_no_lapels_pointed",
+                    "label": "5 Button No Lapels Pointed",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e8e24123915731c1375ad8697820f50a.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "6_btn_no_lapels_pointed",
+                    "label": "6 Button No Lapels Pointed",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/081283f0f1c40e4b54679cebb0ce846e.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "6_btn_no_lapels_rounded",
+                    "label": "6 Button No Lapels Rounded",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/5eac75fd4f6ac97e976432c4df4d756e.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "5_btn_notch_lapels_pointed",
+                    "label": "5 Button Notch Lapels Pointed",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/5a77cde8910beb293fdbb203abb0950a.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "5_btn_no_lapels_straight",
+                    "label": "5 Button No Lapels Straight",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/5f6cda72983e221065a8a0c472acf1ce.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "6_3_btn_shawl_collar_straight",
+                    "label": "6-3 Button Shawl Collar Straight",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/5148fb654049359213c22867f8cc8c97.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "4_btn_round_neck_straight",
+                    "label": "4 Button Round Neck Straight",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/5f6cda72983e221065a8a0c472acf1ce.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "4_btn_round_neck_pointed",
+                    "label": "4 Button Round Neck Pointed",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/657a391a3f94eab8a2c6acccec8c12f9.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "jetted_2_pockets",
+                    "label": "Jetted 2 Pockets",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/eaa15c13b5237ab6c1a7cb793416c138.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "jetted_3_pockets",
+                    "label": "Jetted 3 Pockets",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/bd33e72bbe2037110c40072fce086f30.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "jetted_4_pockets",
+                    "label": "Jetted 4 Pockets",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/e1666f8335e630bdd44e2a4fae4d3987.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                },
+                {
+                    "id": "fabric_back_no_buckle",
+                    "label": "Fabric Back No Buckle",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/2768ecdbc278c73ce3827a27a9ae5867.jpeg",
+                    "priceModifier": 115.00,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "back_pockets",
+            "label": "Back Pockets",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_pocket",
+                    "label": "No Pocket",
+                    "thumbnail": "003D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "double_pockets",
+                    "label": "Double Pockets",
+                    "thumbnail": "004E",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "single_pocket",
+                    "label": "Single Pocket",
+                    "thumbnail": "003F",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "front_pockets_style",
+            "label": "Front Pockets Style",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_pocket",
+                    "label": "No Pocket",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/2662b67c532c6c442c97fc8f5d6102c5.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "vertical_pockets",
+                    "label": "Vertical Pockets",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/87a3f3eb77277bab6fa326c40c5b2da5.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "jetted_pockets",
+                    "label": "Jetted Pockets",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/7a51aec0d8bc99a98423c676a96c02e8.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "horizontal_pockets",
+                    "label": "Horizontal Pockets",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/3febf6a8cbe16042116fe72afc9ecf1a.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "rounded_pockets",
+                    "label": "Rounded Pockets",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/8595cadb436b2ca413dd7c628abb06e1.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "cross_pockets",
+                    "label": "Cross Pockets",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/824edecccab399685ce8e6ee375857ad.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "belt_loops",
+            "label": "Belt Loops",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_loops",
+                    "label": "No Loops",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/b1515a20434f1874041b180842698757.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "double_loops",
+                    "label": "Double Loops",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/941ca735160a09f6c3a140094aa3958b.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "loops",
+                    "label": "Loops",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/ebbaa4c412798634ace7ad2202215833.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "pleat_style",
+            "label": "Pleat Style",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "plain_front",
+                    "label": "Plain Front",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/5a91ff6c1cf33c54a9d3751c2a005395.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "double_pleat_front",
+                    "label": "Double Pleat Front",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/266122ff57f96aa035a0497e36de6c4d.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "single_pleat_front",
+                    "label": "Single Pleat Front",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a4da5db21a18d6b21bc607aca75ddf1d.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "hem_cuffs",
+            "label": "Hem/Cuffs",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "flat",
+                    "label": "Flat",
+                    "thumbnail": "0050",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "turnups",
+                    "label": "Turnups",
+                    "thumbnail": "0051",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "extra_trousers",
+            "label": "Get an extra Pair of Trousers/Pants",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "yes",
+                    "label": "Yes",
+                    "thumbnail": "003F",
+                    "priceModifier": 115.00,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "satin_stripe",
+            "label": "Satin Stripe",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "black",
+                    "label": "Black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/6cde897bbcd2caf50d2da088d5f6919c.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "grey",
+                    "label": "Grey",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/6cde897bbcd2caf50d2da088d5f6919c.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "white",
+                    "label": "White",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/6cde897bbcd2caf50d2da088d5f6919c.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "adjustable_side_tabs",
+            "label": "Adjustable Side Tabs",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "side_tabs_2_buttons",
+                    "label": "Side-tabs 2 buttons",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/6e3e901ae52e7d66b74790772fce6549.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "side_tabs_3_buttons",
+                    "label": "Side-tabs 3 buttons",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/6e3e901ae52e7d66b74790772fce6549.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "buttons_for_brace",
+            "label": "Buttons for Brace",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no",
+                    "label": "No",
+                    "thumbnail": "004D",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "yes",
+                    "label": "Yes",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/00e8c1b3c7ae7fb9514f54d74a17d9d1.jpeg",
+                    "priceModifier": 0,
+                    "assets": []
                 }
             ]
         },
