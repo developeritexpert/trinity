@@ -234,3 +234,23 @@ body {
   zoom: 35%;
   top: -11rem;
 }
+
+/* Embedded Iframe Mode Overrides */
+html.embedded {
+  overflow: hidden !important;
+}
+
+html.embedded body {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+.embedded header,
+.embedded footer,
+.embedded .back-to-shop-bar {
+  display: none !important;
+}
+
+.embedded .configurator-viewport {
+  height: 100vh !important;
+}

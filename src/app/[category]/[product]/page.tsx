@@ -26,7 +26,7 @@ export default async function ProductPage({ params }: PageProps) {
     return (
         <main className="w-full bg-white text-slate-900 flex flex-col min-h-screen">
             {/* Viewport container lock for the customizer workspace */}
-            <div className="w-full h-[calc(100vh-112px)] flex-shrink-0">
+            <div className="configurator-viewport w-full h-[calc(100vh-112px)] flex-shrink-0">
                 <ConfiguratorLayout initialConfig={config} />
             </div>
             

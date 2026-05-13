@@ -41,7 +41,8 @@ export interface Option {
 export interface Attribute {
     id: string;
     label: string;
-    displayType?: 'swatch' | 'card' | 'icon';
+    displayType?: 'swatch' | 'card' | 'icon' | 'text';
+    placeholder?: string;
     dependsOn?: {                 // <-- ADD THIS BLOCK
         attributeId: string;
         value: string | string[];

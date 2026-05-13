@@ -149,6 +149,52 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         })();
 
         let gridClass = 'grid-cols-3 gap-4 auto-rows-max';
+        if (mode === 'text') {
+            return (
+                <div key={attrId} className={`flex flex-col items-center justify-center w-full ${isInline ? "mt-12" : "mt-6"}`}>
+                    {isInline && (
+                        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-6 text-center">
+                            {attr.label}
+                        </h3>
+                    )}
+                    <div className="w-full max-w-md bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                        <label htmlFor={attrId} className="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">
+                            {attr.label}
+                        </label>
+                        <div className="relative">
+                            <input
+                                id={attrId}
+                                type="text"
+                                value={selections[attrId] || ''}
+                                placeholder={attr.placeholder || "Enter text..."}
+                                maxLength={15}
+                                onChange={(e) => setSelection(attrId, e.target.value)}
+                                className="w-full px-4 py-3 text-slate-800 bg-slate-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0066FF]/50 focus:border-[#0066FF] transition-all text-sm font-medium placeholder-gray-400"
+                            />
+                            {selections[attrId] && (
+                                <button
+                                    onClick={() => setSelection(attrId, '')}
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors"
+                                >
+                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            )}
+                        </div>
+                        <div className="flex justify-between items-center mt-3">
+                            <p className="text-[10px] text-gray-400 italic">
+                                Only English letters and numbers are supported.
+                            </p>
+                            <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest">
+                                {(selections[attrId] || '').length}/15
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
         if (['button_holes', 'button_threads', 'button_holes_all', 'button_holes_cuffs', 'button_threads_all', 'button_threads_cuffs'].includes(attrId)) gridClass = 'grid-cols-5 gap-2 auto-rows-max';
         else if (mode === 'card') gridClass = 'grid-cols-2 gap-6 auto-rows-max';
         else if (mode === 'icon') gridClass = 'grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-max';
@@ -320,7 +366,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
             </div>
 
             {/* BOTTOM FULL-WIDTH BAR: Centered Back to Shop */}
-            <div className="w-full h-18 bg-white border-t border-gray-100 flex-shrink-0 flex items-center justify-center py-4 z-20">
+            <div className="back-to-shop-bar w-full h-18 bg-white border-t border-gray-100 flex-shrink-0 flex items-center justify-center py-4 z-20">
                 <Link
                     href="/"
                     className="relative group px-12 py-3.5 bg-[#0070d8] text-white rounded text-xs font-semibold tracking-widest uppercase hover:bg-blue-700 transition-all shadow-sm hover:shadow-md text-center inline-block"
