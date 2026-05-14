@@ -9115,7 +9115,7 @@
       "id": "is_there_any_other_information_about_your_physique_you_feel_would_help_us_in_constructing_your_perfect_suit",
       "label": "Is there any other information about your physique you feel would help us in constructing your perfect suit?",
       "shopifyOptionId": 395298,
-      "displayType": "icon",
+      "displayType": "text",
       "required": false,
       "affectsPricing": false,
       "conditions": [

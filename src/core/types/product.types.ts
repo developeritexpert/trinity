@@ -41,12 +41,13 @@ export interface Option {
 export interface Attribute {
     id: string;
     label: string;
-    displayType?: 'swatch' | 'card' | 'icon' | 'text';
+    displayType?: 'swatch' | 'card' | 'icon' | 'text' | 'dropdown' | 'radio';
     placeholder?: string;
     dependsOn?: {                 // <-- ADD THIS BLOCK
         attributeId: string;
         value: string | string[];
     };
+    conditions?: any[];
     /** When true, selecting an option in this attribute will NOT auto-advance to the next step */
     noAutoAdvance?: boolean;
     options: Option[];
