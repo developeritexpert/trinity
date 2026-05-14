@@ -230,7 +230,8 @@ body {
 }
 
 .men_trouser,
-.men_blazer {
+.men_blazer,
+.men_blazer_api {
   zoom: 35%;
   top: -11rem;
 }
