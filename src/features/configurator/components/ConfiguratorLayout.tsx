@@ -52,6 +52,22 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
     // RULES ENGINE: Filter hidden steps
     const allVisible = config.attributes.filter(attr => {
+        if (attr.conditions && attr.conditions.length > 0) {
+            // Check flat conditions against radio button selections by matching option labels
+            return attr.conditions.some((cond: any) => {
+                return cond.rules.every((rule: any) => {
+                    const selectedOptionId = selections['measurements'];
+                    if (!selectedOptionId) return false;
+                    
+                    const parentAttr = config.attributes.find(a => a.id === 'measurements');
+                    const selectedOption = parentAttr?.options.find(o => o.id === selectedOptionId);
+                    if (!selectedOption) return false;
+                    
+                    const normalize = (str: string) => str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+                    return normalize(selectedOption.label) === normalize(rule.value);
+                });
+            });
+        }
         if (!attr.dependsOn) return true;
         const dependentValue = selections[attr.dependsOn.attributeId];
         if (!dependentValue) return false;
@@ -62,7 +78,11 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
     // Navigation Tabs: Filter out attributes that are shown inline
     const INLINE_IDS = ['button_holes', 'button_threads', 'button_holes_all', 'button_holes_cuffs', 'button_threads_all', 'button_threads_cuffs'];
-    const visibleAttributes = allVisible.filter(attr => !INLINE_IDS.includes(attr.id));
+    const isMeasurementSubAttr = (attr: any) => 
+        (attr.category === 'measurements' && attr.dependsOn?.attributeId === 'measurements') || 
+        (attr.conditions && attr.conditions.length > 0);
+    
+    const visibleAttributes = allVisible.filter(attr => !INLINE_IDS.includes(attr.id) && !isMeasurementSubAttr(attr));
 
     const currentTabIndex = visibleAttributes.findIndex(attr => attr.id === activeTab);
     const safeTabIndex = currentTabIndex !== -1 ? currentTabIndex : 0;
@@ -70,8 +90,8 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
 
     // Identify dependent attributes to show inline on this page
     const inlineAttributes = allVisible.filter(attr =>
-        attr.dependsOn?.attributeId === activeAttributeData?.id &&
-        INLINE_IDS.includes(attr.id)
+        (attr.dependsOn?.attributeId === activeAttributeData?.id && INLINE_IDS.includes(attr.id)) ||
+        (activeAttributeData?.id === 'measurements' && isMeasurementSubAttr(attr))
     );
 
     const handleNext = () => {
@@ -89,8 +109,26 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         // Skip auto-advance if the attribute opts out with noAutoAdvance: true
         const currentAttrDef = config.attributes.find(a => a.id === attributeId);
         if (currentAttrDef?.noAutoAdvance) return;
+        // Do not auto-advance when clicking sub-options within an inline measurement section
+        if (currentAttrDef && isMeasurementSubAttr(currentAttrDef)) return;
+
         const futureSelections = { ...selections, [attributeId]: optionId };
         const futureVisible = config.attributes.filter(attr => {
+            if (attr.conditions && attr.conditions.length > 0) {
+                return attr.conditions.some((cond: any) => {
+                    return cond.rules.every((rule: any) => {
+                        const selectedOptionId = futureSelections['measurements'];
+                        if (!selectedOptionId) return false;
+                        
+                        const parentAttr = config.attributes.find(a => a.id === 'measurements');
+                        const selectedOption = parentAttr?.options.find(o => o.id === selectedOptionId);
+                        if (!selectedOption) return false;
+                        
+                        const normalize = (str: string) => str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+                        return normalize(selectedOption.label) === normalize(rule.value);
+                    });
+                });
+            }
             if (!attr.dependsOn) return true;
             const depVal = futureSelections[attr.dependsOn.attributeId];
             if (!depVal) return false;
@@ -103,7 +141,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         if (currentIndex !== -1 && currentIndex < futureVisible.length - 1) {
             const nextAttr = futureVisible[currentIndex + 1];
             // Don't auto-advance to inline attributes!
-            if (INLINE_IDS.includes(nextAttr.id)) return;
+            if (INLINE_IDS.includes(nextAttr.id) || isMeasurementSubAttr(nextAttr)) return;
 
             const dep = nextAttr?.dependsOn;
             if (dep && dep.attributeId === attributeId) {
@@ -149,6 +187,36 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
         })();
 
         let gridClass = 'grid-cols-3 gap-4 auto-rows-max';
+        if (mode === 'dropdown') {
+            return (
+                <div key={attrId} className={`w-full ${isInline ? "mt-6" : "mt-6"}`}>
+                    <label htmlFor={attrId} className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+                        {attr.label} {attr.required && <span className="text-red-500">*</span>}
+                    </label>
+                    <div className="relative w-full">
+                        <select
+                            id={attrId}
+                            value={selections[attrId] || ''}
+                            onChange={(e) => setSelection(attrId, e.target.value)}
+                            className="w-full px-4 py-3 text-slate-800 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0066FF]/50 focus:border-[#0066FF] transition-all text-sm font-medium appearance-none shadow-sm cursor-pointer"
+                        >
+                            <option value="" disabled>— Select —</option>
+                            {attr.options.map((opt: any) => (
+                                <option key={opt.id} value={opt.id}>
+                                    {opt.label} {(opt.priceModifier ?? 0) > 0 ? `(+$${opt.priceModifier})` : ''}
+                                </option>
+                            ))}
+                        </select>
+                        <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
         if (mode === 'text') {
             return (
                 <div key={attrId} className={`flex flex-col items-center justify-center w-full ${isInline ? "mt-12" : "mt-6"}`}>
@@ -318,7 +386,67 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
                     {/* 2. SCROLLABLE GRID CONTENT */}
                     <div className="flex-1 overflow-y-auto custom-scrollbar px-8 pb-10">
                         {activeAttributeData && renderAttributeSection(activeAttributeData)}
-                        {inlineAttributes.map(attr => renderAttributeSection(attr, true))}
+                        
+                        {activeAttributeData?.id === 'measurements' ? (() => {
+                            const jacketDropdowns = inlineAttributes.filter(a => ['jacket_size', 'fit', 'would_you_change_the_length_of_the_sleeve', 'would_you_change_the_length_of_the_jacket', 'jacket_s_fit', 'neck', 'chest', 'jacket_waist', 'seat', 'jacket_length', 'shoulder_width', 'sleeve_length', 'bicep', 'wrist'].includes(a.id));
+                            const trouserDropdowns = inlineAttributes.filter(a => ['trousers_size', 'trousers_fit', 'trousers_waist', 'trouser_length', 'thigh', 'knee', 'u_crotch', 'bottom'].includes(a.id));
+                            const waistcoatDropdowns = inlineAttributes.filter(a => ['waistcoat_length'].includes(a.id));
+                            const bodyProfileSwatches = inlineAttributes.filter(a => !['jacket_size', 'fit', 'would_you_change_the_length_of_the_sleeve', 'would_you_change_the_length_of_the_jacket', 'jacket_s_fit', 'neck', 'chest', 'jacket_waist', 'seat', 'jacket_length', 'shoulder_width', 'sleeve_length', 'bicep', 'wrist', 'trousers_size', 'trousers_fit', 'trousers_waist', 'trouser_length', 'thigh', 'knee', 'u_crotch', 'bottom', 'waistcoat_length'].includes(a.id));
+
+                            return (
+                                <div className="mt-8 space-y-12">
+                                    {jacketDropdowns.length > 0 && (
+                                        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                                            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                                                <span className="text-xl">👔</span>
+                                                <h4 className="text-sm font-bold text-slate-800 uppercase tracking-widest">Jacket Measurements</h4>
+                                            </div>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                {jacketDropdowns.map(attr => renderAttributeSection(attr, true))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {trouserDropdowns.length > 0 && (
+                                        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                                            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                                                <span className="text-xl">👖</span>
+                                                <h4 className="text-sm font-bold text-slate-800 uppercase tracking-widest">Trouser Measurements</h4>
+                                            </div>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                {trouserDropdowns.map(attr => renderAttributeSection(attr, true))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {waistcoatDropdowns.length > 0 && (
+                                        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                                            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                                                <span className="text-xl">🦺</span>
+                                                <h4 className="text-sm font-bold text-slate-800 uppercase tracking-widest">Waistcoat Measurements</h4>
+                                            </div>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                {waistcoatDropdowns.map(attr => renderAttributeSection(attr, true))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {bodyProfileSwatches.length > 0 && (
+                                        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                                            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                                                <span className="text-xl">👤</span>
+                                                <h4 className="text-sm font-bold text-slate-800 uppercase tracking-widest">Body Profile & Preferences</h4>
+                                            </div>
+                                            <div className="space-y-8">
+                                                {bodyProfileSwatches.map(attr => renderAttributeSection(attr, true))}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })() : (
+                            inlineAttributes.map(attr => renderAttributeSection(attr, true))
+                        )}
                     </div>
 
                     {/* 3. FOOTER (Fixed at bottom of controls) */}
