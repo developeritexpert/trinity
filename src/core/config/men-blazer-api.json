@@ -10,7 +10,7 @@
     "style": "sb_1_button",
     "lapel_style": "notch",
     "lapel_width": "slim",
-    "pocket_style": "no_pockets",
+    "pocket_style": "with_flap",
     "vent_style": "no_vent",
     "cuff_button": "no_button",
     "shoulder_padding": "regular_padding",
@@ -1200,66 +1200,82 @@
     },
     {
       "id": "pocket_style",
-      "label": "Jacket Pocket Style",
-      "shopifyOptionId": 347433,
-      "displayType": "swatch",
-      "required": true,
-      "affectsPricing": false,
+      "label": "Pocket Style",
       "options": [
         {
-          "id": "no_pockets",
-          "label": "No Pockets",
-          "shopifyOptionValueId": 12030548,
-          "shopifyHandle": "nopockets",
-          "thumbnail": "https://static.shopapps.site/options/swatch/134119/88115ac870e3db42a00696d2fae4f79b.jpeg",
+          "id": "with_flap",
+          "label": "With Flap",
+          "thumbnail": "0022",
           "priceModifier": 0,
-          "assets": []
+          "assets": [
+            {
+              "url": "/assets/men/blazer/{{color}}/pockets/pockets_with_flap.png",
+              "zIndex": 46,
+              "className": "man_suit"
+            }
+          ]
         },
         {
-          "id": "slanted_pockets",
-          "label": "Slanted Pockets",
-          "shopifyOptionValueId": 13219148,
-          "shopifyHandle": "slantedpockets",
-          "thumbnail": "https://static.shopapps.site/options/swatch/134119/473bbb1c3a0499bcac5b5851e5eb6a4d.jpeg",
+          "id": "double_welted",
+          "label": "Double Welted",
+          "thumbnail": "0023",
           "priceModifier": 0,
-          "assets": []
+          "assets": [
+            {
+              "url": "/assets/men/blazer/{{color}}/pockets/pockets_double_welt.png",
+              "zIndex": 46,
+              "className": "man_suit"
+            }
+          ]
         },
         {
-          "id": "straight_pockets",
-          "label": "Straight Pockets",
-          "shopifyOptionValueId": 13219147,
-          "shopifyHandle": "straightpockets",
-          "thumbnail": "https://static.shopapps.site/options/swatch/134119/a887ff396638e479bd3c0e5b40f92990.jpeg",
+          "id": "patched",
+          "label": "Patched",
+          "thumbnail": "006E",
           "priceModifier": 0,
-          "assets": []
-        }
-      ]
-    },
-    {
-      "id": "flap_on_jacket_pockets",
-      "label": "Flap On Jacket Pockets",
-      "shopifyOptionId": 347434,
-      "displayType": "swatch",
-      "required": true,
-      "affectsPricing": false,
-      "options": [
-        {
-          "id": "no",
-          "label": "No",
-          "shopifyOptionValueId": 12030549,
-          "shopifyHandle": "no",
-          "thumbnail": "https://static.shopapps.site/options/swatch/134119/650e8c8fcbc755228f4fc06771b85ddf.jpeg",
-          "priceModifier": 0,
-          "assets": []
+          "assets": [
+            {
+              "url": "/assets/men/blazer/{{color}}/pockets/pockets_patched.png",
+              "zIndex": 46,
+              "className": "man_suit"
+            }
+          ]
         },
         {
-          "id": "yes",
-          "label": "Yes",
-          "shopifyOptionValueId": 13219152,
-          "shopifyHandle": "yes",
-          "thumbnail": "https://static.shopapps.site/options/swatch/134119/854e8d6a03c9aa6004f1003c1de2ce04.png",
+          "id": "with_flap_3",
+          "label": "With flap x3",
+          "thumbnail": "0022",
           "priceModifier": 0,
-          "assets": []
+          "assets": [
+            {
+              "url": "/assets/men/blazer/{{color}}/pockets/pockets_with_flap_3.png",
+              "zIndex": 46,
+              "className": "man_suit"
+            },
+            {
+              "url": "/assets/men/blazer/{{color}}/pockets/pockets_with_flap_3_top.png",
+              "zIndex": 46,
+              "className": "man_suit"
+            }
+          ]
+        },
+        {
+          "id": "double_welted_3",
+          "label": "Double Welted x3",
+          "thumbnail": "0023",
+          "priceModifier": 0,
+          "assets": [
+            {
+              "url": "/assets/men/blazer/{{color}}/pockets/pockets_double_welt_3.png",
+              "zIndex": 46,
+              "className": "man_suit"
+            },
+            {
+              "url": "/assets/men/blazer/{{color}}/pockets/pockets_double_welt_3_top.png",
+              "zIndex": 46,
+              "className": "man_suit"
+            }
+          ]
         }
       ]
     },
