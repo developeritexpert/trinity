@@ -143,7 +143,8 @@ export const LayeredViewer = () => {
             .replace('{{fit}}', activeFitCode)
             .replace('{{fitSuffix}}', activeFitSuffix)
             .replace('{{lengthCode}}', activeLengthCode)
-            .replace('{{fastening}}', activeFasteningCode);
+            .replace('{{fastening}}', activeFasteningCode)
+            .replace('{{id}}', selectedOptionId ?? '');
 
         // 1. Process commonAssets (apply to all options)
         if (attr.commonAssets) {

@@ -77,7 +77,7 @@ export const ConfiguratorLayout = ({ initialConfig }: { initialConfig: ProductCo
     });
 
     // Navigation Tabs: Filter out attributes that are shown inline
-    const INLINE_IDS = ['button_holes', 'button_threads', 'button_holes_all', 'button_holes_cuffs', 'button_threads_all', 'button_threads_cuffs'];
+    const INLINE_IDS = ['button_threads', 'button_holes_all', 'button_holes_cuffs', 'button_threads_all', 'button_threads_cuffs'];
     const isMeasurementSubAttr = (attr: any) => 
         (attr.category === 'measurements' && attr.dependsOn?.attributeId === 'measurements') || 
         (attr.conditions && attr.conditions.length > 0);

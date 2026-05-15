@@ -1,0 +1,538 @@
+{
+    "productId": "men-model-shirt",
+    "basePrice": 99,
+    "defaultSelections": {
+        "fabric": "sky_blue",
+        "collar": "col_cutaway",
+        "cuffs": "cuff_single_1_button",
+        "fit": "slim_fit",
+        "contrasting_button_holes": "white",
+        "contrasting_button_threads": "white"
+    },
+    "sharedLayers": [
+        {
+            "url": "/assets/men/shirt/shared/overlays/vasko_humbroich.png",
+            "zIndex": 10,
+            "className": "men_model"
+        },
+        {
+            "url": "/assets/men/shirt/shared/overlays/encima.png",
+            "zIndex": 20,
+            "className": "men_pent"
+        },
+        {
+            "url": "/assets/men/shirt/shared/overlays/necklines_open_extreme.png",
+            "zIndex": 20,
+            "className": "man_suit"
+        },
+        {
+            "url": "/assets/men/shirt/shared/overlays/zapatos.png",
+            "zIndex": 35,
+            "className": "men_model"
+        }
+    ],
+    "attributes": [
+        {
+            "id": "fabric",
+            "label": "Fabric",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/men/shirt/{{color}}/base/sleeves.png",
+                    "zIndex": 35,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/shirt/{{color}}/base/neckline.png",
+                    "zIndex": 35,
+                    "className": "man_suit"
+                }
+            ],
+            "options": [
+                {
+                    "id": "sky_blue",
+                    "label": "Sky Blue",
+                    "colorCode": "sky_blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/797ef7681cee36e6ecf3c6407dcfd328.png"
+                },
+                {
+                    "id": "apple_red",
+                    "label": "Apple Red",
+                    "colorCode": "apple_red",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/c86c95b554f2cf9780cc952b429952ea.png"
+                }
+            ]
+        },
+        {
+            "id": "collar",
+            "label": "Collar Style",
+            "displayType": "icon",
+            "commonAssets": [
+                {
+                    "url": "/assets/men/shirt/{{color}}/style/{{id}}.png",
+                    "zIndex": 100,
+                    "className": "man_suit"
+                }
+            ],
+            "options": [
+                {
+                    "id": "col_new_kent",
+                    "label": "New kent",
+                    "collarCode": "new_kent",
+                    "thumbnail": "0059"
+                },
+                {
+                    "id": "col_cutaway",
+                    "label": "Cutaway",
+                    "collarCode": "cutaway",
+                    "thumbnail": "005A"
+                },
+                {
+                    "id": "col_kent_collar",
+                    "label": "Kent Collar",
+                    "collarCode": "kent_collar",
+                    "thumbnail": "0061"
+                },
+                {
+                    "id": "col_button_down",
+                    "label": "Button Down",
+                    "collarCode": "button_down",
+                    "thumbnail": "0065"
+                },
+                {
+                    "id": "col_rounded_collar",
+                    "label": "Rounded Collar",
+                    "collarCode": "rounded_collar",
+                    "thumbnail": "0064"
+                },
+                {
+                    "id": "col_stand_up_collar",
+                    "label": "Stand Up Collar",
+                    "collarCode": "stand_up_collar",
+                    "thumbnail": "0064"
+                }
+            ]
+        },
+        {
+            "id": "cuffs",
+            "label": "Cuff Style",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "cuff_single_1_button",
+                    "label": "Single cuff 1 button",
+                    "cuffCode": "single_1_button",
+                    "thumbnail": "0068"
+                },
+                {
+                    "id": "cuff_single_2_button",
+                    "label": "Single cuff 2 buttons",
+                    "cuffCode": "single_2_button",
+                    "thumbnail": "0069"
+                },
+                {
+                    "id": "cuff_two_button_cut",
+                    "label": "Two-button-cut",
+                    "cuffCode": "two_button_cut",
+                    "thumbnail": "006C"
+                },
+                {
+                    "id": "cuff_rounded_1_button",
+                    "label": "Rounded 1 button",
+                    "cuffCode": "rounded_1_button",
+                    "thumbnail": "006D"
+                },
+                {
+                    "id": "cuff_double_squared_french",
+                    "label": "Double squared french cuff",
+                    "cuffCode": "double_squared_french",
+                    "thumbnail": "006F"
+                }
+            ]
+        },
+        {
+            "id": "fit",
+            "label": "Fit",
+            "displayType": "icon",
+            "commonAssets": [
+                {
+                    "url": "/assets/men/shirt/{{color}}/style/{{id}}_body.png",
+                    "zIndex": 100,
+                    "className": "man_suit"
+                }
+            ],
+            "options": [
+                {
+                    "id": "slim_fit",
+                    "label": "Slim Fit",
+                    "fitCode": "slim_fit",
+                    "thumbnail": "0050",
+                    "assets": []
+                },
+                {
+                    "id": "normal_fit",
+                    "label": "Normal Fit",
+                    "fitCode": "normal_fit",
+                    "thumbnail": "0051",
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "chest_pocket",
+            "label": "Chest Pocket",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "no_pocket",
+                    "label": "No Pocket",
+                    "fitCode": "no_pocket",
+                    "thumbnail": "0057",
+                    "assets": []
+                },
+                {
+                    "id": "standard_pocket",
+                    "label": "Standard Pocket",
+                    "fitCode": "standard_pocket",
+                    "thumbnail": "0070",
+                    "assets": [
+                        {
+                            "url": "/assets/men/shirt/{{color}}/style/standard_pocket.png",
+                            "zIndex": 120,
+                            "className": "man_suit"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "contrasted_collar",
+            "label": "Contrasted Collar",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "cc_by_default",
+                    "label": "By Default",
+                    "contrastedCollarCode": "",
+                    "thumbnail": "0061",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "cc_all",
+                    "label": "All",
+                    "contrastedCollarCode": "collar_all",
+                    "thumbnail": "0042",
+                    "priceModifier": 7,
+                    "assets": []
+                },
+                {
+                    "id": "cc_inner_fabric",
+                    "label": "Inner Fabric",
+                    "contrastedCollarCode": "collar_inner",
+                    "thumbnail": "007A",
+                    "priceModifier": 8,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "contrasted_collar_fabric",
+            "label": "Collar Fabric",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "contrasted_collar",
+                "value": [
+                    "cc_all",
+                    "cc_inner_fabric"
+                ]
+            },
+            "commonAssets": [
+                {
+                    "url": "/assets/men/shirt/shared/contrasted_collar/{{collar_fabric}}/{{collar}}_{{contrasted_collar}}.png",
+                    "zIndex": 130,
+                    "className": "man_suit"
+                }
+            ],
+            "options": [
+                {
+                    "id": "ccf_699",
+                    "label": "Mayfield",
+                    "collarFabricCode": "ccf_699",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/699_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_2738",
+                    "label": "Bort",
+                    "collarFabricCode": "ccf_2738",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2738_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3742",
+                    "label": "Kaliman",
+                    "collarFabricCode": "ccf_3742",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3742_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3747",
+                    "label": "Curtis",
+                    "collarFabricCode": "ccf_3747",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3747_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3812",
+                    "label": "Shoreditch",
+                    "collarFabricCode": "ccf_3812",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3812_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3813",
+                    "label": "Stratford",
+                    "collarFabricCode": "ccf_3813",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3813_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3783",
+                    "label": "Walthamstow",
+                    "collarFabricCode": "ccf_3783",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3783_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3811",
+                    "label": "Hampsted",
+                    "collarFabricCode": "ccf_3811",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3811_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_1769",
+                    "label": "Melville",
+                    "collarFabricCode": "ccf_1769",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/1769_normal.jpg",
+                    "priceModifier": 0
+                }
+            ]
+        },
+        {
+            "id": "contrasted_cuff",
+            "label": "Contrasted Cuff",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "cc_by_default",
+                    "label": "By Default",
+                    "contrastedCuffCode": "cc_by_default",
+                    "thumbnail": "0068",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "cc_all",
+                    "label": "All",
+                    "contrastedCuffCode": "cuff_all",
+                    "thumbnail": "0045",
+                    "priceModifier": 7,
+                    "assets": []
+                }
+            ]
+        },
+        {
+            "id": "cuff_fabric",
+            "label": "Cuff Fabric",
+            "displayType": "swatch",
+            "dependsOn": {
+                "attributeId": "contrasted_cuff",
+                "value": "cc_all"
+            },
+            "commonAssets": [
+                {
+                    "url": "/assets/men/shirt/shared/contrasted_cuffs/{{cuff_fabric}}/color_cuff_all.png",
+                    "zIndex": 130,
+                    "className": "man_suit"
+                }
+            ],
+            "options": [
+                {
+                    "id": "ccf_699",
+                    "label": "Mayfield",
+                    "cuffFabricCode": "ccf_699",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/699_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_2738",
+                    "label": "Bort",
+                    "cuffFabricCode": "ccf_2738",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/2738_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3742",
+                    "label": "Kaliman",
+                    "cuffFabricCode": "ccf_3742",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3742_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3747",
+                    "label": "Curtis",
+                    "cuffFabricCode": "ccf_3747",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3747_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3812",
+                    "label": "Shoreditch",
+                    "cuffFabricCode": "ccf_3812",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3812_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3813",
+                    "label": "Stratford",
+                    "cuffFabricCode": "ccf_3813",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3813_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3783",
+                    "label": "Walthamstow",
+                    "cuffFabricCode": "ccf_3783",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3783_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_3811",
+                    "label": "Hampsted",
+                    "cuffFabricCode": "ccf_3811",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/3811_normal.jpg",
+                    "priceModifier": 0
+                },
+                {
+                    "id": "ccf_1769",
+                    "label": "Melville",
+                    "cuffFabricCode": "ccf_1769",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/dimg/fabric/shirt/1769_normal.jpg",
+                    "priceModifier": 0
+                }
+            ]
+        },
+        {
+            "id": "contrasting_button_holes",
+            "label": "Contrasting Button Holes",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/men/shirt/shared/holes_threads/{{id}}/body_hole.png",
+                    "zIndex": 140,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/shirt/shared/holes_threads/{{id}}/neck_hole.png",
+                    "zIndex": 141,
+                    "className": "man_suit"
+                }
+            ],
+            "options": [
+                {
+                    "id": "white",
+                    "label": "White",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/1927ca7008c75d4607d4232fedcc3fea.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "blue",
+                    "label": "Blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/c510b2c9f69d92a26af5a7ac6bc051e1.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "pink",
+                    "label": "Pink",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/c095b8861784a7c79d79c56f8356c875.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "black",
+                    "label": "Black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/b5ededa790fdd4a9e39c5ef9172873bb.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "red",
+                    "label": "Red",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a2b0cce4bf702faf0289a99517a60cce.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "yellow",
+                    "label": "Yellow",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/fcefb69ff3a339da881c36524d389ffa.png",
+                    "priceModifier": 3
+                }
+            ]
+        },
+        {
+            "id": "contrasting_button_threads",
+            "label": "Contrasting Button Threads",
+            "displayType": "swatch",
+            "commonAssets": [
+                {
+                    "url": "/assets/men/shirt/shared/holes_threads/{{id}}/body_thread.png",
+                    "zIndex": 142,
+                    "className": "man_suit"
+                },
+                {
+                    "url": "/assets/men/shirt/shared/holes_threads/{{id}}/neck_thread.png",
+                    "zIndex": 141,
+                    "className": "man_suit"
+                }
+            ],
+            "options": [
+                {
+                    "id": "white",
+                    "label": "White",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/1927ca7008c75d4607d4232fedcc3fea.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "blue",
+                    "label": "Blue",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/c510b2c9f69d92a26af5a7ac6bc051e1.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "pink",
+                    "label": "Pink",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/c095b8861784a7c79d79c56f8356c875.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "black",
+                    "label": "Black",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/b5ededa790fdd4a9e39c5ef9172873bb.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "red",
+                    "label": "Red",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/a2b0cce4bf702faf0289a99517a60cce.png",
+                    "priceModifier": 3
+                },
+                {
+                    "id": "yellow",
+                    "label": "Yellow",
+                    "thumbnail": "https://static.shopapps.site/options/swatch/134119/fcefb69ff3a339da881c36524d389ffa.png",
+                    "priceModifier": 3
+                }
+            ]
+        }
+    ]
+}

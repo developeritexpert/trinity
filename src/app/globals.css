@@ -231,7 +231,13 @@ body {
 
 .men_trouser,
 .men_blazer,
-.men_blazer_api {
+.men_blazer_api,
+.men_model_shirt {
+  zoom: 35%;
+  top: -11rem;
+}
+
+.men_model_shirt {
   zoom: 35%;
   top: -11rem;
 }
