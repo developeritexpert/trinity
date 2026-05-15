@@ -6,8 +6,12 @@
         "collar": "col_cutaway",
         "cuffs": "cuff_single_1_button",
         "fit": "slim_fit",
+        "chest_pocket": "no_pocket",
+        "contrasted_collar": "cc_by_default",
+        "contrasted_cuff": "cc_by_default",
         "contrasting_button_holes": "white",
-        "contrasting_button_threads": "white"
+        "contrasting_button_threads": "white",
+        "buttons": "by_default"
     },
     "sharedLayers": [
         {
@@ -531,6 +535,92 @@
                     "label": "Yellow",
                     "thumbnail": "https://static.shopapps.site/options/swatch/134119/fcefb69ff3a339da881c36524d389ffa.png",
                     "priceModifier": 3
+                }
+            ]
+        },
+        {
+            "id": "buttons",
+            "label": "Buttons",
+            "displayType": "icon",
+            "options": [
+                {
+                    "id": "by_default",
+                    "label": "By Default",
+                    "thumbnail": "0053",
+                    "priceModifier": 0,
+                    "assets": []
+                },
+                {
+                    "id": "black",
+                    "label": "Black",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/8.jpg",
+                    "priceModifier": 5,
+                    "assets": [
+                        {
+                            "url": "/assets/men/shirt/shared/buttons/black/body_custom_button.png",
+                            "zIndex": 150,
+                            "className": "man_suit"
+                        },
+                        {
+                            "url": "/assets/men/shirt/shared/buttons/black/neck_custom_button.png",
+                            "zIndex": 151,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "blue",
+                    "label": "Blue",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/6.jpg",
+                    "priceModifier": 5,
+                    "assets": [
+                        {
+                            "url": "/assets/men/shirt/shared/buttons/blue/body_custom_button.png",
+                            "zIndex": 150,
+                            "className": "man_suit"
+                        },
+                        {
+                            "url": "/assets/men/shirt/shared/buttons/blue/neck_custom_button.png",
+                            "zIndex": 151,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "red",
+                    "label": "Red",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/3.jpg",
+                    "priceModifier": 5,
+                    "assets": [
+                        {
+                            "url": "/assets/men/shirt/shared/buttons/red/body_custom_button.png",
+                            "zIndex": 150,
+                            "className": "man_suit"
+                        },
+                        {
+                            "url": "/assets/men/shirt/shared/buttons/red/neck_custom_button.png",
+                            "zIndex": 151,
+                            "className": "man_suit"
+                        }
+                    ]
+                },
+                {
+                    "id": "white",
+                    "label": "White",
+                    "thumbnail": "https://d1fufvy4xao6k9.cloudfront.net/images/man/shirt/buttons_color/1.jpg",
+                    "priceModifier": 5,
+                    "assets": [
+                        {
+                            "url": "/assets/men/shirt/shared/buttons/white/body_custom_button.png",
+                            "zIndex": 150,
+                            "className": "man_suit"
+                        },
+                        {
+                            "url": "/assets/men/shirt/shared/buttons/white/neck_custom_button.png",
+                            "zIndex": 151,
+                            "className": "man_suit"
+                        }
+                    ]
                 }
             ]
         }
