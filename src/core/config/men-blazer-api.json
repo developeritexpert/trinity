@@ -154,6 +154,16 @@
       ],
       "options": [
         {
+          "id": "navy_blue",
+          "label": "Navy Blue",
+          "shopifyOptionValueId": 29085795,
+          "shopifyHandle": "navy_blue",
+          "thumbnail": "https://static.shopapps.site/options/swatch/134119/e3f0e825690110c1f7051ec32236c3e5.jpeg",
+          "priceModifier": 0,
+          "assets": [],
+          "colorCode": "navy_blue"
+        },
+        {
           "id": "100d8300_4_simple_grey",
           "label": "100D8300-4- Simple Grey",
           "shopifyOptionValueId": 29085220,
@@ -676,12 +686,12 @@
           "priceModifier": 0,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/single_breasted/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/sb_1_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "single_breasted"
+          "styleCode": "sb_1_button"
         },
         {
           "id": "sb_2_button",
@@ -692,12 +702,12 @@
           "priceModifier": 0,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/single_breasted_2/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/sb_2_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "single_breasted_2"
+          "styleCode": "sb_2_button"
         },
         {
           "id": "sb_3_button",
@@ -708,12 +718,12 @@
           "priceModifier": 0,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/single_breasted/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/sb_3_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "single_breasted"
+          "styleCode": "sb_3_button"
         },
         {
           "id": "sb_4_button",
@@ -724,12 +734,12 @@
           "priceModifier": 0,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/single_breasted/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/sb_4_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "single_breasted"
+          "styleCode": "sb_4_button"
         },
         {
           "id": "db_1_2_button",
@@ -740,12 +750,12 @@
           "priceModifier": 0,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/double_breasted_4/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/db_1_2_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "double_breasted_4"
+          "styleCode": "db_1_2_button"
         },
         {
           "id": "db_1_3_button",
@@ -756,12 +766,12 @@
           "priceModifier": 0,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/double_breasted_4/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/db_1_3_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "double_breasted_4"
+          "styleCode": "db_1_3_button"
         },
         {
           "id": "db_2_2_button",
@@ -772,12 +782,12 @@
           "priceModifier": 0,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/double_breasted_6/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/db_2_2_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "double_breasted_6"
+          "styleCode": "db_2_2_button"
         },
         {
           "id": "db_2_3_button",
@@ -788,12 +798,12 @@
           "priceModifier": 0,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/double_breasted_6/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/db_2_3_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "double_breasted_6"
+          "styleCode": "db_2_3_button"
         },
         {
           "id": "nehru_4_button",
@@ -804,12 +814,12 @@
           "priceModifier": 15,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/mandarin/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/nehru_4_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "mandarin"
+          "styleCode": "nehru_4_button"
         },
         {
           "id": "nehru_5_button",
@@ -820,12 +830,12 @@
           "priceModifier": 15,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/mandarin/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/nehru_5_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "mandarin"
+          "styleCode": "nehru_5_button"
         },
         {
           "id": "tsb_1_button",
@@ -836,12 +846,18 @@
           "priceModifier": 15,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/single_breasted/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tsb_1_button/bottom.png",
               "zIndex": 45,
+              "className": "man_suit"
+            },
+            {
+              "url": "/assets/men/blazer/{{color}}/style/tsb_1_button/tsb_1_button_tuxedo.png",
+              "zIndex": 48,
               "className": "man_suit"
             }
           ],
-          "styleCode": "single_breasted"
+          "styleCode": "tsb_1_button",
+          "tuxedoCode": "tsb_1"
         },
         {
           "id": "tsb_2_button",
@@ -852,12 +868,18 @@
           "priceModifier": 15,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/single_breasted_2/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tsb_2_button/bottom.png",
               "zIndex": 45,
+              "className": "man_suit"
+            },
+            {
+              "url": "/assets/men/blazer/{{color}}/style/tsb_1_button/tsb_2_button_tuxedo.png",
+              "zIndex": 48,
               "className": "man_suit"
             }
           ],
-          "styleCode": "single_breasted_2"
+          "styleCode": "tsb_2_button",
+          "tuxedoCode": "tsb_2"
         },
         {
           "id": "tsb_3_button",
@@ -868,12 +890,13 @@
           "priceModifier": 30,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/single_breasted/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tsb_3_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "single_breasted"
+          "styleCode": "tsb_3_button",
+          "tuxedoCode": "tsb_2"
         },
         {
           "id": "tsb_4_button",
@@ -884,12 +907,13 @@
           "priceModifier": 30,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/single_breasted/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tsb_4_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "single_breasted"
+          "styleCode": "tsb_4_button",
+          "tuxedoCode": "tsb_2"
         },
         {
           "id": "tdb_1_2_button",
@@ -900,12 +924,18 @@
           "priceModifier": 30,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/double_breasted_4/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tdb_1_2_button/bottom.png",
               "zIndex": 45,
+              "className": "man_suit"
+            },
+            {
+              "url": "/assets/men/blazer/shared/tuxedo/tdb_tuxedo.png",
+              "zIndex": 48,
               "className": "man_suit"
             }
           ],
-          "styleCode": "double_breasted_4"
+          "styleCode": "tdb_1_2_button",
+          "tuxedoCode": "tdb"
         },
         {
           "id": "tdb_1_3_button",
@@ -916,12 +946,13 @@
           "priceModifier": 30,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/double_breasted_4/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tdb_1_3_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "double_breasted_4"
+          "styleCode": "tdb_1_3_button",
+          "tuxedoCode": "tdb"
         },
         {
           "id": "tdb_2_2_button",
@@ -932,12 +963,13 @@
           "priceModifier": 30,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/double_breasted_6/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tdb_2_2_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "double_breasted_6"
+          "styleCode": "tdb_2_2_button",
+          "tuxedoCode": "tdb"
         },
         {
           "id": "tdb_2_3_button",
@@ -948,12 +980,13 @@
           "priceModifier": 30,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/double_breasted_6/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tdb_2_3_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "double_breasted_6"
+          "styleCode": "tdb_2_3_button",
+          "tuxedoCode": "tdb"
         },
         {
           "id": "tsb_1_button_shawl",
@@ -964,12 +997,13 @@
           "priceModifier": 30,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/single_breasted/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tsb_1_button_shawl/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "single_breasted"
+          "styleCode": "tsb_1_button_shawl",
+          "tuxedoCode": "tsb_1"
         },
         {
           "id": "tdb_1_3_button_shawl",
@@ -980,12 +1014,13 @@
           "priceModifier": 30,
           "assets": [
             {
-              "url": "/assets/men/blazer/{{color}}/style/double_breasted_4/bottom.png",
+              "url": "/assets/men/blazer/{{color}}/style/tdb_1_3_button_shawl/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
             }
           ],
-          "styleCode": "double_breasted_4"
+          "styleCode": "tdb_1_3_button_shawl",
+          "tuxedoCode": "tdb"
         }
       ]
     },
@@ -1059,6 +1094,11 @@
               "url": "/assets/men/blazer/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
               "zIndex": 45,
               "className": "man_suit"
+            },
+            {
+              "url": "/assets/men/blazer/shared/tuxedo/{{tuxedo}}_tuxedo_{{lapel}}_{{width}}.png",
+              "zIndex": 49,
+              "className": "man_suit"
             }
           ],
           "widthCode": "slim"
@@ -1075,6 +1115,11 @@
               "url": "/assets/men/blazer/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
               "zIndex": 45,
               "className": "man_suit"
+            },
+            {
+              "url": "/assets/men/blazer/shared/tuxedo/{{tuxedo}}_tuxedo_{{lapel}}_{{width}}.png",
+              "zIndex": 49,
+              "className": "man_suit"
             }
           ],
           "widthCode": "wide"
@@ -1090,6 +1135,11 @@
             {
               "url": "/assets/men/blazer/{{color}}/style/{{style}}/lapel_{{lapel}}_{{width}}.png",
               "zIndex": 45,
+              "className": "man_suit"
+            },
+            {
+              "url": "/assets/men/blazer/shared/tuxedo/{{tuxedo}}_tuxedo_{{lapel}}_{{width}}.png",
+              "zIndex": 49,
               "className": "man_suit"
             }
           ],

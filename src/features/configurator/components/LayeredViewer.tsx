@@ -49,11 +49,13 @@ export const LayeredViewer = () => {
     let activeFasteningCode = 'standard';          // selected fastening option id
     let activeLengthCode = 'length_long';           // trouser length token
     let activeFitSuffix = 'slim';                   // trouser fit filename suffix
+    let activeTuxedoCode = '';                      // tsb_1 | tsb_2 | tdb — empty for non-tuxedo styles
 
     visibleAttributes.forEach((attr) => {
         const selectedOpt = attr.options.find(opt => opt.id === selections[attr.id]);
         if (attr.id === 'fabric' && selectedOpt?.colorCode) activeColorCode = selectedOpt.colorCode;
         if (attr.id === 'style' && selectedOpt?.styleCode) activeStyleCode = selectedOpt.styleCode;
+        if (attr.id === 'style' && selectedOpt?.tuxedoCode) activeTuxedoCode = selectedOpt.tuxedoCode;
         if (attr.id === 'lapel_style' && selectedOpt?.lapelCode) activeLapelCode = selectedOpt.lapelCode;
         if (attr.id === 'lapel_width' && selectedOpt?.widthCode) activeWidthCode = selectedOpt.widthCode;
         if (attr.id === 'lining_style' && selectedOpt?.liningStyleCode !== undefined) activeLiningStyleCode = selectedOpt.liningStyleCode;
@@ -70,7 +72,7 @@ export const LayeredViewer = () => {
         if (attr.id === 'contrasted_cuff' && selectedOpt?.contrastedCuffCode !== undefined) activeContrastedCuffCode = selectedOpt.contrastedCuffCode;
         if (attr.id === 'cuff_fabric' && selectedOpt?.cuffFabricCode) activeCuffFabricCode = selectedOpt.cuffFabricCode;
         if (attr.id === 'fit' && selectedOpt?.styleCode) activeFitCode = selectedOpt.styleCode;
-        if (attr.id === 'fit' && selectedOpt?.fitSuffix)  activeFitSuffix = selectedOpt.fitSuffix;
+        if (attr.id === 'fit' && selectedOpt?.fitSuffix) activeFitSuffix = selectedOpt.fitSuffix;
         if (attr.id === 'length' && selectedOpt?.lengthCode) activeLengthCode = selectedOpt.lengthCode;
     });
 
@@ -113,7 +115,8 @@ export const LayeredViewer = () => {
                 .replace('{{fit}}', activeFitCode)
                 .replace('{{fitSuffix}}', activeFitSuffix)
                 .replace('{{lengthCode}}', activeLengthCode)
-                .replace('{{fastening}}', activeFasteningCode);
+                .replace('{{fastening}}', activeFasteningCode)
+                .replace('{{tuxedo}}', activeTuxedoCode);
             targetAssets.push({ ...asset, url: finalUrl });
         });
     }
@@ -144,6 +147,7 @@ export const LayeredViewer = () => {
             .replace('{{fitSuffix}}', activeFitSuffix)
             .replace('{{lengthCode}}', activeLengthCode)
             .replace('{{fastening}}', activeFasteningCode)
+            .replace('{{tuxedo}}', activeTuxedoCode)
             .replace('{{id}}', selectedOptionId ?? '');
 
         // 1. Process commonAssets (apply to all options)
@@ -206,8 +210,8 @@ export const LayeredViewer = () => {
         const baseLimitX = 140 / zoomFactor;
         const baseLimitY = 245 / zoomFactor;
 
-        const limitX = currentScale <= 1 ? baseLimitX : (currentScale - 1) * (180 / zoomFactor) + baseLimitX; 
-        const limitY = currentScale <= 1 ? baseLimitY : (currentScale - 1) * (280 / zoomFactor) + baseLimitY; 
+        const limitX = currentScale <= 1 ? baseLimitX : (currentScale - 1) * (180 / zoomFactor) + baseLimitX;
+        const limitY = currentScale <= 1 ? baseLimitY : (currentScale - 1) * (280 / zoomFactor) + baseLimitY;
 
         return {
             x: Math.max(-limitX, Math.min(limitX, x)),
@@ -307,8 +311,8 @@ export const LayeredViewer = () => {
     };
 
     return (
-        <div 
-            id="available_window" 
+        <div
+            id="available_window"
             className={`image_render w-full h-full bg-[#f8f9fa] flex items-center justify-center overflow-hidden p-4 lg:p-8 relative ${config.productId.replace(/-/g, '_')}_wrap select-none`}
             onWheel={handleWheel}
         >
@@ -356,7 +360,7 @@ export const LayeredViewer = () => {
             </div>
 
             {/* SUIT IMAGES CONTAINER (ZOOMABLE & DRAGGABLE) */}
-            <div 
+            <div
                 className={`layers viewport relative w-full max-w-[550px] aspect-[1/2] select-none ${config.productId.replace(/-/g, '_')}`}
                 style={{
                     transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,

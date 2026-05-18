@@ -21,6 +21,8 @@ export interface Option {
     widthCode?: string;
     liningStyleCode?: string;
     liningColorCode?: string;
+    /** Tuxedo button style code: e.g. 'tsb_1' | 'tsb_2' | 'tdb'. Empty for non-tuxedo styles. */
+    tuxedoCode?: string;
 
     // for shirt
     collarCode?: string;
