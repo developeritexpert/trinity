@@ -95,6 +95,7 @@ export const LayeredViewer = () => {
     // Always include sharedLayers first (universal overlays/shadows defined at config level)
     if (config.sharedLayers) {
         config.sharedLayers.forEach(asset => {
+            if (asset.url.includes('{{tuxedo}}') && !activeTuxedoCode) return;
             const finalUrl = asset.url
                 .replace('{{color}}', activeColorCode)
                 .replace('{{style}}', activeStyleCode)
@@ -153,6 +154,7 @@ export const LayeredViewer = () => {
         // 1. Process commonAssets (apply to all options)
         if (attr.commonAssets) {
             attr.commonAssets.forEach(asset => {
+                if (asset.url.includes('{{tuxedo}}') && !activeTuxedoCode) return;
                 targetAssets.push({ ...asset, url: resolveUrl(asset.url) });
             });
         }
@@ -160,6 +162,7 @@ export const LayeredViewer = () => {
         // 2. Process option-specific assets
         if (option && option.assets) {
             option.assets.forEach(asset => {
+                if (asset.url.includes('{{tuxedo}}') && !activeTuxedoCode) return;
                 targetAssets.push({ ...asset, url: resolveUrl(asset.url) });
             });
         }

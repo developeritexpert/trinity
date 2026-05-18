@@ -849,11 +849,6 @@
               "url": "/assets/men/blazer/{{color}}/style/tsb_1_button/bottom.png",
               "zIndex": 45,
               "className": "man_suit"
-            },
-            {
-              "url": "/assets/men/blazer/{{color}}/style/tsb_1_button/tsb_1_button_tuxedo.png",
-              "zIndex": 48,
-              "className": "man_suit"
             }
           ],
           "styleCode": "tsb_1_button",
@@ -870,11 +865,6 @@
             {
               "url": "/assets/men/blazer/{{color}}/style/tsb_2_button/bottom.png",
               "zIndex": 45,
-              "className": "man_suit"
-            },
-            {
-              "url": "/assets/men/blazer/{{color}}/style/tsb_1_button/tsb_2_button_tuxedo.png",
-              "zIndex": 48,
               "className": "man_suit"
             }
           ],
@@ -926,11 +916,6 @@
             {
               "url": "/assets/men/blazer/{{color}}/style/tdb_1_2_button/bottom.png",
               "zIndex": 45,
-              "className": "man_suit"
-            },
-            {
-              "url": "/assets/men/blazer/shared/tuxedo/tdb_tuxedo.png",
-              "zIndex": 48,
               "className": "man_suit"
             }
           ],
